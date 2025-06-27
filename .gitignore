@@ -1,84 +1,62 @@
-# === Java build output ===
-/backend/target/
-*.class
-*.jar
-*.war
-*.ear
+HELP.md
+target/
+.mvn/wrapper/maven-wrapper.jar
+**/src/main/**/target/
+**/src/test/**/target/
 
-
-# === Maven specific ===
-/backend/.mvn/wrapper/dists/
-/backend/.mvn/wrapper/maven-wrapper.jar
-dependency-reduced-pom.xml
-release.properties
-# Firebase credentials
-backend/src/main/resources/firebase-adminsdk.json
-**/firebase-adminsdk.json
-
-# === Gradle (if present) ===
-.gradle/
-build/
-!gradle/wrapper/gradle-wrapper.jar
-
-# === Logs ===
-*.log
-logs/
-spring.log
-backend/logs/
-backend/*.log
-
-# === IDEs ===
-# IntelliJ
-.idea/
-*.iml
-*.iws
-# Eclipse
-.project
+### STS ###
+.apt_generated
 .classpath
-.settings/
-.metadata/
-# VSCode
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+**/src/main/**/build/
+**/src/test/**/build/
+
+### VS Code ###
 .vscode/
 
-# === OS / Misc ===
+### private keys ###
+**/src/main/resources/firebase-adminsdk.json
+
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+.vscode/extensions.json
+.idea
 .DS_Store
-Thumbs.db
-*.swp
-*.swo
-
-# === Docker volumes and configs ===
-db_data/
-docker-compose.override.yml
-*.pid
-
-# === Test DB & Generated Files ===
-*.h2.db
-*.mv.db
-*.sql
-
-# === Config and Secrets ===
-application-local.properties
-*.local.properties
-.env
-.env.*
-secrets.*
-
-# === React Frontend (if in /frontend) ===
-/frontend/node_modules/
-/frontend/build/
-/frontend/dist/
-/frontend/.env
-/frontend/.env.*
-
-# === Optional: Yarn or PNPM (if used) ===
-.yarn/
-.pnpm-debug.log
-yarn-error.log
-.yarnrc.yml
-.pnpm-store/
-
-# === Optional: Archive files ===
-*.zip
-*.tar.gz
-*.rar
-*.7z
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

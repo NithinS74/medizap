@@ -7,8 +7,6 @@ import com.google.firebase.auth.FirebaseToken;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.Map;
 
@@ -31,7 +29,6 @@ public class FirebaseAuthVerifyID {
             FirebaseToken decodedToken = fauth.verifyToken(idToken);
             String uid = decodedToken.getUid();
             String email = decodedToken.getEmail();
-            logger.info("\n---->>>>>>>>>LOGIN REDIVED<<<<<<<<----\n" + uid + "\n" + email + "\n");
 
             return ResponseEntity.ok(Map.of(
                     "status", "success",
