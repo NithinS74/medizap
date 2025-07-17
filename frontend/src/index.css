@@ -1,68 +1,525 @@
+/* src/App.css (or src/styles/theme.css) */
+/* iOS Inspired Styles - Updated Discord-like Theme */
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  /* iOS System Colors (keeping these as they might be used elsewhere) */
+  --ios-system-blue: #007AFF;
+  --ios-system-gray: #8E8E93;
+  --ios-system-gray-2: #AEAEB2;
+  --ios-system-gray-3: #C7C7CC;
+  --ios-system-gray-4: #D1D1D6;
+  --ios-system-gray-5: #E5E5EA;
+  --ios-system-gray-6: #F2F2F7;
+  --ios-system-green: #34C759;
+  --ios-system-indigo: #5856D6;
+  --ios-system-orange: #FF9500;
+  --ios-system-pink: #FF2D55;
+  --ios-system-purple: #AF52DE;
+  --ios-system-red: #FF3B30;
+  --ios-system-teal: #5AC8FA;
+  --ios-system-yellow: #FFCC00;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* Discord-like Color Scheme (keeping these as base for components) */
+  --discord-primary: #36393F;
+  --discord-secondary: #2F3136;
+  --discord-tertiary: #202225;
+  --discord-accent: #5865F2;
+  --discord-text: #DCDDDE;
+  --discord-text-muted: #A3A6AA;
+  --discord-success: #3BA55C;
+  --discord-danger: #ED4245;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* App Colors - Dark Theme (Adjusted for gradient background) */
+  /* These will be used for component backgrounds, contrasting with the body gradient */
+  --primary-bg-dark: #121212; /* Deeper black for inputs/elements if needed */
+  --secondary-bg: var(--discord-secondary); /* For cards, etc. */
+  --tertiary-bg: var(--discord-tertiary); /* For sidebar */
+  --card-bg: var(--discord-secondary);
+  --text-primary: var(--discord-text);
+  --text-secondary: var(--discord-text-muted);
+  --border-color: rgba(255, 255, 255, 0.06); /* Slightly more prominent border */
+  --accent-color: var(--discord-accent);
+
+  /* --- NEW & IMPROVED GRADIENT COLORS --- */
+  --gradient-start: #1A1A1D; /* Deep, cool-toned dark grey/near black */
+  --gradient-mid: #2E2E32;   /* A balanced mid-dark grey */
+  --gradient-end: #424247;   /* Slightly lighter, rich dark grey */
+
+  /* Sidebar width variable for consistency */
+  --sidebar-expanded-width: 250px;
+  --sidebar-collapsed-width: 70px;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'San Francisco', 'Segoe UI', sans-serif;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  /* --- NEW & IMPROVED GRADIENT BACKGROUND --- */
+  background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-mid) 50%, var(--gradient-end) 100%);
+  background-attachment: fixed; /* Keep gradient fixed even if content scrolls */
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* App Container (if you use this wrapper in your App.jsx) */
+.app-container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+/* --- Specific Components from your provided CSS --- */
+
+/* Sidebar (General styles - specific width/state will be in Sidebar.css) */
+.sidebar {
+  background-color: var(--tertiary-bg);
+  display: flex;
+  flex-direction: column;
+  padding-top: 0;
+  transition: width 0.3s ease;
+}
+
+/* Server List (if applicable) */
+.server-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.server-icon {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--secondary-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  font-weight: 600;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  transition: all 0.2s ease;
+  overflow: hidden;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.server-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.server-icon:hover {
+  border-radius: 16px;
+  background: var(--accent-color);
+  color: white;
+}
+
+.server-icon.active {
+  border-radius: 16px;
+  background: var(--accent-color);
+  color: white;
+}
+
+.server-icon.active::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 20px;
+  width: 4px;
+  background: white;
+  border-radius: 0 4px 4px 0;
+}
+
+.add-server {
+  color: var(--ios-system-green);
+  background: var(--secondary-bg);
+  font-size: 20px;
+}
+
+.add-server:hover {
+  background: var(--ios-system-green);
+  color: white;
+  border-radius: 16px;
+}
+
+/* Tooltip */
+.server-tooltip {
+  position: absolute;
+  left: 60px;
+  background: var(--tertiary-bg);
+  padding: 8px 12px;
+  border-radius: 4px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+  z-index: 100;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.server-icon:hover .server-tooltip {
+  opacity: 1;
+}
+
+/* Main Content View (General styles - specific padding/flex will be in DashboardLayout.css) */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 0px;
+  overflow-y: auto;
+}
+
+/* Project Sidebar (if applicable) */
+.project-sidebar {
+  width: 240px;
+  background: var(--secondary-bg);
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--border-color);
+  user-select: none;
+}
+
+.project-header {
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.channel-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px 0;
+}
+
+.channel-category {
+  margin-bottom: 16px;
+}
+
+.category-header {
+  padding: 4px 16px;
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.channel-item {
+  padding: 6px 16px;
+  margin: 2px 0;
+  color: var(--text-secondary);
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.channel-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+}
+
+.channel-item.active {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+}
+
+.channel-item .hash {
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+/* Main Content View */
+.content-view {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.dashboard-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Header */
+.content-header {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  z-index: 1;
+}
+
+.content-header h2 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-right: 16px;
+}
+
+/* Dashboard */
+.dashboard-content {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+/* Cards */
+.dashboard-card {
+  background: var(--secondary-bg);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow for depth */
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.card-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* Tasks */
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.task-item {
+  background: var(--secondary-bg);
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  align-items: flex-start;
+  border-left: 3px solid transparent;
+  transition: all 0.2s;
+}
+
+.task-item:hover {
+  background: rgba(255, 255, 255, 0.08); /* Slightly more pronounced hover */
+}
+
+.task-item.high-priority {
+  border-left-color: var(--ios-system-red);
+}
+
+.task-item.medium-priority {
+  border-left-color: var(--ios-system-orange);
+}
+
+.task-item.low-priority {
+  border-left-color: var(--ios-system-green);
+}
+
+.task-checkbox {
+  margin-right: 12px;
+}
+
+.task-content {
+  flex: 1;
+}
+
+.task-title {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.task-meta {
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.task-due,
+.task-assignee {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.assignee-avatar {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+/* Header Styles */
+.header {
+  width: 100%;
+  height: var(--header-height); /* Assuming --header-height is defined or will be */
+  background-color: var(--tertiary-bg);
+  color: var(--text-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.header .menu {
+  display: flex;
+  gap: 15px;
+  margin-left: auto;
+}
+
+/* Footer Styles */
+.footer {
+  width: 100%;
+  background-color: var(--tertiary-bg);
+  color: var(--text-secondary);
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+button:not(.nav-button), /* Exclude sidebar nav buttons from this general style */
+a {
+  background-color: transparent;
+  border: none;
+  color: var(--accent-color);
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+button:not(.nav-button):hover, /* Exclude sidebar nav buttons from this general style */
+a:hover {
+  color: var(--discord-text);
+}
+
+/* Sidebar (Mobile Responsive) - Note: Sidebar.css will handle primary responsiveness */
+@media (max-width: 768px) {
+    /* These specific overrides might still be useful if not handled by Sidebar.css */
+    /* .sidebar { width: var(--sidebar-collapsed-width); } */
+    .server-list .server-icon {
+        height: 30px;
+        width: 30px;
+        margin: 5px;
+    }
+    .main-content {
+        padding: 15px;
+    }
+    .project-sidebar {
+        width: 100%;
+    }
+    .content-view {
+        gap: 15px;
+    }
+    .dashboard-card {
+        padding: 15px;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 480px) {
+    .sidebar {
+        display: none;
+    }
+    .main-content {
+        padding: 10px;
+    }
+    .header {
+        height: 50px;
+    }
+    .logo {
+        font-size: 20px;
+    }
+    .menu {
+        display: none;
+    }
+}
+
+/* Essential global root styles */
+html, body, #root {
+  height: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Calculator component styles (adjusted to theme) */
+.calculator {
+  margin-top: 2rem;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  background: var(--secondary-bg);
+  color: var(--text-primary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Added subtle shadow */
+}
+
+.calculator input,
+.calculator select {
+  margin: 0.5rem;
+  padding: 0.6rem; /* Slightly more padding */
+  font-size: 1rem;
+  background-color: var(--primary-bg-dark); /* Use the new darker variable */
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 6px; /* Slightly more rounded */
+}
+
+.calculator button {
+  padding: 0.6rem 1.2rem; /* Slightly larger buttons */
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 8px; /* More rounded buttons */
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease; /* Add transform for subtle click effect */
+}
+
+.calculator button:hover {
+  background-color: var(--discord-accent); /* Keep consistent accent on hover */
+  filter: brightness(1.1); /* Slight brightness increase on hover */
+}
+.calculator button:active {
+  transform: translateY(1px); /* Subtle press effect */
+}
+
+.calc-result {
+  margin-top: 1rem;
+  font-weight: bold;
 }

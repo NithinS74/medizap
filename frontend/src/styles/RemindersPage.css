@@ -1,0 +1,325 @@
+/* src/styles/RemindersPage.css */
+
+.reminders-page-container {
+  padding: 30px; /* Consistent padding */
+  color: var(--text-primary);
+  max-width: 1200px; /* Limit max width for better readability */
+  margin: 0 auto; /* Center the content */
+}
+
+.reminders-page-container h1 {
+  font-size: 2.8rem; /* Larger, more impactful heading */
+  margin-bottom: 40px; /* More space below heading */
+  color: var(--text-primary);
+  text-align: center;
+  font-weight: 700; /* Bolder */
+  letter-spacing: -0.02em; /* Slightly tighter kerning */
+}
+
+/* Card Styling - Using existing dashboard-card */
+.create-reminder-card,
+.reminders-list-card {
+  margin-bottom: 30px; /* More space between sections */
+  border: 1px solid var(--border-color); /* Subtle border for definition */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25); /* Enhanced shadow for depth */
+}
+
+.create-reminder-card h2,
+.reminders-list-card h2 {
+  font-size: 1.8rem; /* Larger subheadings */
+  margin-bottom: 25px; /* More space below subheadings */
+  color: var(--text-primary);
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08); /* Separator */
+  padding-bottom: 15px;
+}
+
+/* Form Group Styling */
+.form-group {
+  margin-bottom: 20px; /* Consistent spacing */
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--text-secondary); /* Lighter label text */
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 18px; /* More padding for a better feel */
+  border: 1px solid var(--border-color);
+  border-radius: 10px; /* More rounded inputs */
+  background-color: var(--primary-bg-dark); /* Darker input background */
+  color: var(--text-primary);
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--text-secondary); /* Placeholder color */
+  opacity: 0.7;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent-color); /* Accent border on focus */
+  box-shadow: 0 0 0 4px rgba(88, 101, 242, 0.3); /* Stronger accent shadow on focus */
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px; /* Taller text area */
+}
+
+/* Form Actions (Buttons) */
+.form-actions {
+    display: flex;
+    gap: 15px; /* Space between buttons */
+    justify-content: flex-end; /* Align buttons to the right */
+    margin-top: 30px;
+}
+
+.create-button {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 10px; /* Rounded buttons */
+  padding: 14px 30px; /* More padding for buttons */
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  flex-grow: 1; /* Allow button to grow in smaller spaces */
+  max-width: 200px; /* Max width for consistency */
+}
+
+.create-button:hover {
+  background-color: #4b5af0;
+  transform: translateY(-2px); /* More pronounced lift */
+}
+
+.create-button:active {
+  transform: translateY(0);
+}
+
+.cancel-edit-button {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    border-radius: 10px;
+    padding: 14px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
+    flex-grow: 1;
+    max-width: 150px;
+}
+
+.cancel-edit-button:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--text-primary);
+    transform: translateY(-2px);
+}
+.cancel-edit-button:active {
+    transform: translateY(0);
+}
+
+
+/* Reminder List Grid */
+.reminders-list-card {
+  /* Inherits dashboard-card styles */
+}
+
+.no-reminders-message {
+    text-align: center;
+    color: var(--text-secondary);
+    font-style: italic;
+    padding: 30px 0; /* More padding */
+    font-size: 1.1rem;
+}
+
+.reminder-items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Slightly wider cards */
+  gap: 25px; /* More space between cards */
+}
+
+.reminder-item {
+  /* Inherits dashboard-card styles */
+  padding: 20px 25px; /* More padding */
+  display: flex; /* Flexbox for internal layout */
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 160px; /* Consistent height for better grid look */
+  position: relative; /* For past-badge */
+}
+
+.reminder-item h3 {
+  font-size: 1.25rem; /* Larger title */
+  margin-bottom: 10px;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.reminder-item p {
+  font-size: 1rem; /* Slightly larger message text */
+  color: var(--text-secondary);
+  line-height: 1.4;
+  flex-grow: 1; /* Allow message to take available space */
+  margin-bottom: 15px;
+}
+
+.reminder-item .reminder-time {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  text-align: right;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08); /* Stronger separator */
+}
+
+/* Reminder Actions (Edit/Delete) */
+.reminder-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px; /* Space from time */
+  justify-content: flex-end; /* Align actions to the right */
+}
+
+.edit-button,
+.delete-button {
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.edit-button {
+  color: var(--ios-system-blue); /* iOS blue for edit */
+}
+
+.edit-button:hover {
+  background-color: rgba(0, 122, 255, 0.15); /* Light blue background on hover */
+  color: white;
+  border-color: var(--ios-system-blue);
+}
+
+.delete-button {
+  color: var(--ios-system-red); /* iOS red for delete */
+}
+
+.delete-button:hover {
+  background-color: rgba(255, 59, 48, 0.15); /* Light red background on hover */
+  color: white;
+  border-color: var(--ios-system-red);
+}
+
+/* Past Reminders Styling */
+.reminder-item.past-reminder {
+    opacity: 0.8; /* Slightly dim past reminders */
+    border: 1px solid var(--ios-system-gray); /* Grey border for past */
+}
+
+.past-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: var(--ios-system-gray-2); /* Darker grey badge */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+
+/* Responsive adjustments for the page layout */
+@media (max-width: 1024px) {
+    .reminders-page-container {
+        padding: 25px;
+    }
+    .reminders-page-container h1 {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+    }
+    .create-reminder-card h2,
+    .reminders-list-card h2 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+  .reminders-page-container {
+    padding: 20px;
+  }
+  .reminders-page-container h1 {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+  }
+  .create-reminder-card h2,
+  .reminders-list-card h2 {
+    font-size: 1.4rem;
+  }
+  .reminder-items-grid {
+    grid-template-columns: 1fr; /* Stack columns on smaller screens */
+  }
+  .reminder-item {
+      min-height: auto; /* Allow height to adjust */
+  }
+  .form-actions {
+      flex-direction: column; /* Stack buttons vertically */
+  }
+  .create-button, .cancel-edit-button {
+      max-width: 100%; /* Full width buttons */
+  }
+}
+
+@media (max-width: 500px) {
+  .reminders-page-container {
+    padding: 15px;
+  }
+  .reminders-page-container h1 {
+    font-size: 1.8rem;
+  }
+  .create-reminder-card h2,
+  .reminders-list-card h2 {
+    font-size: 1.2rem;
+  }
+  .form-group input,
+  .form-group textarea {
+      padding: 10px 12px;
+      border-radius: 8px;
+  }
+  .create-button, .cancel-edit-button {
+      padding: 10px 20px;
+      font-size: 1rem;
+  }
+  .reminder-item {
+      padding: 15px 20px;
+  }
+  .reminder-item h3 {
+      font-size: 1.1rem;
+  }
+  .reminder-item p {
+      font-size: 0.9rem;
+  }
+  .reminder-item .reminder-time {
+      font-size: 0.8rem;
+  }
+  .edit-button, .delete-button {
+      padding: 6px 12px;
+      font-size: 0.8rem;
+  }
+}

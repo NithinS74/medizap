@@ -1,0 +1,39 @@
+/* src/styles/NotificationCenter.css */
+
+.notification-center {
+  position: relative; /* For positioning the badge */
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.notification-bell {
+  background: none;
+  border: none;
+  font-size: 1.8rem; /* Size of the bell icon */
+  cursor: pointer;
+  color: var(--text-primary); /* Use theme variable for color */
+  position: relative;
+  transition: transform 0.2s ease-in-out;
+  padding: 5px; /* Add some padding for easier clicking */
+}
+
+.notification-bell:hover {
+  transform: rotate(15deg); /* Subtle rotation on hover */
+}
+
+.notification-badge {
+  position: absolute;
+  top: -5px; /* Adjust as needed */
+  right: -5px; /* Adjust as needed */
+  background-color: var(--accent-color); /* Use theme variable for accent color */
+  color: white;
+  border-radius: 50%;
+  padding: 2px 7px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  min-width: 20px; /* Ensure it's a circle even with single digit */
+  text-align: center;
+  line-height: 1.2; /* Center text vertically */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}

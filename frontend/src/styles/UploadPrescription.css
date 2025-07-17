@@ -1,0 +1,233 @@
+/* src/styles/UploadPrescription.css */
+
+.upload-prescription-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: var(--secondary-bg); /* Use secondary background */
+    border-radius: 12px;
+    box-shadow: 0 8px 24px var(--shadow-color);
+    color: var(--text-primary); /* Primary text color */
+    font-family: 'Inter', sans-serif;
+}
+
+.page-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--accent-color); /* Accent color for titles */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.page-description {
+    font-size: 1rem;
+    color: var(--text-secondary); /* Secondary text color for description */
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.upload-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 25px;
+    border: 2px dashed var(--border-color); /* Dashed border for upload area */
+    border-radius: 10px;
+    background-color: var(--tertiary-bg); /* Tertiary background for upload area */
+    margin-bottom: 30px;
+}
+
+.file-input {
+    display: none; /* Hide the default file input */
+}
+
+.file-input-label {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: var(--accent-color); /* Accent color for the button */
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 10px hsla(210, 80%, 55%, 0.3);
+}
+
+.file-input-label:hover {
+    background-color: hsl(210, 80%, 50%); /* Darker accent on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px hsla(210, 80%, 55%, 0.4);
+}
+
+.file-input-label:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px hsla(210, 80%, 55%, 0.3);
+}
+
+.image-preview {
+    margin-top: 15px;
+    text-align: center;
+    max-width: 100%;
+}
+
+.image-preview img {
+    max-width: 100%;
+    height: auto;
+    max-height: 250px; /* Limit preview height */
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.image-preview .file-name {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-top: 10px;
+    word-break: break-all; /* Break long file names */
+}
+
+.convert-button {
+    padding: 15px 30px;
+    background-color: #28a745; /* Green for convert action */
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 6px 15px rgba(40, 167, 69, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.convert-button:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(40, 167, 69, 0.4);
+}
+
+.convert-button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
+}
+
+.convert-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+    opacity: 0.7;
+}
+
+.small-spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top-color: #fff;
+}
+
+
+.error-message {
+    color: var(--error-color); /* Error color from theme */
+    background-color: hsla(0, 80%, 60%, 0.1); /* Light red background */
+    border: 1px solid var(--error-color);
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 25px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.converted-text-section {
+    margin-top: 40px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 30px;
+}
+
+.converted-text-section h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.converted-text-output {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--primary-bg-dark); /* Darker primary background for text area */
+    color: var(--text-primary);
+    font-family: 'monospace', sans-serif; /* Monospace font for code/text output */
+    font-size: 0.95rem;
+    line-height: 1.5;
+    min-height: 150px;
+    resize: vertical; /* Allow vertical resizing */
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .upload-prescription-container {
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .page-title {
+        font-size: 1.8rem;
+    }
+
+    .page-description {
+        font-size: 0.9rem;
+    }
+
+    .file-input-label, .convert-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .converted-text-section h3 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .upload-prescription-container {
+        margin: 10px;
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    .page-title {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .page-description {
+        font-size: 0.85rem;
+        margin-bottom: 20px;
+    }
+
+    .upload-section {
+        padding: 15px;
+    }
+
+    .file-input-label, .convert-button {
+        padding: 8px 15px;
+        font-size: 0.85rem;
+        border-radius: 20px;
+    }   
+
+    .converted-text-output {
+        padding: 10px;
+        font-size: 0.85rem;
+        min-height: 100px;
+    }
+}

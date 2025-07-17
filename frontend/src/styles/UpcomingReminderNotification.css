@@ -1,0 +1,77 @@
+/* src/styles/UpcomingReminderNotification.css */
+
+.upcoming-reminder-notification {
+  position: fixed; /* Fixed position relative to viewport */
+  top: 20px;       /* From the top */
+  right: 20px;     /* From the right */
+  background-color: var(--card-bg); /* Use your card background color */
+  border: 1px solid var(--border-color);
+  border-radius: 12px; /* Nicely rounded corners */
+  padding: 15px 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Subtle shadow for depth */
+  z-index: 1000; /* Ensure it's above other content */
+  width: 280px; /* Fixed width for consistency */
+  max-width: 90vw; /* Responsive on smaller screens */
+  color: var(--text-primary);
+  opacity: 0.95; /* Slightly transparent */
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transform: translateY(0); /* Initial state */
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Spacing between elements */
+}
+
+/* Header with icon */
+.notification-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 5px; /* Space between header and content */
+}
+
+.notification-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--accent-color); /* Use accent color for icon */
+}
+
+.notification-header h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.notification-title {
+  font-weight: 500;
+  font-size: 1rem;
+  margin: 0;
+  color: var(--accent-color); /* Highlight title slightly */
+}
+
+.notification-message {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.notification-time {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin: 0;
+  text-align: right;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08); /* Separator line */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .upcoming-reminder-notification {
+    width: auto; /* Let content dictate width */
+    left: 20px; /* Position from left on small screens */
+    right: 20px; /* Position from right on small screens */
+    top: 15px;
+    padding: 12px 15px;
+  }
+}

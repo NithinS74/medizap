@@ -1,0 +1,383 @@
+/* src/styles/DashboardLayout.css */
+
+/* --- IMPORTS --- */
+@import './ThemeVariables.css'; /* Import central theme variables FIRST */
+
+
+/* Base Layout Container */
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh; /* Occupy full viewport height */
+  /* The overall body background gradient is defined in App.css, and will show through transparent areas */
+  color: var(--text-primary);
+  flex-direction: column; /* Main container is a column for header, main-area, footer */
+}
+
+/* Header Styles - Fixed at the top */
+.dashboard-header {
+  background-color: var(--secondary-bg); /* Solid background for header */
+  padding: 18px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 4px 12px var(--shadow-color);
+  z-index: 10; /* Ensure header is above other content */
+  flex-shrink: 0; /* Prevent header from shrinking */
+  height: var(--header-height); /* Consistent header height */
+  box-sizing: border-box; /* Include padding in height */
+
+  position: fixed; /* Make the header fixed */
+  top: 0; /* Pin it to the top */
+  width: 100%; /* Span the full width */
+  height: 90px;
+  left: 0; /* Align to the left edge */
+}
+
+.dashboard-header .sidebar-toggle {
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 2rem;
+  cursor: pointer;
+  margin-right: 15px;
+  display: none; /* Hidden on desktop, shown on mobile */
+  transition: transform 0.2s ease-in-out, color 0.2s ease;
+}
+
+.dashboard-header .sidebar-toggle:hover {
+  color: var(--accent-color);
+  transform: scale(1.1);
+}
+
+.dashboard-header .app-title {
+  margin: 0;
+  font-size: 2.8rem; /* Adjusted to fit better with other elements */
+  font-weight: 800;
+  color: var(--accent-color);
+  letter-spacing: -0.5px;
+}
+
+.dashboard-header .header-user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Adjusted gap to accommodate new button */
+  font-size: 1.5rem; /* Adjusted to fit better */
+  color: var(--text-secondary);
+}
+
+/* Logout Button Styling (NOW EXCLUSIVELY FOR SIDEBAR) */
+.logout-button.sidebar-logout-button { /* More specific selector */
+  background-color: var(--error-color); /* Always red */
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 8px hsla(0, 80%, 60%, 0.3);
+  white-space: nowrap; /* Prevent text wrapping */
+
+  /* Positioning for sidebar: push to bottom, center horizontally */
+  margin-top: auto; /* Pushes it to the bottom of the flex column */
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px; /* Space from bottom of sidebar */
+  width: calc(100% - 40px); /* Fill space with margins */
+  text-align: center;
+  flex-shrink: 0; /* Prevent button from shrinking */
+}
+
+.logout-button.sidebar-logout-button:hover {
+  background-color: hsl(0, 80%, 50%); /* Darker red on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px hsla(0, 80%, 60%, 0.4);
+}
+
+.logout-button.sidebar-logout-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px hsla(0, 80%, 60%, 0.3);
+}
+
+/* Emergency Button Styling (Blinking Red Hazard Sign) */
+.dashboard-header .emergency-button {
+  position: relative; /* For pseudo-elements */
+  background-color: var(--error-color); /* Red background for emergency */
+  color: white; /* White for the warning sign character */
+  border: 2px solid hsl(0, 80%, 40%); /* Darker red border */
+  border-radius: 50%; /* Make it round */
+  width: 60px; /* Slightly larger for prominence */
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem; /* Larger unicode warning sign */
+  font-weight: 900; /* Bolder character */
+  cursor: pointer;
+  box-shadow: 0 0 10px hsla(0, 80%, 60%, 0.5); /* Initial red glow */
+  transition: all 0.3s ease;
+  overflow: hidden; /* Hide overflowing pseudo-elements */
+  animation: blink 1.5s infinite alternate; /* Blinking effect for the button */
+}
+
+.dashboard-header .emergency-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px hsla(0, 80%, 60%, 0.7); /* More pronounced red glow */
+}
+
+.dashboard-header .emergency-button:active {
+  transform: scale(0.98);
+}
+
+/* Animation for the button's blinking effect */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; } /* Fades to 60% opacity */
+}
+
+/* Animation for radiating circles */
+@keyframes radiate {
+  0% {
+    transform: scale(0.5);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+.dashboard-header .emergency-button::before,
+.dashboard-header .emergency-button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: hsla(0, 80%, 70%, 0.6); /* Lighter red for circles */
+  z-index: -1; /* Behind the button content */
+  animation: radiate 2.5s infinite ease-out; /* Apply animation */
+}
+
+.dashboard-header .emergency-button::after {
+  animation-delay: 1.25s; /* Stagger the animation */
+}
+
+
+/* Main Area Container (holds sidebar and content) */
+.dashboard-main-area {
+  display: flex;
+  flex-grow: 1; /* Allows this area to fill available vertical space */
+  position: relative; /* Context for fixed sidebar */
+  margin-top: var(--header-height); /* Offset content below the fixed header */
+}
+
+/* Sidebar Styles - Fixed on the left */
+.dashboard-sidebar {
+  width: var(--sidebar-expanded-width); /* Consistent width from ThemeVariables */
+  background-color: var(--secondary-bg); /* Solid background for sidebar */
+  position: fixed; /* Make the sidebar fixed */
+  top: var(--header-height); /* Pin to the top, right below the fixed header */
+  left: 0;
+  height: calc(100vh - var(--header-height)); /* Calculate height to fill remaining viewport */
+  transform: translateX(0); /* Default position (visible) */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  box-shadow: 4px 0 15px var(--shadow-color);
+  z-index: 5; /* Below header, above main content */
+  display: flex;
+  flex-direction: column; /* This is crucial for positioning elements at the bottom */
+  align-items: flex-start;
+  padding-top: 25px; /* Padding for content within sidebar */
+  border-right: 1px solid var(--border-color);
+  flex-shrink: 0; /* Prevent sidebar from shrinking */
+}
+
+.dashboard-sidebar .sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 0;
+  flex-grow: 1; /* Allows navigation links to fill space and push subsequent elements to bottom */
+}
+
+.dashboard-sidebar .sidebar-nav a {
+  padding: 15px 30px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.05rem;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dashboard-sidebar .sidebar-nav a:hover {
+  background-color: var(--tertiary-bg);
+  color: var(--text-primary);
+  transform: translateX(5px);
+}
+
+.dashboard-sidebar .sidebar-nav a.active {
+  background-color: var(--accent-color);
+  color: white;
+  border-left: 6px solid var(--accent-active);
+  padding-left: 24px;
+  font-weight: 700;
+  box-shadow: inset 3px 0 8px hsla(210, 80%, 55%, 0.3);
+}
+
+/* Theme Toggle Button in Sidebar */
+.dashboard-sidebar .sidebar-theme-toggle {
+  background-color: var(--tertiary-bg);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+  padding: 12px 20px;
+  margin: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
+  width: calc(100% - 40px); /* Full width minus combined horizontal margins */
+  flex-shrink: 0;
+}
+
+.dashboard-sidebar .sidebar-theme-toggle:hover {
+  background-color: var(--accent-color);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px hsla(210, 80%, 55%, 0.3);
+}
+
+.dashboard-sidebar .sidebar-theme-toggle:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px hsla(210, 80%, 55%, 0.3);
+}
+
+
+/* Main Content Area */
+.dashboard-content {
+  flex-grow: 1; /* Allows content to fill remaining horizontal space */
+  padding: 30px; /* Inner padding for content */
+  background-color: var(--primary-bg); /* Use primary-bg for content area */
+  border-radius: 12px; /* Consistent rounded corners */
+  box-shadow: 0 8px 25px var(--shadow-color); /* Consistent shadow */
+
+  /* Offset for the fixed sidebar */
+  margin-left: var(--sidebar-expanded-width); /* Pushes content right, away from fixed sidebar */
+  margin-top: 0; /* Already accounted for by .dashboard-main-area's margin-top */
+  margin-right: 0; /* Remove specific right margin */
+  margin-bottom: 0; /* Remove specific bottom margin */
+
+  /* Ensure it takes at least the remaining viewport height, allowing for scrolling */
+  min-height: calc(100vh - var(--header-height));
+  overflow-y: auto; /* Allow content to scroll if it overflows */
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .dashboard-header .sidebar-toggle {
+    display: block; /* Show toggle button on mobile */
+  }
+
+  .dashboard-sidebar {
+    position: fixed; /* Fixed position for mobile slide-out */
+    height: 100vh; /* Full viewport height on mobile */
+    top: 0; /* Align to top of viewport */
+    transform: translateX(-100%); /* Hide sidebar by default */
+    box-shadow: 4px 0 15px var(--shadow-color);
+    padding-top: var(--header-height); /* Push sidebar content down from header */
+    z-index: 100; /* Ensure sidebar is above the overlay when open */
+  }
+
+  .dashboard-sidebar.open {
+    transform: translateX(0); /* Show sidebar when open */
+  }
+
+  /* Overlay that appears when mobile sidebar is open */
+  .dashboard-layout.sidebar-open .dashboard-main-area::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--overlay-color); /* Semi-transparent overlay */
+    z-index: 4; /* Below sidebar, above content */
+  }
+
+  .dashboard-content {
+    margin-left: 0; /* No left margin on mobile, sidebar is off-canvas */
+    margin: 0; /* Remove any lingering margins on mobile */
+    border-radius: 0; /* No border-radius on content for full width mobile */
+    background-color: var(--primary-bg); /* On mobile, content area might be a solid block */
+    flex-grow: 1;
+    padding-top: calc(var(--header-height) + 20px); /* Adjust padding for fixed header */
+    min-height: calc(100vh - var(--header-height));
+  }
+
+  body.sidebar-open {
+      overflow: hidden; /* Prevent body scroll when sidebar is open */
+  }
+
+  /* Adjust header user info for smaller screens */
+  .dashboard-header .header-user-info {
+    gap: 10px; /* Reduce gap on smaller screens */
+    font-size: 0.9rem; /* Slightly smaller font */
+  }
+  .dashboard-header .emergency-button {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    width: 40px; /* Adjust size for mobile */
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-header {
+    padding: 12px 15px;
+  }
+  .dashboard-header .app-title {
+    font-size: 1.5rem;
+  }
+  .dashboard-header .header-user-info {
+    gap: 8px; /* Further reduce gap */
+    font-size: 0.8rem;
+  }
+  /* Ensure sidebar logout button responsive adjustments */
+  .logout-button.sidebar-logout-button {
+    padding: 8px 15px;
+    font-size: 0.85rem;
+    margin: 15px auto; /* Adjust margin for smaller screens */
+    width: calc(100% - 30px);
+  }
+  .dashboard-sidebar {
+    width: 250px;
+  }
+  .dashboard-sidebar .sidebar-nav a {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+  }
+  .dashboard-sidebar .sidebar-nav a.active {
+    padding-left: 14px;
+  }
+  .dashboard-content {
+    padding: 15px;
+  }
+  /* Adjust theme toggle button for smaller screens */
+  .dashboard-sidebar .sidebar-theme-toggle {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    margin: 15px;
+    width: calc(100% - 30px);
+  }
+}

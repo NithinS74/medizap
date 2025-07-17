@@ -1,0 +1,18 @@
+/* src/styles/LoadingSpinner.css */
+
+.loading-spinner {
+  border: 4px solid #f3f3f3; /* Light grey border */
+  border-top: 4px solid #3498db; /* Blue top border to create the spin effect */
+  border-radius: 50%; /* Makes it circular */
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite; /* Animation to rotate it */
+  display: inline-block; /* Allows it to sit nicely with text */
+  vertical-align: middle; /* Aligns it vertically with surrounding content */
+  margin-left: 5px; /* Adds a little space to its left */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

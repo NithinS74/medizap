@@ -1,0 +1,2015 @@
+[
+  {
+    "disease": "Rheumatoid Arthritis",
+    "description": "Autoimmune disorder causing inflammation of joints and surrounding tissues",
+    "symptoms": [
+      "joint pain",
+      "swelling",
+      "stiffness (especially in the morning)",
+      "fatigue",
+      "weakness",
+      "fever",
+      "loss of appetite",
+      "rheumatoid nodules (lumps under the skin)"
+    ],
+    "medicines": [
+      "Nonsteroidal anti-inflammatory drugs (NSAIDs)",
+      "Disease-modifying antirheumatic drugs (DMARDs)",
+      "Biologic response modifiers (e.g.",
+      "TNF inhibitors)"
+    ]
+  },
+  {
+    "disease": "Systemic Lupus Erythematosus (SLE)",
+    "description": "Chronic autoimmune disease affecting various organs and tissues",
+    "symptoms": [
+      "joint pain and swelling",
+      "butterfly-shaped rash on face (malar rash)",
+      "fatigue",
+      "fever",
+      "chest pain",
+      "sensitivity to sunlight",
+      "mouth or nose sores",
+      "raynaud's phenomenon"
+    ],
+    "medicines": [
+      "Nonsteroidal anti-inflammatory drugs (NSAIDs)",
+      "Corticosteroids",
+      "Antimalarial drugs",
+      "Immunosuppressants",
+      "Biologic therapies"
+    ]
+  },
+  {
+    "disease": "Multiple Sclerosis",
+    "description": "Autoimmune disease affecting the central nervous system",
+    "symptoms": [
+      "fatigue",
+      "numbness or weakness in limbs",
+      "blurred or double vision",
+      "tingling or pain in parts of the body",
+      "impaired coordination or balance",
+      "cognitive changes"
+    ],
+    "medicines": [
+      "Corticosteroids (for acute exacerbations)",
+      "Disease-modifying therapies (Interferons",
+      "Glatiramer acetate)"
+    ]
+  },
+  {
+    "disease": "Type 1 Diabetes",
+    "description": "Autoimmune condition causing destruction of insulin-producing cells in pancreas",
+    "symptoms": [
+      "increased thirst",
+      "frequent urination",
+      "extreme hunger",
+      "unintended weight loss",
+      "fatigue",
+      "irritability",
+      "blurred vision"
+    ],
+    "medicines": [
+      "Insulin therapy (multiple types)",
+      "Blood sugar monitoring",
+      "Oral medications (in some cases)"
+    ]
+  },
+  {
+    "disease": "Hashimoto's Thyroiditis",
+    "description": "Autoimmune disorder leading to inflammation and underactivity of the thyroid gland",
+    "symptoms": [
+      "fatigue",
+      "weight gain",
+      "cold intolerance",
+      "dry skin and hair",
+      "constipation",
+      "muscle weakness",
+      "joint pain",
+      "heavy or irregular periods (in women)"
+    ],
+    "medicines": [
+      "Thyroid hormone replacement therapy (Levothyroxine)",
+      "Anti-inflammatory medications (for symptom relief)"
+    ]
+  },
+  {
+    "disease": "Graves' Disease",
+    "description": "Autoimmune disorder causing overactivity of the thyroid gland",
+    "symptoms": [
+      "hyperthyroidism symptoms: weight loss",
+      "rapid heartbeat",
+      "nervousness or irritability",
+      "tremors",
+      "sweating",
+      "fatigue",
+      "heat intolerance",
+      "bulging eyes (exophthalmos)"
+    ],
+    "medicines": [
+      "Antithyroid medications (Methimazole",
+      "Propylthiouracil)",
+      "Beta-blockers (for symptom relief)"
+    ]
+  },
+  {
+    "disease": "Crohn's Disease",
+    "description": "Chronic inflammatory bowel disease affecting the gastrointestinal tract",
+    "symptoms": [
+      "diarrhea",
+      "abdominal pain and cramping",
+      "rectal bleeding",
+      "weight loss",
+      "fatigue",
+      "reduced appetite",
+      "fever",
+      "perianal complications (fistulas",
+      "abscesses)"
+    ],
+    "medicines": [
+      "Aminosalicylates",
+      "Corticosteroids",
+      "Immunomodulators",
+      "Biologic therapies"
+    ]
+  },
+  {
+    "disease": "Ulcerative Colitis",
+    "description": "Chronic inflammatory bowel disease affecting the colon and rectum",
+    "symptoms": [
+      "diarrhea (often bloody)",
+      "abdominal pain and cramping",
+      "rectal bleeding",
+      "urgency to defecate",
+      "inability to defecate despite urgency",
+      "fatigue",
+      "weight loss"
+    ],
+    "medicines": [
+      "Aminosalicylates",
+      "Corticosteroids",
+      "Immunomodulators",
+      "Biologic therapies"
+    ]
+  },
+  {
+    "disease": "Psoriasis",
+    "description": "Chronic autoimmune condition affecting the skin",
+    "symptoms": [
+      "red patches of skin covered with silvery scales",
+      "itching or burning",
+      "thickened or ridged nails",
+      "swollen or stiff joints (psoriatic arthritis)",
+      "plaques on scalp"
+    ],
+    "medicines": [
+      "Topical corticosteroids",
+      "Vitamin D analogs",
+      "Retinoids",
+      "Biologic therapies"
+    ]
+  },
+  {
+    "disease": "Celiac Disease",
+    "description": "Autoimmune disorder triggered by gluten ingestion, causing damage to the small intestine",
+    "symptoms": [
+      "abdominal pain",
+      "diarrhea",
+      "bloating",
+      "gas",
+      "fatigue",
+      "weight loss",
+      "anemia",
+      "osteoporosis",
+      "dermatitis herpetiformis (skin rash)"
+    ],
+    "medicines": [
+      "Gluten-free diet (strict avoidance of gluten-containing foods)",
+      "Nutritional supplements"
+    ]
+  },
+  {
+    "disease": "Breast Cancer",
+    "description": "Lump in breast or armpit, Change in breast size or shape, Nipple changes (inversion, discharge), Skin changes (redness, dimpling), Breast pain, Swollen lymph nodes",
+    "symptoms": [
+      "chemotherapy",
+      "hormonal therapy (tamoxifen",
+      "aromatase inhibitors)",
+      "targeted therapy (herceptin)",
+      "radiation therapy"
+    ],
+    "medicines": [
+      "nan"
+    ]
+  },
+  {
+    "disease": "Lung Cancer",
+    "description": "Persistent cough, Chest pain, Hoarseness, Shortness of breath, Coughing up blood, Fatigue, Unintended weight loss, Recurrent respiratory infections",
+    "symptoms": [
+      "chemotherapy",
+      "immunotherapy (checkpoint inhibitors)",
+      "targeted therapy (egfr inhibitors)",
+      "radiation therapy",
+      "surgery"
+    ],
+    "medicines": [
+      "nan"
+    ]
+  },
+  {
+    "disease": "Prostate Cancer",
+    "description": "Urinary problems (frequent urination, weak urine stream), Blood in urine or semen, Erectile dysfunction, Pain or stiffness in pelvis, Bone pain",
+    "symptoms": [
+      "active surveillance (for low-risk cases)",
+      "surgery (prostatectomy)",
+      "radiation therapy",
+      "hormonal therapy (androgen deprivation therapy)"
+    ],
+    "medicines": [
+      "nan"
+    ]
+  },
+  {
+    "disease": "Colorectal Cancer",
+    "description": "Change in bowel habits (diarrhea or constipation), Blood in stool, Abdominal discomfort or pain, Fatigue, Unintended weight loss, Anemia",
+    "symptoms": [
+      "surgery (colectomy",
+      "proctectomy)",
+      "chemotherapy",
+      "targeted therapy (egfr inhibitors)",
+      "immunotherapy (checkpoint inhibitors)",
+      "radiation therapy"
+    ],
+    "medicines": [
+      "nan"
+    ]
+  },
+  {
+    "disease": "Skin Cancer (Melanoma)",
+    "description": "Change in size, shape, or color of a mole, New mole or growth on skin, Itching or pain in a mole, Sores that don't heal, Spread of pigment from border of a mole",
+    "symptoms": [
+      "surgery (wide local excision)",
+      "immunotherapy (checkpoint inhibitors)",
+      "targeted therapy (braf inhibitors)",
+      "radiation therapy"
+    ],
+    "medicines": [
+      "nan"
+    ]
+  },
+  {
+    "disease": "Leukemia",
+    "description": "Fatigue, Weakness, Pale skin, Frequent infections, Fever, Easy bleeding or bruising, Enlarged lymph nodes or spleen, Bone pain",
+    "symptoms": [
+      "chemotherapy",
+      "targeted therapy (tyrosine kinase inhibitors)",
+      "immunotherapy (monoclonal antibodies)",
+      "stem cell transplant"
+    ],
+    "medicines": [
+      "nan"
+    ]
+  },
+  {
+    "disease": "Lymphoma",
+    "description": "Swollen lymph nodes (usually painless), Fatigue, Fever, Night sweats, Unintended weight loss, Itchy skin, Respiratory symptoms",
+    "symptoms": [
+      "chemotherapy",
+      "immunotherapy (checkpoint inhibitors)",
+      "targeted therapy (monoclonal antibodies)",
+      "radiation therapy"
+    ],
+    "medicines": [
+      "nan"
+    ]
+  },
+  {
+    "disease": "Ovarian Cancer",
+    "description": "Abdominal bloating or swelling, Pelvic pain or pressure, Difficulty eating or feeling full quickly, Urinary urgency or frequency, Fatigue, Back pain",
+    "symptoms": [
+      "surgery (hysterectomy)",
+      "chemotherapy",
+      "targeted therapy (parp inhibitors)",
+      "immunotherapy (checkpoint inhibitors)"
+    ],
+    "medicines": [
+      "nan"
+    ]
+  },
+  {
+    "disease": "Pancreatic Cancer",
+    "description": "Abdominal pain or discomfort, Jaundice (yellowing of skin and eyes), Unintended weight loss, Loss of appetite, Nausea, Fatigue, New-onset diabetes",
+    "symptoms": [
+      "surgery (pancreatectomy)",
+      "chemotherapy",
+      "targeted therapy (egfr inhibitors)",
+      "immunotherapy (checkpoint inhibitors)",
+      "radiation therapy"
+    ],
+    "medicines": [
+      "nan"
+    ]
+  },
+  {
+    "disease": "Brain Cancer (Glioblastoma)",
+    "description": "Headaches, Seizures, Nausea and vomiting, Cognitive changes (memory loss, difficulty concentrating), Weakness or paralysis, Vision or speech problems",
+    "symptoms": [
+      "surgery (tumor resection)",
+      "chemotherapy",
+      "radiation therapy",
+      "tumor-treating fields therapy (optune)"
+    ],
+    "medicines": [
+      "nan"
+    ]
+  },
+  {
+    "disease": "Bladder Cancer",
+    "description": "Blood in urine, Painful or frequent urination, Back or pelvic pain, Urinary urgency, Unintended weight loss, Fatigue, Bone pain",
+    "symptoms": [
+      "surgery (transurethral resection",
+      "cystectomy)",
+      "immunotherapy (checkpoint inhibitors)",
+      "chemotherapy",
+      "radiation therapy"
+    ],
+    "medicines": [
+      "nan"
+    ]
+  },
+  {
+    "disease": "Liver Cancer",
+    "description": "Jaundice, Abdominal pain or swelling, Unintended weight loss, Loss of appetite, Fatigue, Weakness, Nausea and vomiting, White chalky stools",
+    "symptoms": [
+      "surgery (hepatectomy)",
+      "liver transplant",
+      "ablation therapy",
+      "embolization",
+      "chemotherapy",
+      "targeted therapy (sorafenib)"
+    ],
+    "medicines": [
+      "nan"
+    ]
+  },
+  {
+    "disease": "Esophageal Cancer",
+    "description": "Difficulty swallowing (dysphagia), Pain or discomfort in chest or throat, Unintended weight loss, Chronic cough, Hoarseness, Heartburn",
+    "symptoms": [
+      "surgery (esophagectomy)",
+      "chemotherapy",
+      "radiation therapy",
+      "immunotherapy (checkpoint inhibitors)",
+      "targeted therapy (egfr inhibitors)"
+    ],
+    "medicines": [
+      "nan"
+    ]
+  },
+  {
+    "disease": "Coronary Artery Disease (CAD)",
+    "description": "Narrowing or blockage of coronary arteries, leading to reduced blood flow to the heart muscle",
+    "symptoms": [
+      "chest pain (angina)",
+      "shortness of breath",
+      "fatigue",
+      "weakness",
+      "dizziness",
+      "nausea"
+    ],
+    "medicines": [
+      "Aspirin",
+      "Statins",
+      "Beta-blockers",
+      "ACE inhibitors",
+      "Calcium channel blockers"
+    ]
+  },
+  {
+    "disease": "Myocardial Infarction (Heart Attack)",
+    "description": "Death of heart muscle tissue due to blocked blood flow to the heart",
+    "symptoms": [
+      "chest pain or discomfort (often radiating to arm",
+      "jaw",
+      "back",
+      "or neck)",
+      "shortness of breath",
+      "nausea",
+      "vomiting",
+      "sweating"
+    ],
+    "medicines": [
+      "Aspirin",
+      "Thrombolytics",
+      "Beta-blockers",
+      "ACE inhibitors",
+      "Statins"
+    ]
+  },
+  {
+    "disease": "Heart Failure",
+    "description": "Inability of the heart to pump blood effectively",
+    "symptoms": [
+      "shortness of breath (especially during physical exertion or when lying flat)",
+      "fatigue",
+      "swelling (edema) in legs",
+      "ankles",
+      "or abdomen",
+      "rapid or irregular heartbeat"
+    ],
+    "medicines": [
+      "Diuretics",
+      "ACE inhibitors",
+      "Beta-blockers",
+      "Aldosterone antagonists",
+      "Angiotensin receptor blockers"
+    ]
+  },
+  {
+    "disease": "Hypertension (High Blood Pressure)",
+    "description": "Persistent elevation of blood pressure above normal levels",
+    "symptoms": [
+      "headaches",
+      "shortness of breath",
+      "nosebleeds",
+      "flushing",
+      "dizziness",
+      "chest pain (in severe cases)"
+    ],
+    "medicines": [
+      "Diuretics",
+      "ACE inhibitors",
+      "Angiotensin II receptor blockers",
+      "Calcium channel blockers",
+      "Beta-blockers"
+    ]
+  },
+  {
+    "disease": "Arrhythmia",
+    "description": "Irregular heart rhythm or heartbeat",
+    "symptoms": [
+      "palpitations (fluttering or pounding sensation in chest)",
+      "chest discomfort",
+      "shortness of breath",
+      "dizziness",
+      "fainting (syncope)"
+    ],
+    "medicines": [
+      "Antiarrhythmic medications",
+      "Beta-blockers",
+      "Calcium channel blockers",
+      "Anticoagulants"
+    ]
+  },
+  {
+    "disease": "Peripheral Artery Disease (PAD)",
+    "description": "Narrowing or blockage of arteries supplying blood to extremities",
+    "symptoms": [
+      "painful cramping in hip",
+      "thigh",
+      "or calf muscles after physical activity (claudication)",
+      "numbness or weakness in affected limb",
+      "coldness in lower leg or foot"
+    ],
+    "medicines": [
+      "Antiplatelet agents (e.g.",
+      "Aspirin)",
+      "Statins",
+      "Medications to control blood pressure"
+    ]
+  },
+  {
+    "disease": "Atherosclerosis",
+    "description": "Buildup of plaque (fatty deposits) in arteries",
+    "symptoms": [
+      "chest pain (angina)",
+      "shortness of breath",
+      "weakness",
+      "fatigue",
+      "numbness or weakness in limbs",
+      "confusion",
+      "vision problems"
+    ],
+    "medicines": [
+      "Statins",
+      "Antiplatelet agents (e.g.",
+      "Aspirin)",
+      "Beta-blockers",
+      "ACE inhibitors",
+      "Calcium channel blockers"
+    ]
+  },
+  {
+    "disease": "Cardiomyopathy",
+    "description": "Disease of the heart muscle, leading to weakened heart function",
+    "symptoms": [
+      "shortness of breath",
+      "fatigue",
+      "swelling in legs",
+      "ankles",
+      "or abdomen",
+      "irregular heartbeats",
+      "dizziness or lightheadedness",
+      "chest pain or pressure"
+    ],
+    "medicines": [
+      "ACE inhibitors",
+      "Beta-blockers",
+      "Diuretics",
+      "Anticoagulants",
+      "Antiarrhythmic medications"
+    ]
+  },
+  {
+    "disease": "Atrial Fibrillation",
+    "description": "Irregular and often rapid heartbeat originating in the atria",
+    "symptoms": [
+      "irregular heartbeats (palpitations)",
+      "rapid heartbeat (tachycardia)",
+      "weakness",
+      "fatigue",
+      "shortness of breath",
+      "chest pain or discomfort"
+    ],
+    "medicines": [
+      "Anticoagulants",
+      "Rate control medications (Beta-blockers",
+      "Calcium channel blockers)",
+      "Rhythm control medications (Amiodarone",
+      "Flecainide)"
+    ]
+  },
+  {
+    "disease": "Valvular Heart Disease",
+    "description": "Dysfunction or damage to heart valves, affecting blood flow",
+    "symptoms": [
+      "shortness of breath",
+      "fatigue",
+      "irregular heartbeat",
+      "swelling in legs or abdomen",
+      "chest pain or pressure",
+      "dizziness or fainting episodes"
+    ],
+    "medicines": [
+      "Diuretics",
+      "ACE inhibitors",
+      "Beta-blockers",
+      "Anticoagulants",
+      "Heart valve repair or replacement surgery"
+    ]
+  },
+  {
+    "disease": "Endocarditis",
+    "description": "Inflammation of the inner lining of the heart chambers and valves",
+    "symptoms": [
+      "fever",
+      "chills",
+      "fatigue",
+      "weakness",
+      "shortness of breath",
+      "chest pain",
+      "palpitations",
+      "small red or purple spots on skin (petechiae)"
+    ],
+    "medicines": [
+      "Antibiotics",
+      "Anticoagulants",
+      "Surgery (in severe cases)"
+    ]
+  },
+  {
+    "disease": "Pericarditis",
+    "description": "Inflammation of the pericardium (the sac surrounding the heart)",
+    "symptoms": [
+      "chest pain (sharp",
+      "stabbing",
+      "or dull)",
+      "shortness of breath",
+      "cough",
+      "fever",
+      "fatigue",
+      "swelling in abdomen or legs",
+      "irregular heartbeat"
+    ],
+    "medicines": [
+      "Nonsteroidal anti-inflammatory drugs (NSAIDs)",
+      "Colchicine",
+      "Corticosteroids"
+    ]
+  },
+  {
+    "disease": "Congenital Heart Disease",
+    "description": "Structural heart defects present at birth",
+    "symptoms": [
+      "cyanosis (bluish tint to skin",
+      "lips",
+      "or nails)",
+      "shortness of breath",
+      "poor feeding or growth (in infants)",
+      "fatigue",
+      "swelling in extremities"
+    ],
+    "medicines": [
+      "Surgical repair",
+      "Medications to control symptoms (e.g.",
+      "Diuretics",
+      "ACE inhibitors)"
+    ]
+  },
+  {
+    "disease": "Rheumatic Heart Disease",
+    "description": "Heart damage caused by rheumatic fever, resulting from untreated strep throat",
+    "symptoms": [
+      "fatigue",
+      "chest pain",
+      "shortness of breath",
+      "palpitations",
+      "swollen or tender joints",
+      "fever",
+      "skin rash"
+    ],
+    "medicines": [
+      "Antibiotics (to treat strep throat)",
+      "Anti-inflammatory medications",
+      "Surgery (in severe cases)"
+    ]
+  },
+  {
+    "disease": "Dengue Fever",
+    "description": "A mosquito-borne viral infection causing flu-like symptoms.",
+    "symptoms": [
+      "high fever",
+      "severe headache",
+      "pain behind the eyes",
+      "joint and muscle pain",
+      "rash"
+    ],
+    "medicines": [
+      "Paracetamol",
+      "IV fluids"
+    ]
+  },
+  {
+    "disease": "Tuberculosis (TB)",
+    "description": "A bacterial infection affecting the lungs, causing coughing and fatigue.",
+    "symptoms": [
+      "persistent cough",
+      "chest pain",
+      "coughing up blood",
+      "fatigue",
+      "weight loss"
+    ],
+    "medicines": [
+      "Rifampin",
+      "Isoniazid",
+      "Pyrazinamide",
+      "Ethambutol"
+    ]
+  },
+  {
+    "disease": "Cholera",
+    "description": "A bacterial infection causing severe diarrhea and dehydration.",
+    "symptoms": [
+      "severe diarrhea",
+      "vomiting",
+      "dehydration",
+      "muscle cramps"
+    ],
+    "medicines": [
+      "Doxycycline",
+      "Azithromycin",
+      "Ciprofloxacin"
+    ]
+  },
+  {
+    "disease": "Malaria",
+    "description": "A mosquito-borne parasitic disease causing fever and flu-like symptoms.",
+    "symptoms": [
+      "fever",
+      "chills",
+      "sweating",
+      "headache",
+      "nausea",
+      "vomiting"
+    ],
+    "medicines": [
+      "Chloroquine",
+      "Artemisinin-based combination therapy (ACT)",
+      "Mefloquine"
+    ]
+  },
+  {
+    "disease": "Typhoid Fever",
+    "description": "A bacterial infection causing high fever, stomach pain, and weakness.",
+    "symptoms": [
+      "high fever",
+      "stomach pain",
+      "weakness",
+      "headache",
+      "rash"
+    ],
+    "medicines": [
+      "Ciprofloxacin",
+      "Azithromycin",
+      "Ceftriaxone"
+    ]
+  },
+  {
+    "disease": "Hepatitis B",
+    "description": "A viral infection affecting the liver, transmitted through bodily fluids.",
+    "symptoms": [
+      "jaundice (yellowing of the skin and eyes)",
+      "fatigue",
+      "abdominal pain",
+      "nausea",
+      "joint pain"
+    ],
+    "medicines": [
+      "Tenofovir",
+      "Entecavir",
+      "Interferon"
+    ]
+  },
+  {
+    "disease": "Leptospirosis",
+    "description": "A bacterial infection transmitted through contaminated water or soil.",
+    "symptoms": [
+      "high fever",
+      "headache",
+      "muscle aches",
+      "vomiting",
+      "jaundice"
+    ],
+    "medicines": [
+      "Doxycycline",
+      "Penicillin",
+      "Ceftriaxone"
+    ]
+  },
+  {
+    "disease": "Rabies",
+    "description": "A viral infection transmitted through animal bites, affecting the nervous system.",
+    "symptoms": [
+      "fever",
+      "headache",
+      "nausea",
+      "confusion",
+      "hallucinations",
+      "paralysis"
+    ],
+    "medicines": [
+      "Rabies vaccine",
+      "Rabies immune globulin (RIG)"
+    ]
+  },
+  {
+    "disease": "Influenza",
+    "description": "A viral infection causing respiratory symptoms such as fever and cough.",
+    "symptoms": [
+      "fever",
+      "cough",
+      "sore throat",
+      "runny or stuffy nose",
+      "body aches"
+    ],
+    "medicines": [
+      "Oseltamivir (Tamiflu)",
+      "Zanamivir (Relenza)"
+    ]
+  },
+  {
+    "disease": "HIV/AIDS",
+    "description": "A viral infection compromising the immune system, transmitted through bodily fluids.",
+    "symptoms": [
+      "fever",
+      "fatigue",
+      "swollen lymph nodes",
+      "sore throat",
+      "rash",
+      "weight loss",
+      "night sweats"
+    ],
+    "medicines": [
+      "Antiretroviral therapy (ART)"
+    ]
+  },
+  {
+    "disease": "Measles",
+    "description": "A highly contagious viral infection causing fever and rash.",
+    "symptoms": [
+      "fever",
+      "cough",
+      "runny nose",
+      "sore throat",
+      "inflamed eyes",
+      "rash"
+    ],
+    "medicines": [
+      "Vitamin A supplementation"
+    ]
+  },
+  {
+    "disease": "Pneumonia",
+    "description": "An infection of the lungs, commonly caused by bacteria or viruses.",
+    "symptoms": [
+      "cough with phlegm",
+      "fever",
+      "chills",
+      "shortness of breath",
+      "chest pain",
+      "fatigue"
+    ],
+    "medicines": [
+      "Amoxicillin",
+      "Azithromycin",
+      "Ceftriaxone"
+    ]
+  },
+  {
+    "disease": "Chikungunya",
+    "description": "A viral infection transmitted by mosquitoes, causing joint pain and fever.",
+    "symptoms": [
+      "fever",
+      "joint pain",
+      "headache",
+      "muscle pain",
+      "rash"
+    ],
+    "medicines": [
+      "Paracetamol",
+      "Fluids for hydration"
+    ]
+  },
+  {
+    "disease": "Anthrax",
+    "description": "A bacterial infection that can affect the skin, lungs, or gastrointestinal tract.",
+    "symptoms": [
+      "fever",
+      "chills",
+      "cough",
+      "chest discomfort",
+      "nausea",
+      "vomiting",
+      "abdominal pain"
+    ],
+    "medicines": [
+      "Ciprofloxacin",
+      "Doxycycline"
+    ]
+  },
+  {
+    "disease": "Zika Virus",
+    "description": "A viral infection transmitted by mosquitoes, linked to birth defects.",
+    "symptoms": [
+      "fever",
+      "rash",
+      "joint pain",
+      "conjunctivitis (red eyes)",
+      "muscle pain"
+    ],
+    "medicines": [
+      "Supportive care"
+    ]
+  },
+  {
+    "disease": "Rotavirus Infection",
+    "description": "A viral infection causing severe diarrhea, primarily affecting children.",
+    "symptoms": [
+      "severe diarrhea",
+      "vomiting",
+      "fever",
+      "abdominal pain"
+    ],
+    "medicines": [
+      "Oral rehydration solution (ORS)",
+      "Rotavirus vaccine"
+    ]
+  },
+  {
+    "disease": "Norovirus",
+    "description": "A viral infection leading to gastroenteritis, characterized by vomiting and diarrhea.",
+    "symptoms": [
+      "nausea",
+      "vomiting",
+      "diarrhea",
+      "stomach pain",
+      "fever",
+      "headache"
+    ],
+    "medicines": [
+      "Supportive care",
+      "Fluids for hydration"
+    ]
+  },
+  {
+    "disease": "Hand, Foot, and Mouth Disease",
+    "description": "A viral infection common in children, causing fever and sores on the hands, feet, and mouth.",
+    "symptoms": [
+      "fever",
+      "sore throat",
+      "rash on hands",
+      "feet",
+      "and mouth",
+      "loss of appetite"
+    ],
+    "medicines": [
+      "Supportive care",
+      "Pain relievers"
+    ]
+  },
+  {
+    "disease": "Tetanus",
+    "description": "A bacterial infection leading to muscle stiffness and spasms.",
+    "symptoms": [
+      "stiffness in jaw muscles (lockjaw)",
+      "stiffness in neck muscles",
+      "difficulty swallowing",
+      "muscle stiffness and spasms"
+    ],
+    "medicines": [
+      "Tetanus vaccine",
+      "Tetanus immune globulin (TIG)"
+    ]
+  },
+  {
+    "disease": "Pertussis (Whooping Cough)",
+    "description": "A bacterial infection causing severe coughing fits.",
+    "symptoms": [
+      "severe coughing fits",
+      "whooping sound when coughing",
+      "vomiting after coughing"
+    ],
+    "medicines": [
+      "Azithromycin",
+      "Clarithromycin"
+    ]
+  },
+  {
+    "disease": "Conjunctivitis (Pink Eye)",
+    "description": "An inflammation of the eye, commonly caused by viruses or bacteria.",
+    "symptoms": [
+      "redness in the white of the eye or inner eyelid",
+      "increased tearing",
+      "itching",
+      "burning sensation in the eyes"
+    ],
+    "medicines": [
+      "Antibiotic eye drops or ointments",
+      "Antihistamine eye drops"
+    ]
+  },
+  {
+    "disease": "Scabies",
+    "description": "A parasitic infection causing intense itching and skin rash.",
+    "symptoms": [
+      "intense itching",
+      "rash (often between fingers",
+      "wrists",
+      "elbows",
+      "or knees)",
+      "sores or crusts from scratching"
+    ],
+    "medicines": [
+      "Permethrin cream",
+      "Antihistamines"
+    ]
+  },
+  {
+    "disease": "Lyme Disease",
+    "description": "A bacterial infection transmitted by ticks, causing rash and flu-like symptoms.",
+    "symptoms": [
+      "rash (bull's-eye pattern)",
+      "fever",
+      "chills",
+      "fatigue",
+      "muscle and joint aches"
+    ],
+    "medicines": [
+      "Doxycycline",
+      "Amoxicillin"
+    ]
+  },
+  {
+    "disease": "Brucellosis",
+    "description": "A bacterial infection transmitted from animals to humans, causing fever and joint pain.",
+    "symptoms": [
+      "fever",
+      "sweats",
+      "fatigue",
+      "joint and muscle pain",
+      "headache",
+      "loss of appetite",
+      "swelling of the liver or spleen"
+    ],
+    "medicines": [
+      "Doxycycline",
+      "Rifampicin",
+      "Gentamicin"
+    ]
+  },
+  {
+    "disease": "Trachoma",
+    "description": "A bacterial infection of the eye, leading to blindness if left untreated.",
+    "symptoms": [
+      "eye discharge",
+      "itchiness",
+      "irritation",
+      "blurred vision",
+      "sensitivity to light"
+    ],
+    "medicines": [
+      "Azithromycin",
+      "Tetracycline"
+    ]
+  },
+  {
+    "disease": "E. coli Infection",
+    "description": "A bacterial infection causing diarrhea and abdominal pain.",
+    "symptoms": [
+      "diarrhea (often bloody)",
+      "stomach cramps",
+      "nausea",
+      "vomiting",
+      "fever"
+    ],
+    "medicines": [
+      "Supportive care",
+      "Fluids for hydration"
+    ]
+  },
+  {
+    "disease": "Giardiasis",
+    "description": "A parasitic infection affecting the digestive system, causing diarrhea.",
+    "symptoms": [
+      "diarrhea",
+      "greasy stools",
+      "stomach cramps",
+      "bloating",
+      "nausea",
+      "dehydration"
+    ],
+    "medicines": [
+      "Metronidazole",
+      "Tinidazole"
+    ]
+  },
+  {
+    "disease": "Leprosy",
+    "description": "A chronic bacterial infection causing skin lesions and nerve damage.",
+    "symptoms": [
+      "skin lesions (discolored patches or nodules)",
+      "numbness or loss of sensation in affected areas",
+      "muscle weakness"
+    ],
+    "medicines": [
+      "Rifampicin",
+      "Dapsone",
+      "Clofazimine"
+    ]
+  },
+  {
+    "disease": "Chickenpox",
+    "description": "A highly contagious viral infection causing itchy rash and fever.",
+    "symptoms": [
+      "rash (itchy red spots that become blisters)",
+      "fever",
+      "headache",
+      "fatigue"
+    ],
+    "medicines": [
+      "Acyclovir",
+      "Antihistamines"
+    ]
+  },
+  {
+    "disease": "Yellow Fever",
+    "description": "A viral infection transmitted by mosquitoes, causing fever and jaundice.",
+    "symptoms": [
+      "fever",
+      "headache",
+      "muscle aches",
+      "backache",
+      "loss of appetite",
+      "nausea",
+      "vomiting",
+      "jaundice"
+    ],
+    "medicines": [
+      "Yellow fever vaccine",
+      "Supportive care"
+    ]
+  },
+  {
+    "disease": "Zika Fever",
+    "description": "A viral infection transmitted by mosquitoes, usually mild with symptoms like fever and rash.",
+    "symptoms": [
+      "fever",
+      "rash",
+      "joint pain",
+      "conjunctivitis (red eyes)",
+      "muscle pain"
+    ],
+    "medicines": [
+      "Supportive care",
+      "Pain relievers"
+    ]
+  },
+  {
+    "disease": "Filariasis",
+    "description": "A parasitic infection transmitted by mosquitoes, causing swelling and skin changes.",
+    "symptoms": [
+      "swelling of limbs (lymphedema)",
+      "thickening of skin (elephantiasis)",
+      "fever",
+      "chills",
+      "pain"
+    ],
+    "medicines": [
+      "Diethylcarbamazine (DEC)",
+      "Ivermectin",
+      "Albendazole"
+    ]
+  },
+  {
+    "disease": "Leishmaniasis",
+    "description": "A parasitic infection transmitted by sandflies, affecting the skin and internal organs.",
+    "symptoms": [
+      "skin sores (ulcers)",
+      "fever",
+      "weight loss",
+      "swollen spleen and liver",
+      "anemia"
+    ],
+    "medicines": [
+      "Sodium stibogluconate",
+      "Amphotericin B"
+    ]
+  },
+  {
+    "disease": "Q Fever",
+    "description": "A bacterial infection typically transmitted from animals to humans, causing flu-like symptoms.",
+    "symptoms": [
+      "high fever",
+      "headache",
+      "fatigue",
+      "muscle aches",
+      "nausea",
+      "vomiting",
+      "diarrhea"
+    ],
+    "medicines": [
+      "Doxycycline",
+      "Ciprofloxacin"
+    ]
+  },
+  {
+    "disease": "Dengue Hemorrhagic Fever",
+    "description": "A severe form of dengue fever, characterized by bleeding and plasma leakage.",
+    "symptoms": [
+      "symptoms of dengue fever",
+      "bleeding (nosebleeds",
+      "bleeding gums)",
+      "abdominal pain",
+      "vomiting blood",
+      "liver enlargement",
+      "circulatory system failure"
+    ],
+    "medicines": [
+      "Fluid replacement therapy",
+      "Blood transfusion"
+    ]
+  },
+  {
+    "disease": "Avian Influenza (Bird Flu)",
+    "description": "A viral infection primarily affecting birds but can spread to humans, causing respiratory symptoms.",
+    "symptoms": [
+      "fever",
+      "cough",
+      "sore throat",
+      "muscle aches",
+      "headache",
+      "difficulty breathing",
+      "pneumonia"
+    ],
+    "medicines": [
+      "Oseltamivir (Tamiflu)",
+      "Zanamivir (Relenza)"
+    ]
+  },
+  {
+    "disease": "Rift Valley Fever",
+    "description": "A viral infection transmitted by mosquitoes or contact with infected animals, causing fever and flu-like symptoms.",
+    "symptoms": [
+      "fever",
+      "headache",
+      "muscle pain",
+      "joint pain",
+      "weakness",
+      "vomiting",
+      "red eyes",
+      "abdominal pain",
+      "liver damage"
+    ],
+    "medicines": [
+      "Ribavirin",
+      "Vaccine for livestock"
+    ]
+  },
+  {
+    "disease": "West Nile Virus",
+    "description": "A viral infection transmitted by mosquitoes, causing fever and neurological symptoms.",
+    "symptoms": [
+      "fever",
+      "headache",
+      "body aches",
+      "skin rash",
+      "swollen lymph nodes",
+      "nausea",
+      "vomiting",
+      "diarrhea",
+      "neurological symptoms"
+    ],
+    "medicines": [
+      "Supportive care",
+      "Pain relievers"
+    ]
+  },
+  {
+    "disease": "Chagas Disease",
+    "description": "A parasitic infection transmitted by triatomine bugs, leading to chronic heart and digestive problems.",
+    "symptoms": [
+      "swelling at the site of infection",
+      "fever",
+      "fatigue",
+      "body aches",
+      "rash",
+      "swollen glands",
+      "eyelid swelling",
+      "liver and spleen enlargement",
+      "irregular heartbeat",
+      "digestive problems"
+    ],
+    "medicines": [
+      "Benznidazole",
+      "Nifurtimox"
+    ]
+  },
+  {
+    "disease": "Valley Fever (Coccidioidomycosis)",
+    "description": "A fungal infection caused by inhaling spores, leading to flu-like symptoms and pneumonia.",
+    "symptoms": [
+      "fatigue",
+      "cough",
+      "fever",
+      "shortness of breath",
+      "headache",
+      "night sweats",
+      "muscle aches",
+      "joint pain",
+      "rash"
+    ],
+    "medicines": [
+      "Fluconazole",
+      "Itraconazole",
+      "Amphotericin B"
+    ]
+  },
+  {
+    "disease": "Mumps",
+    "description": "A viral infection causing swelling of the salivary glands and flu-like symptoms.",
+    "symptoms": [
+      "fever",
+      "headache",
+      "muscle aches",
+      "swollen salivary glands (parotitis)",
+      "fatigue"
+    ],
+    "medicines": [
+      "Supportive care",
+      "Pain relievers"
+    ]
+  },
+  {
+    "disease": "Diabetes Mellitus",
+    "description": "Metabolic disorder characterized by high blood sugar levels",
+    "symptoms": [
+      "increased thirst",
+      "frequent urination",
+      "extreme hunger",
+      "unintended weight loss",
+      "fatigue",
+      "blurred vision",
+      "slow-healing sores or frequent infections"
+    ],
+    "medicines": [
+      "Insulin therapy (multiple types)",
+      "Oral antidiabetic medications (Metformin",
+      "Sulfonylureas)",
+      "Blood sugar monitoring"
+    ]
+  },
+  {
+    "disease": "Phenylketonuria (PKU)",
+    "description": "Inherited disorder causing inability to metabolize phenylalanine",
+    "symptoms": [
+      "intellectual disability",
+      "developmental delays",
+      "behavioral problems",
+      "hyperactivity",
+      "seizures",
+      "skin rashes",
+      "musty odor in urine",
+      "eczema"
+    ],
+    "medicines": [
+      "Low-protein diet (restricted phenylalanine intake)",
+      "Phenylalanine-free formula",
+      "Medications to manage symptoms and complications"
+    ]
+  },
+  {
+    "disease": "Galactosemia",
+    "description": "Genetic disorder impairing ability to metabolize galactose",
+    "symptoms": [
+      "jaundice",
+      "liver enlargement",
+      "poor feeding",
+      "vomiting",
+      "diarrhea",
+      "failure to thrive",
+      "lethargy",
+      "cataracts (if untreated)"
+    ],
+    "medicines": [
+      "Galactose-free diet",
+      "Close monitoring and treatment of complications (if present)"
+    ]
+  },
+  {
+    "disease": "Maple Syrup Urine Disease (MSUD)",
+    "description": "Genetic disorder affecting branched-chain amino acid metabolism",
+    "symptoms": [
+      "sweet-smelling urine",
+      "poor feeding",
+      "vomiting",
+      "lethargy",
+      "developmental delay",
+      "neurological symptoms (seizures",
+      "tremors",
+      "coma)",
+      "maple syrup-like odor of sweat and urine"
+    ],
+    "medicines": [
+      "Dietary restriction of branched-chain amino acids",
+      "Thiamine supplementation (in some cases)"
+    ]
+  },
+  {
+    "disease": "Wilson Disease",
+    "description": "Inherited disorder causing copper accumulation in the liver and other organs",
+    "symptoms": [
+      "jaundice",
+      "abdominal pain and swelling",
+      "fatigue",
+      "weakness",
+      "loss of appetite",
+      "nausea",
+      "vomiting",
+      "neurological symptoms (tremors",
+      "difficulty walking",
+      "speech problems)"
+    ],
+    "medicines": [
+      "Chelating agents (D-penicillamine",
+      "Trientine)",
+      "Zinc supplements (to prevent copper absorption)",
+      "Liver transplant (in severe cases)"
+    ]
+  },
+  {
+    "disease": "Homocystinuria",
+    "description": "Genetic disorder affecting amino acid metabolism, leading to elevated homocysteine levels",
+    "symptoms": [
+      "intellectual disability",
+      "eye problems (near-sightedness",
+      "dislocated lens)",
+      "skeletal abnormalities (tall stature",
+      "scoliosis)",
+      "blood clots",
+      "heart problems",
+      "stroke"
+    ],
+    "medicines": [
+      "Vitamin B6 (Pyridoxine)",
+      "Folic acid supplements",
+      "Vitamin B12 (Cobalamin)",
+      "Dietary restriction of methionine and homocysteine-rich foods"
+    ]
+  },
+  {
+    "disease": "Gaucher Disease",
+    "description": "Inherited disorder resulting from deficiency of enzyme glucocerebrosidase",
+    "symptoms": [
+      "enlarged spleen and liver",
+      "anemia",
+      "low platelet count",
+      "bone pain and fractures",
+      "easy bruising",
+      "fatigue",
+      "delayed growth and development"
+    ],
+    "medicines": [
+      "Enzyme replacement therapy (Imiglucerase",
+      "Velaglucerase alfa",
+      "Taliglucerase alfa)",
+      "Substrate reduction therapy (Miglustat)"
+    ]
+  },
+  {
+    "disease": "Fabry Disease",
+    "description": "X-linked inherited disorder causing deficiency of enzyme alpha-galactosidase A",
+    "symptoms": [
+      "pain and burning sensations in hands and feet (acroparesthesia)",
+      "skin lesions (angiokeratomas)",
+      "gastrointestinal symptoms",
+      "corneal opacities",
+      "heart and kidney problems"
+    ],
+    "medicines": [
+      "Enzyme replacement therapy (Agalsidase alfa",
+      "Agalsidase beta)",
+      "Pain management",
+      "Supportive care"
+    ]
+  },
+  {
+    "disease": "Pompe Disease",
+    "description": "Genetic disorder resulting from deficiency of enzyme acid alpha-glucosidase",
+    "symptoms": [
+      "muscle weakness (especially in legs",
+      "arms",
+      "and trunk)",
+      "poor muscle tone (hypotonia)",
+      "enlarged heart (cardiomegaly)",
+      "breathing difficulties",
+      "delayed motor development"
+    ],
+    "medicines": [
+      "Enzyme replacement therapy (Alglucosidase alfa)",
+      "Respiratory support",
+      "Physical therapy",
+      "Occupational therapy"
+    ]
+  },
+  {
+    "disease": "Alkaptonuria",
+    "description": "Inherited disorder leading to accumulation of homogentisic acid in the body",
+    "symptoms": [
+      "dark urine that turns black on exposure to air",
+      "joint stiffness and pain (due to deposition of homogentisic acid)",
+      "ochronosis (blue-black discoloration of connective tissues)"
+    ],
+    "medicines": [
+      "Symptomatic relief (Pain management)",
+      "Dietary restriction of tyrosine and phenylalanine"
+    ]
+  },
+  {
+    "disease": "Alzheimer's Disease",
+    "description": "Progressive neurodegenerative disorder leading to memory loss and cognitive decline",
+    "symptoms": [
+      "memory loss (especially recent memories)",
+      "difficulty in problem-solving",
+      "confusion",
+      "changes in mood or personality",
+      "difficulty completing familiar tasks"
+    ],
+    "medicines": [
+      "Cholinesterase inhibitors (Donepezil",
+      "Rivastigmine)",
+      "Memantine",
+      "Antipsychotics (for behavioral symptoms)"
+    ]
+  },
+  {
+    "disease": "Parkinson's Disease",
+    "description": "Neurodegenerative disorder affecting movement and motor function",
+    "symptoms": [
+      "tremors (usually starting in hands)",
+      "slowed movement (bradykinesia)",
+      "muscle stiffness",
+      "impaired balance and coordination",
+      "speech changes",
+      "rigid facial expression"
+    ],
+    "medicines": [
+      "Levodopa/carbidopa",
+      "Dopamine agonists (Pramipexole",
+      "Ropinirole)",
+      "MAO-B inhibitors",
+      "COMT inhibitors"
+    ]
+  },
+  {
+    "disease": "Multiple Sclerosis",
+    "description": "Autoimmune disease affecting the central nervous system",
+    "symptoms": [
+      "fatigue",
+      "numbness or weakness in limbs",
+      "blurred or double vision",
+      "tingling or pain in parts of the body",
+      "impaired coordination or balance",
+      "cognitive changes"
+    ],
+    "medicines": [
+      "Corticosteroids (for acute exacerbations)",
+      "Disease-modifying therapies (Interferons",
+      "Glatiramer acetate)"
+    ]
+  },
+  {
+    "disease": "Epilepsy",
+    "description": "Chronic disorder characterized by recurrent seizures",
+    "symptoms": [
+      "seizures (varying types and severity)",
+      "temporary confusion",
+      "staring spells",
+      "uncontrollable jerking movements",
+      "loss of consciousness"
+    ],
+    "medicines": [
+      "Antiepileptic drugs (Phenytoin",
+      "Carbamazepine",
+      "Valproic acid",
+      "Lamotrigine)"
+    ]
+  },
+  {
+    "disease": "Migraine",
+    "description": "Recurrent severe headaches often accompanied by nausea and sensitivity to light",
+    "symptoms": [
+      "throbbing or pulsating headache (often on one side)",
+      "nausea",
+      "vomiting",
+      "sensitivity to light",
+      "sound",
+      "or smells",
+      "visual disturbances (aura)"
+    ],
+    "medicines": [
+      "Pain relievers (Ibuprofen",
+      "Acetaminophen)",
+      "Triptans",
+      "Antiemetics",
+      "Preventive medications (Beta-blockers",
+      "Anticonvulsants)"
+    ]
+  },
+  {
+    "disease": "Amyotrophic Lateral Sclerosis (ALS)",
+    "description": "Progressive neurodegenerative disease affecting nerve cells in the brain and spinal cord",
+    "symptoms": [
+      "muscle weakness (usually starting in limbs)",
+      "muscle twitching or cramping",
+      "difficulty in speaking",
+      "swallowing difficulties",
+      "impaired motor function"
+    ],
+    "medicines": [
+      "Riluzole",
+      "Edaravone",
+      "Symptomatic treatments (Baclofen",
+      "Diazepam for spasticity)"
+    ]
+  },
+  {
+    "disease": "Huntington's Disease",
+    "description": "Inherited disorder causing progressive degeneration of nerve cells in the brain",
+    "symptoms": [
+      "involuntary jerking or writhing movements (chorea)",
+      "muscle problems (rigidity",
+      "slow movements)",
+      "cognitive decline",
+      "behavioral changes",
+      "difficulty swallowing"
+    ],
+    "medicines": [
+      "Tetrabenazine",
+      "Antipsychotics (for behavioral symptoms)",
+      "Antidepressants"
+    ]
+  },
+  {
+    "disease": "Cerebral Palsy",
+    "description": "Permanent movement disorders resulting from brain damage before, during, or shortly after birth",
+    "symptoms": [
+      "abnormal muscle tone (spasticity",
+      "rigidity",
+      "or floppiness)",
+      "delayed development",
+      "impaired coordination or balance",
+      "speech and language difficulties"
+    ],
+    "medicines": [
+      "Physical therapy",
+      "Occupational therapy",
+      "Muscle relaxants",
+      "Anticonvulsants"
+    ]
+  },
+  {
+    "disease": "Stroke",
+    "description": "Sudden interruption of blood supply to the brain, leading to brain damage",
+    "symptoms": [
+      "sudden numbness or weakness in face",
+      "arm",
+      "or leg (usually on one side)",
+      "sudden confusion",
+      "trouble speaking or understanding",
+      "sudden vision problems",
+      "severe headache"
+    ],
+    "medicines": [
+      "Thrombolytics (tPA)",
+      "Anticoagulants",
+      "Antiplatelet agents",
+      "Statins",
+      "Rehabilitation therapy"
+    ]
+  },
+  {
+    "disease": "Traumatic Brain Injury",
+    "description": "Brain damage caused by an external force such as a blow to the head",
+    "symptoms": [
+      "loss of consciousness",
+      "headache",
+      "nausea or vomiting",
+      "dizziness or balance problems",
+      "sensory changes (blurred vision",
+      "ringing in ears)",
+      "cognitive impairment"
+    ],
+    "medicines": [
+      "Surgery (for severe cases)",
+      "Rehabilitation therapy",
+      "Anticonvulsants",
+      "Antidepressants"
+    ]
+  },
+  {
+    "disease": "Asthma",
+    "description": "Chronic respiratory condition characterized by airway inflammation and bronchospasm",
+    "symptoms": [
+      "wheezing",
+      "shortness of breath",
+      "chest tightness or pain",
+      "coughing (especially at night or early morning)",
+      "difficulty sleeping"
+    ],
+    "medicines": [
+      "Short-acting beta-agonists (Albuterol)",
+      "Inhaled corticosteroids (Fluticasone",
+      "Budesonide)",
+      "Long-acting beta-agonists (Formoterol",
+      "Salmeterol)"
+    ]
+  },
+  {
+    "disease": "Chronic Obstructive Pulmonary Disease (COPD)",
+    "description": "Progressive lung disease causing airflow limitation",
+    "symptoms": [
+      "shortness of breath (especially during physical activity)",
+      "chronic cough",
+      "excessive sputum production",
+      "wheezing",
+      "chest tightness or pain"
+    ],
+    "medicines": [
+      "Bronchodilators (Short-acting and Long-acting)",
+      "Inhaled corticosteroids",
+      "Phosphodiesterase-4 inhibitors",
+      "Oxygen therapy",
+      "Pulmonary rehabilitation"
+    ]
+  },
+  {
+    "disease": "Pneumonia",
+    "description": "Inflammation of lung tissue caused by infection (bacterial, viral, or fungal)",
+    "symptoms": [
+      "fever",
+      "chills",
+      "cough (with phlegm production)",
+      "shortness of breath",
+      "chest pain",
+      "rapid heartbeat",
+      "fatigue",
+      "confusion"
+    ],
+    "medicines": [
+      "Antibiotics (for bacterial pneumonia)",
+      "Antiviral medications (for viral pneumonia)",
+      "Antifungal medications (for fungal pneumonia)",
+      "Oxygen therapy"
+    ]
+  },
+  {
+    "disease": "Tuberculosis (TB)",
+    "description": "Infectious bacterial disease primarily affecting the lungs",
+    "symptoms": [
+      "persistent cough (usually with blood-tinged sputum)",
+      "weight loss",
+      "fatigue",
+      "fever",
+      "night sweats",
+      "loss of appetite",
+      "chest pain",
+      "shortness of breath"
+    ],
+    "medicines": [
+      "Antibiotics (Isoniazid",
+      "Rifampicin",
+      "Ethambutol",
+      "Pyrazinamide)",
+      "Directly Observed Therapy (DOT)",
+      "Bacillus Calmette-Gu\u00e9rin (BCG) vaccine"
+    ]
+  },
+  {
+    "disease": "Influenza",
+    "description": "Viral infection causing respiratory illness, often seasonal",
+    "symptoms": [
+      "fever or feeling feverish/chills",
+      "cough",
+      "sore throat",
+      "runny or stuffy nose",
+      "muscle or body aches",
+      "headaches",
+      "fatigue"
+    ],
+    "medicines": [
+      "Antiviral medications (Oseltamivir",
+      "Zanamivir",
+      "Peramivir)",
+      "Symptomatic relief (Pain relievers",
+      "Decongestants",
+      "Cough suppressants)"
+    ]
+  },
+  {
+    "disease": "Acute Respiratory Distress Syndrome (ARDS)",
+    "description": "Rapid onset of severe respiratory failure due to various underlying conditions",
+    "symptoms": [
+      "severe shortness of breath",
+      "rapid breathing",
+      "low blood oxygen levels",
+      "confusion or disorientation",
+      "extreme fatigue or weakness"
+    ],
+    "medicines": [
+      "Mechanical ventilation",
+      "Oxygen therapy",
+      "Medications to treat underlying cause (e.g.",
+      "Antibiotics",
+      "Antifungals)"
+    ]
+  },
+  {
+    "disease": "Pulmonary Embolism",
+    "description": "Blockage of arteries in the lungs, usually by blood clots originating elsewhere",
+    "symptoms": [
+      "sudden shortness of breath",
+      "chest pain (usually sharp and worsened by deep breaths or coughing)",
+      "rapid or irregular heartbeat",
+      "coughing up blood",
+      "sweating"
+    ],
+    "medicines": [
+      "Anticoagulants (Heparin",
+      "Warfarin",
+      "Direct oral anticoagulants)",
+      "Thrombolytics",
+      "Oxygen therapy",
+      "Surgery (in severe cases)"
+    ]
+  },
+  {
+    "disease": "Cystic Fibrosis",
+    "description": "Genetic disorder causing thick, sticky mucus buildup in lungs and other organs",
+    "symptoms": [
+      "persistent cough with thick sputum",
+      "wheezing",
+      "shortness of breath",
+      "recurrent lung infections (pneumonia)",
+      "poor growth or weight gain"
+    ],
+    "medicines": [
+      "Airway clearance techniques (Chest physiotherapy",
+      "Percussion and vibration)",
+      "Bronchodilators",
+      "Inhaled antibiotics",
+      "Mucolytics",
+      "Enzyme supplements"
+    ]
+  },
+  {
+    "disease": "Bronchiectasis",
+    "description": "Chronic lung condition characterized by damaged and widened airways",
+    "symptoms": [
+      "chronic cough with large amounts of sputum",
+      "recurrent respiratory infections",
+      "wheezing",
+      "shortness of breath",
+      "chest pain or tightness",
+      "fatigue"
+    ],
+    "medicines": [
+      "Antibiotics (for treating infections)",
+      "Mucolytics",
+      "Bronchodilators",
+      "Chest physiotherapy",
+      "Surgical removal of damaged lung tissue"
+    ]
+  },
+  {
+    "disease": "Respiratory Syncytial Virus (RSV) Infection",
+    "description": "Viral infection causing respiratory illness, particularly in infants and young children",
+    "symptoms": [
+      "runny nose",
+      "decreased appetite",
+      "coughing",
+      "sneezing",
+      "fever",
+      "wheezing or difficulty breathing",
+      "rapid breathing"
+    ],
+    "medicines": [
+      "Supportive care (Fluids",
+      "Rest)",
+      "Oxygen therapy (for severe cases)",
+      "Ribavirin (in severe cases)"
+    ]
+  },
+  {
+    "disease": "Cystic Fibrosis",
+    "description": "Genetic disorder causing thick, sticky mucus buildup in lungs and other organs",
+    "symptoms": [
+      "persistent cough with thick sputum",
+      "wheezing",
+      "shortness of breath",
+      "recurrent lung infections (pneumonia)",
+      "poor growth or weight gain"
+    ],
+    "medicines": [
+      "Airway clearance techniques (Chest physiotherapy",
+      "Percussion and vibration)",
+      "Bronchodilators",
+      "Inhaled antibiotics",
+      "Mucolytics",
+      "Enzyme supplements"
+    ]
+  },
+  {
+    "disease": "Huntington's Disease",
+    "description": "Inherited disorder causing progressive degeneration of nerve cells in the brain",
+    "symptoms": [
+      "involuntary jerking or writhing movements (chorea)",
+      "muscle problems (rigidity",
+      "slow movements)",
+      "cognitive decline",
+      "behavioral changes",
+      "difficulty swallowing"
+    ],
+    "medicines": [
+      "Tetrabenazine",
+      "Antipsychotics (for behavioral symptoms)",
+      "Antidepressants"
+    ]
+  },
+  {
+    "disease": "Down Syndrome",
+    "description": "Genetic disorder causing developmental and intellectual delays",
+    "symptoms": [
+      "intellectual disability",
+      "low muscle tone (hypotonia)",
+      "upward slanting eyes with small folds of skin at inner corners (epicanthal folds)",
+      "flat facial profile"
+    ],
+    "medicines": [
+      "Early intervention programs",
+      "Educational support",
+      "Speech therapy",
+      "Occupational therapy"
+    ]
+  },
+  {
+    "disease": "Duchenne Muscular Dystrophy",
+    "description": "Progressive muscle-wasting disease caused by genetic mutation",
+    "symptoms": [
+      "progressive muscle weakness",
+      "difficulty walking",
+      "frequent falls",
+      "gait abnormalities",
+      "enlarged calves",
+      "muscle contractures",
+      "heart problems",
+      "breathing difficulties"
+    ],
+    "medicines": [
+      "Corticosteroids (Prednisone",
+      "Deflazacort)",
+      "Physical therapy",
+      "Mobility aids",
+      "Respiratory support"
+    ]
+  },
+  {
+    "disease": "Hemophilia",
+    "description": "Genetic disorder impairing blood clotting ability",
+    "symptoms": [
+      "excessive bleeding from minor injuries or surgery",
+      "easy bruising",
+      "joint pain or swelling (hemarthrosis)",
+      "blood in urine or stool",
+      "nosebleeds"
+    ],
+    "medicines": [
+      "Clotting factor replacement therapy",
+      "Desmopressin (DDAVP)",
+      "Antifibrinolytic medications"
+    ]
+  },
+  {
+    "disease": "Sickle Cell Disease",
+    "description": "Genetic disorder causing abnormal hemoglobin production and red blood cell shape",
+    "symptoms": [
+      "pain crises (sudden and severe pain)",
+      "anemia",
+      "fatigue",
+      "jaundice",
+      "swelling of hands and feet (dactylitis)",
+      "frequent infections",
+      "delayed growth and development"
+    ],
+    "medicines": [
+      "Pain management (analgesics",
+      "opioids)",
+      "Hydroxyurea",
+      "Blood transfusions",
+      "Antibiotics"
+    ]
+  },
+  {
+    "disease": "Tay-Sachs Disease",
+    "description": "Genetic disorder leading to progressive destruction of nerve cells in the brain",
+    "symptoms": [
+      "developmental delay",
+      "loss of motor skills",
+      "seizures",
+      "blindness",
+      "deafness",
+      "difficulty swallowing",
+      "progressive intellectual disability"
+    ],
+    "medicines": [
+      "Supportive care (Symptom management)",
+      "Physical therapy",
+      "Occupational therapy"
+    ]
+  },
+  {
+    "disease": "Cystinosis",
+    "description": "Genetic disorder causing accumulation of cystine in cells and tissues",
+    "symptoms": [
+      "kidney problems (renal fanconi syndrome)",
+      "growth failure",
+      "muscle weakness",
+      "photophobia (sensitivity to light)",
+      "poor appetite",
+      "vomiting",
+      "delayed puberty"
+    ],
+    "medicines": [
+      "Cysteamine (to reduce cystine levels)",
+      "Supportive care (fluid and electrolyte replacement)"
+    ]
+  },
+  {
+    "disease": "Phenylketonuria (PKU)",
+    "description": "Inherited disorder causing inability to metabolize phenylalanine",
+    "symptoms": [
+      "intellectual disability",
+      "developmental delays",
+      "behavioral problems",
+      "hyperactivity",
+      "seizures",
+      "skin rashes",
+      "musty odor in urine",
+      "eczema"
+    ],
+    "medicines": [
+      "Low-protein diet (restricted phenylalanine intake)",
+      "Phenylalanine-free formula",
+      "Medications to manage symptoms and complications"
+    ]
+  }
+]

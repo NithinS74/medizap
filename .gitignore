@@ -34,6 +34,8 @@ build/
 
 ### private keys ###
 **/src/main/resources/firebase-adminsdk.json
+firebase-service-account.json
+.env
 
 
 # Logs

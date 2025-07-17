@@ -1,0 +1,118 @@
+/* src/styles/ThemeVariables.css */
+
+/* --- Base/Light Theme (Default) --- */
+/* This palette provides a light, vibrant, and consistent theme. */
+:root {
+  /* Backgrounds */
+  --primary-bg: hsl(210, 20%, 98%); /* Very light off-white for main content background */
+  --secondary-bg: hsl(0, 0%, 100%);  /* Pure white for cards, sections, and main sidebar */
+  --tertiary-bg: hsl(210, 15%, 90%); /* Light muted blue-gray for subtle accents, header background, input fields */
+  --primary-bg-dark: hsl(210, 10%, 95%); /* Slightly darker light background for inputs within lighter cards */
+
+  /* Text Colors */
+  --text-primary: hsl(220, 20%, 20%); /* Deep charcoal for main text (high contrast on light bg) */
+  --text-secondary: hsl(210, 10%, 45%); /* Muted gray for secondary text, descriptions */
+  --text-accent: hsl(220, 70%, 40%); /* Darker blue for emphasis or active states */
+
+  /* Accent Colors (Vibrant and welcoming) */
+  --accent-color: hsl(210, 80%, 55%); /* A friendly, vibrant blue for primary actions, highlights */
+  --accent-hover: hsl(210, 75%, 45%); /* Slightly darker blue on hover */
+  --accent-active: hsl(210, 70%, 35%); /* Even darker for active state */
+
+  /* Neutrals & Borders */
+  --border-color: hsl(210, 15%, 85%); /* Light gray for borders, complements backgrounds */
+  --shadow-color: hsla(210, 5%, 50%, 0.12); /* Lighter, subtle shadow with a hint of blue */
+  --overlay-color: hsla(210, 10%, 20%, 0.4); /* Softer overlay for mobile sidebar */
+
+  /* Status Colors (remain distinct) */
+  --error-color: hsl(0, 80%, 60%);   /* Vibrant red */
+  --success-color: hsl(120, 70%, 45%); /* Earthy green */
+  --warning-color: hsl(40, 90%, 55%); /* Warm orange */
+
+  /* Fonts */
+  --font-family-sans: 'Inter', -apple-system, BlinkMacMacFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  /* Global Gradient Colors (for body/root background) */
+  --gradient-start: hsl(210, 30%, 95%); /* Very light, cool gray */
+  --gradient-mid: hsl(200, 25%, 90%);   /* A soft, slightly bluer gray */
+  --gradient-end: hsl(190, 20%, 88%);   /* A very subtle hint of light blue/green */
+
+  /* Layout/Component Sizing Variables */
+  --sidebar-expanded-width: 280px;
+  --header-height: 70px;
+}
+
+/* --- Dark Theme Overrides --- */
+/* Applied when a parent (e.g., body) has the class 'dark-theme' */
+body.dark-theme {
+  /* Backgrounds */
+  --primary-bg: hsl(220, 15%, 12%); /* Deep charcoal blue - for main content background */
+  --secondary-bg: hsl(220, 10%, 18%); /* Slightly lighter charcoal gray - for cards, sections, main sidebar */
+  --tertiary-bg: hsl(220, 8%, 25%); /* Even lighter, cool dark gray - for subtle accents, header background, input fields */
+  --primary-bg-dark: hsl(220, 10%, 8%); /* A very dark almost black - for inputs within lighter dark backgrounds */
+
+  /* Text Colors */
+  --text-primary: hsl(220, 15%, 90%); /* Soft white/light gray - for main body text (high contrast) */
+  --text-secondary: hsl(220, 10%, 65%); /* Muted light gray - for secondary text, descriptions */
+  --text-accent: hsl(195, 100%, 70%); /* Bright, contrasting cyan - for emphasis, active states, special text */
+
+  /* Accent Colors (Vibrant and welcoming Cyan/Aqua) */
+  --accent-color: hsl(195, 100%, 50%); /* Vibrant Cyan - for primary actions, highlights */
+  --accent-hover: hsl(195, 90%, 40%); /* Darker Cyan on hover */
+  --accent-active: hsl(195, 80%, 30%); /* Even darker for active state */
+
+  /* Neutrals & Borders */
+  --border-color: hsl(220, 8%, 35%); /* Subtle, cool dark gray for borders, complements backgrounds */
+  --shadow-color: hsla(220, 10%, 5%, 0.4); /* Deeper, transparent black for shadows */
+  --overlay-color: hsla(220, 10%, 5%, 0.7); /* Darker, less transparent overlay for mobile sidebar */
+
+  /* Status Colors (remain distinct but adjusted for dark background) */
+  --error-color: hsl(0, 70%, 60%);   /* Vibrant Red */
+  --success-color: hsl(120, 60%, 50%); /* Green */
+  --warning-color: hsl(40, 90%, 60%); /* Warm Orange */
+
+  /* Global Gradient Colors (for body/root background) */
+  --gradient-start: hsl(240, 20%, 8%); /* Very deep dark blue/purple */
+  --gradient-mid: hsl(240, 15%, 12%); /* Mid-dark blue/purple */
+  --gradient-end: hsl(250, 10%, 15%); /* Slightly lighter, subtle purplish dark blue */
+}
+
+/* Apply base styles to the body */
+body {
+  margin: 0;
+  font-family: var(--font-family-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--primary-bg);
+  color: var(--text-primary);
+}
+
+/* Common button styles */
+button {
+  font-family: var(--font-family-sans);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Common input/textarea styles */
+input, textarea, select {
+  font-family: var(--font-family-sans);
+  background-color: var(--tertiary-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 0.375rem; /* Equivalent to Tailwind's rounded-md */
+  padding: 0.5rem 0.75rem;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.5); /* A ring effect on focus */
+}
+
+/* Placeholder text color */
+::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.7;
+}

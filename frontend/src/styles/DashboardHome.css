@@ -1,0 +1,328 @@
+/* src/styles/DashboardHome.css */
+
+.dashboard-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid columns */
+  gap: 25px; /* Spacing between cards */
+  padding: 20px; /* Padding inside the dashboard area */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Base Dashboard Card Styling (inherits from App.css .dashboard-card, adds more specific layout) */
+.dashboard-card {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  min-height: 180px; /* Ensure cards have some minimum height */
+  box-sizing: border-box;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px); /* Subtle lift on hover */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
+}
+
+.card-title {
+  font-size: 1.5rem; /* Consistent title size */
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-color); /* Separator */
+}
+
+/* Welcome Card Specifics */
+.welcome-card {
+  grid-column: 1 / -1; /* Make welcome card span full width */
+  text-align: center;
+  background-color: var(--secondary-bg); /* Use secondary background */
+  border: 1px solid var(--border-color);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.welcome-card .card-title {
+  font-size: 2.2rem;
+  color: var(--accent-color); /* Accent color for welcome title */
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 15px;
+}
+
+.welcome-message {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 25px;
+}
+
+.welcome-stats {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+.welcome-stats .stat-value {
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+/* General Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  text-align: center;
+}
+
+.stat-item .stat-value {
+  font-size: 2.5rem; /* Larger numbers */
+  font-weight: 700;
+  color: var(--accent-color);
+  margin-bottom: 5px;
+  line-height: 1;
+}
+.stat-item .stat-value.critical {
+  color: var(--ios-system-red); /* Red for critical */
+}
+.stat-item .stat-label {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Appointment List */
+.appointment-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.appointment-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.95rem;
+}
+.appointment-item:last-child {
+  border-bottom: none;
+}
+.appointment-time {
+  color: var(--accent-color);
+  font-weight: 500;
+  white-space: nowrap;
+  margin-right: 10px;
+}
+.appointment-description {
+  flex-grow: 1;
+  color: var(--text-primary);
+}
+.no-data-message {
+  text-align: center;
+  color: var(--text-secondary);
+  font-style: italic;
+  padding: 20px 0;
+}
+
+/* Quick Actions */
+.action-buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.action-button {
+  background-color: var(--tertiary-bg); /* Darker button background */
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease, border-color 0.2s ease;
+  min-height: 90px;
+}
+
+.action-button:hover {
+  background-color: rgba(255, 255, 255, 0.08); /* Lighten on hover */
+  transform: translateY(-2px);
+  border-color: var(--accent-color); /* Accent border on hover */
+}
+.action-button:active {
+  transform: translateY(0);
+}
+
+.action-icon {
+  font-size: 2rem; /* Size for emoji icons */
+  margin-bottom: 8px;
+  line-height: 1;
+}
+.action-text {
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.2;
+}
+
+
+/* Medication Supply */
+.supply-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.supply-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+.supply-list li:last-child {
+  border-bottom: none;
+}
+.supply-value {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.supply-value.danger { color: var(--ios-system-red); }
+.supply-value.warning { color: var(--ios-system-orange); }
+.supply-value.info { color: var(--ios-system-blue); }
+
+
+/* News & Updates */
+.news-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.news-item {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.95rem;
+}
+.news-item:last-child {
+  border-bottom: none;
+}
+.news-date {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+.news-title {
+  margin: 0;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* Chart Placeholder */
+.chart-placeholder-card {
+  min-height: 250px; /* Taller for charts */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.chart-area {
+  padding-top: 15px;
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+.chart-description {
+  font-size: 0.85rem;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+
+/* Responsive Adjustments for Dashboard Grid */
+@media (min-width: 1200px) {
+  .dashboard-grid-container {
+    grid-template-columns: repeat(3, 1fr); /* Three columns on very large screens */
+  }
+  .welcome-card {
+    grid-column: 1 / 4; /* Spans all 3 columns */
+  }
+  .patient-stats-card {
+    grid-column: span 1;
+  }
+  .appointments-card {
+    grid-column: span 2; /* Appointments card spans two columns */
+  }
+  .quick-actions-card {
+    grid-column: span 2; /* Quick actions spans two columns */
+  }
+  .medication-supply-card {
+    grid-column: span 1;
+  }
+  .news-card {
+    grid-column: span 1;
+  }
+  .chart-placeholder-card {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-grid-container {
+    grid-template-columns: 1fr; /* Single column on smaller tablets/mobiles */
+    padding: 15px;
+    gap: 20px;
+  }
+  .welcome-card .card-title {
+    font-size: 1.8rem;
+  }
+  .welcome-message {
+    font-size: 1rem;
+  }
+  .stat-item .stat-value {
+    font-size: 2rem;
+  }
+  .card-title {
+    font-size: 1.3rem;
+  }
+  .action-button {
+    min-height: 80px;
+    padding: 12px;
+  }
+  .action-icon {
+    font-size: 1.8rem;
+  }
+  .action-text {
+    font-size: 0.8rem;
+  }
+  .chart-placeholder-card {
+    min-height: 200px;
+  }
+}
+/* src/styles/DashboardHome.css */
+
+/* ... (your existing CSS) ... */
+
+.pharmacy-map-card {
+  /* You can add specific styles here if needed, e.g., */
+  /* grid-column: span 2; */ /* To make it span two columns if desired */
+}
+
+.map-placeholder {
+  /* Styles for the gray box that says "Interactive Map Placeholder" */
+}

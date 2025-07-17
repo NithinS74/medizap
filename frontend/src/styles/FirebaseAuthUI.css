@@ -1,0 +1,135 @@
+/* src/components/FirebaseAuthUI.css */
+/* Ensure these colors align with your new theme variables */
+
+.auth-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  min-height: 100vh;
+  background-color: transparent; /* Let the body gradient show through */
+  font-family: -apple-system, BlinkMacSystemFont, 'San Francisco', 'Segoe UI', sans-serif;
+  color: var(--text-primary); /* Use theme variable */
+  padding: 40px;
+  gap: 60px;
+  box-sizing: border-box;
+}
+
+.hero-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 550px;
+  text-align: left;
+  padding-right: 30px;
+}
+
+.heading {
+  font-size: 3.8rem;
+  margin-bottom: 20px;
+  color: var(--text-primary); /* Use theme variable */
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.subheading {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: var(--text-secondary); /* Use theme variable */
+  line-height: 1.6;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  color: var(--text-secondary); /* Use theme variable */
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.auth-section {
+  flex: 0 0 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--card-bg); /* Use theme variable for card background */
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  padding: 50px 40px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.auth-title {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: var(--text-primary); /* Use theme variable */
+  font-weight: 700;
+}
+
+.auth-description {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  color: var(--text-secondary); /* Use theme variable */
+}
+
+.form-container {
+  width: 100%;
+}
+
+.firebase-ui-widget {
+  width: 100%;
+}
+
+.loader {
+  margin-top: 25px;
+  font-size: 1rem;
+  color: var(--text-secondary); /* Use theme variable */
+  font-style: italic;
+}
+
+/* Media Queries for Mobile/Tablet */
+@media (max-width: 992px) {
+  .auth-container {
+    flex-direction: column;
+    padding: 30px;
+    gap: 40px;
+  }
+  .hero-section {
+    align-items: center;
+    text-align: center;
+    padding-right: 0;
+  }
+  .heading {
+    font-size: 2.8rem;
+  }
+  .subheading {
+    font-size: 1.2rem;
+  }
+  .auth-section {
+    flex: none;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 40px 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .auth-container {
+    padding: 20px;
+    gap: 30px;
+  }
+  .heading {
+    font-size: 2.2rem;
+  }
+  .subheading {
+    font-size: 1rem;
+  }
+  .auth-section {
+    padding: 30px 20px;
+  }
+}

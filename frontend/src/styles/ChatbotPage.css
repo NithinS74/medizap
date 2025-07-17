@@ -1,0 +1,332 @@
+/* src/styles/ChatbotPage.css - Revamped for a Sleek Dark Theme, similar to ChatbotUI.css */
+
+/* Overall Page Container - Acts as a flexible wrapper for the main chat window */
+.full-chatbot-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically centers the chat window */
+    align-items: center; /* Horizontally centers the chat window */
+    width: 100%;
+    height: 100%; /* Occupies the full height provided by DashboardLayout's main content area */
+    background-color: var(--primary-bg); /* Use primary background for the page itself */
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'San Francisco', 'Segoe UI', sans-serif; /* Keep consistent font */
+    color: var(--text-primary); /* Default text color */
+    overflow: hidden; /* Prevent unwanted scrollbars on the page wrapper */
+}
+
+/* Main Chat Window - The central chat interface */
+.full-page-chat-window {
+    width: 100%;
+    max-width: 900px; /* Adjust max-width for desired size on larger screens */
+    /* UPDATED: Set a viewport-relative height with min/max clamps */
+    height: 75vh; /* Target 75% of viewport height initially */
+    max-height: 800px; /* Cap the height on very large screens */
+    min-height: 400px; /* Ensure a minimum height on smaller screens */
+    
+    background-color: var(--secondary-bg); /* Matches ChatbotUI's window background */
+    border-radius: 12px; /* Consistent rounded corners */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5); /* Consistent shadow with ChatbotUI */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* CRITICAL: Hide any overflow from this window, forcing internal messages to scroll */
+    border: 1px solid var(--border-color); /* Consistent subtle border */
+}
+
+/* Chat Header */
+.full-page-chat-header {
+    display: flex;
+    justify-content: center; /* Center title for full page */
+    align-items: center;
+    padding: 15px 20px; /* Consistent padding */
+    background-color: var(--tertiary-bg); /* Consistent header background */
+    border-bottom: 1px solid var(--border-color); /* Consistent border */
+    color: var(--text-primary); /* Consistent text color */
+    font-weight: 600;
+    font-size: 1.1rem; /* Consistent font size for header title */
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.full-page-chat-header h3 {
+    margin: 0;
+}
+
+/* Chat Messages Area */
+.full-page-chat-messages {
+    flex-grow: 1; /* Allows this area to take up all available vertical space */
+    padding: 20px; /* Consistent padding */
+    overflow-y: auto; /* CRITICAL: Enables vertical scrolling for messages within this area */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Consistent gap between messages */
+    background-color: var(--secondary-bg); /* Consistent background */
+}
+
+/* Custom scrollbar for chat messages */
+.full-page-chat-messages::-webkit-scrollbar {
+    width: 8px; /* Consistent width */
+}
+
+.full-page-chat-messages::-webkit-scrollbar-track {
+    background: var(--tertiary-bg); /* Consistent track background */
+    border-radius: 4px;
+}
+
+.full-page-chat-messages::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2); /* Consistent thumb color */
+    border-radius: 4px;
+}
+
+.full-page-chat-messages::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Consistent hover effect */
+}
+
+/* Individual Message Bubble */
+.full-page-chat-message {
+    padding: 10px 12px; /* Consistent padding */
+    border-radius: 18px; /* Consistent rounded corners */
+    max-width: 80%; /* Consistent max-width */
+    word-wrap: break-word;
+    font-size: 0.9rem; /* Consistent font size */
+    line-height: 1.5;
+    /* Animation kept consistent */
+    animation: fadeInMessage 0.3s ease-out;
+}
+
+.full-page-chat-message.user {
+    background-color: var(--accent-color); /* Consistent user message color */
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 4px; /* Consistent pointed corner */
+}
+
+.full-page-chat-message.bot {
+    background-color: var(--tertiary-bg); /* Consistent bot message color */
+    color: var(--text-primary); /* Consistent text color */
+    align-self: flex-start;
+    border-bottom-left-radius: 4px; /* Consistent pointed corner */
+}
+
+/* Disclaimer text */
+.full-page-chat-message.isDisclaimer {
+    font-size: 0.75em;
+    color: var(--text-secondary); /* Consistent secondary text color */
+    text-align: center;
+    margin-top: 15px;
+    padding: 5px 10px;
+    background-color: var(--tertiary-bg); /* Consistent background */
+    border-radius: 5px;
+    border: none; /* Removed extra border for cleaner look */
+}
+
+/* Input Area */
+.full-page-chat-input-form {
+    display: flex;
+    flex-direction: column; /* Stack input and buttons */
+    padding: 15px 20px; /* Consistent padding */
+    border-top: 1px solid var(--border-color); /* Consistent border */
+    background-color: var(--tertiary-bg); /* Consistent background */
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    gap: 10px; /* Consistent gap */
+}
+
+.full-page-chat-input {
+    flex-grow: 1;
+    padding: 10px 15px; /* Consistent padding */
+    border: 1px solid var(--border-color); /* Consistent border */
+    border-radius: 20px; /* Consistent rounded corners */
+    background-color: var(--primary-bg-dark); /* Consistent input background */
+    color: var(--text-primary); /* Consistent text color */
+    font-size: 0.9rem; /* Consistent font size */
+    outline: none;
+    resize: vertical;
+    min-height: 40px;
+    max-height: 100px;
+    transition: border-color 0.2s ease, background-color 0.2s ease; /* Consistent transitions */
+}
+
+.full-page-chat-input::placeholder {
+    color: var(--text-secondary); /* Consistent placeholder color */
+    opacity: 0.8;
+}
+
+.full-page-chat-input:focus {
+    border-color: var(--accent-color); /* Consistent focus border */
+    background-color: var(--secondary-bg); /* Consistent focus background */
+}
+
+.full-page-chatbot-buttons {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px; /* Consistent gap */
+}
+
+.full-page-send-button {
+    background-color: var(--accent-color); /* Consistent button background */
+    color: white;
+    border: none;
+    border-radius: 20px; /* Consistent rounded corners */
+    padding: 10px 20px; /* Consistent padding */
+    font-size: 0.9rem; /* Consistent font size */
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease; /* Consistent transitions */
+    flex: 1;
+    text-transform: none; /* Remove uppercase, consistent with ChatbotUI */
+    letter-spacing: normal; /* Remove letter-spacing */
+    box-shadow: none; /* Remove explicit button shadow, rely on parent/overall theme */
+}
+
+.full-page-send-button:hover {
+    background-color: #4b5af0; /* Consistent hover color */
+    transform: translateY(-1px); /* Consistent hover transform */
+    box-shadow: none; /* Consistent shadow removal on hover */
+}
+
+.full-page-send-button:active {
+    transform: translateY(0); /* Consistent active transform */
+    box-shadow: none; /* Consistent shadow removal on active */
+}
+
+.full-page-send-button:disabled {
+    background-color: #cccccc; /* Consistent disabled color */
+    color: #888; /* Ensure disabled text is visible */
+    cursor: not-allowed;
+    box-shadow: none;
+    opacity: 1;
+}
+
+/* Medical info card styles (adapted to use theme variables) */
+.medical-info-card {
+    background-color: var(--secondary-bg); /* Use secondary background for cards */
+    border: 1px solid var(--border-color); /* Consistent border */
+    border-radius: 8px; /* Consistent rounded corners */
+    padding: 10px 15px; /* Consistent padding */
+    margin-bottom: 10px;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Slightly adjusted shadow for dark theme */
+    color: var(--text-primary); /* Consistent primary text color */
+}
+
+.medical-info-card h4 {
+    color: var(--accent-color); /* Use accent color for headings */
+    font-size: 1.1em;
+    margin-top: 0;
+    margin-bottom: 5px;
+    border-bottom: 1px dashed var(--border-color); /* Consistent separator */
+    padding-bottom: 5px;
+}
+
+.medical-info-card p {
+    font-size: 0.9em;
+    line-height: 1.4;
+    color: var(--text-secondary); /* Consistent secondary text color */
+    margin-bottom: 5px;
+}
+
+.medical-info-card p:last-child {
+    margin-bottom: 0;
+}
+
+.medical-info-card strong {
+    color: var(--text-primary); /* Consistent primary text color */
+}
+
+/* Animations - Kept consistent */
+@keyframes fadeInMessage {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive adjustments - Adjusted to align with general chatbot UI responsiveness */
+@media (max-width: 768px) {
+    .full-page-chat-window {
+        /* Adjusted for smaller screens */
+        height: 80vh; /* Take more height on smaller screens */
+        max-width: 100%;
+        border-radius: 12px;
+    }
+    .full-page-chat-header {
+        font-size: 1rem;
+        padding: 12px 18px;
+    }
+    .full-page-chat-messages {
+        padding: 15px 18px;
+        gap: 8px;
+    }
+    .full-page-chat-message {
+        font-size: 0.9rem;
+        padding: 8px 10px;
+        border-radius: 16px;
+        max-width: 90%;
+    }
+    .full-page-chat-input-form {
+        padding: 12px 18px;
+        gap: 8px;
+    }
+    .full-page-chat-input {
+        font-size: 0.85rem;
+        min-height: 35px;
+        max-height: 80px;
+    }
+    .full-page-send-button {
+        padding: 8px 15px;
+        font-size: 0.8rem;
+    }
+    .medical-info-card {
+        padding: 10px 12px;
+    }
+    .medical-info-card h4 {
+        font-size: 1em;
+    }
+    .medical-info-card p {
+        font-size: 0.85em;
+    }
+}
+
+@media (max-width: 480px) {
+    .full-chatbot-page {
+        padding: 10px;
+    }
+    .full-page-chat-window {
+        border-radius: 10px;
+        height: 90vh; /* Max height on very small screens */
+        max-height: unset; /* Remove explicit max-height for this breakpoint */
+    }
+    .full-page-chat-header {
+        font-size: 0.95rem;
+        padding: 10px 15px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+    .full-page-chat-messages {
+        padding: 10px 15px;
+    }
+    .full-page-chat-message {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+        border-radius: 14px;
+        max-width: 95%;
+    }
+    .full-page-chat-input-form {
+        padding: 10px 15px;
+    }
+    .full-page-chat-input {
+        font-size: 0.8rem;
+        min-height: 30px;
+        max-height: 70px;
+    }
+    .full-page-chatbot-buttons {
+        flex-direction: column;
+    }
+    .full-page-send-button {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+    .medical-info-card {
+        padding: 8px 10px;
+    }
+}

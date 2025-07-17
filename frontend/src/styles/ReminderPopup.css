@@ -1,0 +1,170 @@
+/* src/styles/ReminderPopup.css */
+
+/* Overlay that covers the whole screen */
+/* Renamed from .reminder-popup-overlay to .reminder-overlay to match JSX */
+.reminder-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6); /* Slightly less opaque for better blur visibility */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  z-index: 2000; /* Ensure it's above everything else */
+  backdrop-filter: blur(8px); /* Increased blur for more pronounced effect */
+  -webkit-backdrop-filter: blur(8px); /* Safari support for backdrop-filter */
+  animation: fadeInOverlay 0.3s ease-out forwards; /* Fade in the overlay */
+}
+
+/* The actual white-themed popup content box */
+/* Renamed from .reminder-popup-content to .reminder-popup-card to match JSX */
+.reminder-popup-card {
+  background-color: #ffffff; /* Pure white background */
+  color: #333333; /* Dark gray text for high contrast */
+  padding: 30px 40px;
+  border-radius: 20px; /* More rounded corners for a softer look */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4); /* Stronger, darker shadow for depth */
+  text-align: center;
+  max-width: 480px; /* Slightly wider for better content flow */
+  width: 90%; /* Responsive width */
+  animation: fadeInPop 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards; /* More dynamic pop animation */
+  border: 1px solid #e0e0e0; /* Subtle light border */
+  display: flex; /* Use flexbox for internal layout */
+  flex-direction: column; /* Stack header, body, actions vertically */
+}
+
+/* Header styling */
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #f0f0f0; /* Subtle separator */
+  padding-bottom: 15px;
+}
+
+.popup-header h3 {
+  font-size: 1.8rem; /* Adjusted font for better balance */
+  margin: 0;
+  color: #2c3e50; /* A dark blue-gray for the heading */
+  font-weight: 700;
+}
+
+.popup-header .close-btn {
+  background: none;
+  border: none;
+  font-size: 2rem; /* Larger close button */
+  color: #888888;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%; /* Circular button */
+  transition: all 0.2s ease;
+  line-height: 1; /* Ensures symbol is centered */
+}
+
+.popup-header .close-btn:hover {
+  color: #333333;
+  background-color: #f0f0f0;
+  transform: rotate(90deg); /* Little spin effect on hover */
+}
+
+/* Body styling */
+.popup-body {
+  flex-grow: 1; /* Allows body to take up available space */
+  margin-bottom: 25px;
+}
+
+.popup-body .popup-time {
+  font-size: 0.95rem;
+  color: #777777;
+  margin-bottom: 10px;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.popup-body .popup-title {
+  font-size: 1.3rem; /* Larger font for the reminder title */
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #4a4a4a;
+}
+
+.popup-body .popup-message {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #555555;
+  margin-bottom: 0; /* No bottom margin, actions will provide space */
+}
+
+/* Actions (buttons) styling */
+.popup-actions {
+  margin-top: 20px;
+}
+
+/* Dismiss Button Styling */
+.popup-actions .dismiss-btn {
+  background-color: #4CAF50; /* A friendly green for dismiss */
+  color: white;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 30px; /* Pill-shaped button */
+  font-size: 1.15rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 6px 15px rgba(76, 175, 80, 0.3); /* Green shadow */
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.popup-actions .dismiss-btn:hover {
+  background-color: #45a049; /* Darker green on hover */
+  transform: translateY(-3px); /* More pronounced lift */
+  box-shadow: 0 8px 20px rgba(76, 175, 80, 0.4);
+}
+
+.popup-actions .dismiss-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
+}
+
+/* Animations */
+@keyframes fadeInOverlay {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.7) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .reminder-popup-card {
+    padding: 20px 25px;
+    margin: 15px;
+    border-radius: 15px;
+  }
+  .popup-header h3 {
+    font-size: 1.6rem;
+  }
+  .popup-body .popup-title {
+    font-size: 1.1rem;
+  }
+  .popup-body .popup-message {
+    font-size: 0.95rem;
+  }
+  .popup-actions .dismiss-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
