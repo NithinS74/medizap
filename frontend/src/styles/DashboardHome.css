@@ -1,328 +1,581 @@
 /* src/styles/DashboardHome.css */
 
-.dashboard-grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid columns */
-  gap: 25px; /* Spacing between cards */
-  padding: 20px; /* Padding inside the dashboard area */
-  width: 100%;
-  box-sizing: border-box;
+/* Assume --primary-bg, --secondary-bg, etc., are defined in a global CSS file or App.css */
+
+/* --- News Marquee/Top Bar --- */
+.dashboard-news-marquee-container {
+    background-color: var(--secondary-bg);
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
 }
 
-/* Base Dashboard Card Styling (inherits from App.css .dashboard-card, adds more specific layout) */
+.dashboard-news-marquee-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-right: 20px;
+    flex-shrink: 0;
+    text-transform: uppercase;
+}
+
+.dashboard-news-marquee-wrapper {
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.dashboard-news-marquee-content {
+    display: inline-block;
+    animation: marquee 300s linear infinite; /* CHANGED: Marquee speed set to 300 seconds */
+    padding-left: 100%;
+    white-space: nowrap;
+}
+
+.dashboard-news-marquee-item {
+    display: inline-block;
+    margin-right: 60px;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+}
+
+.dashboard-news-marquee-item a {
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.dashboard-news-marquee-item a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.dashboard-news-marquee-item span {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-left: 10px;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+}
+
+.dashboard-news-marquee-content:hover {
+    animation-play-state: paused;
+}
+
+
+/* --- Overall Dashboard Layout (Map + Secondary Content) --- */
+.dashboard-layout-with-map {
+    display: grid;
+    grid-template-columns: 800px minmax(280px, 350px);
+    gap: 25px;
+    padding: 0 20px 20px 20px;
+    background-color: var(--primary-bg);
+    min-height: calc(100vh - var(--header-height, 48px) - 20px - var(--marquee-height, 50px));
+    box-sizing: border-box;
+    align-items: start;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* --- Map Container (Left Side) --- */
+.dashboard-map-container {
+    grid-column: 1;
+    grid-row: 1 / -1;
+    padding: 0px; /* Removed padding here to allow NearbyMap to control its own spacing */
+    z-index: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    box-sizing: border-box;
+    position: relative;
+    min-width: 850px; /* Adjusted min-width for map container */
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    height: 500px; /* Approximate height from your image. Adjust as needed. */
+}
+
+/* Specific styling for the NearbyMap component WHEN USED INSIDE dashboard-map-container */
+.dashboard-map-container .nearby-map-container {
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+    margin: 0;
+    background-color: transparent;
+    min-height: auto;
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Important: Ensure the actual Leaflet map canvas fills its container */
+.dashboard-map-container .nearby-map-container .map-canvas {
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    height: 100%;
+    flex-grow: 1;
+    width: 100%;
+}
+
+/* Adjust map loading/error messages within the dashboard context */
+.dashboard-map-container .nearby-map-container .map-loading,
+.dashboard-map-container .nearby-map-container .map-error {
+    box-shadow: none;
+    margin-bottom: 15px;
+    color: var(--text-secondary);
+}
+
+/* Adjust map disclaimer text within the dashboard context */
+.dashboard-map-container .nearby-map-container .map-disclaimer {
+    margin-top: 15px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+/* --- Map Fade Effect Overlays --- */
+.dashboard-map-container::before,
+.dashboard-map-container::after {
+    display: none; /* Hides the gradient overlays */
+}
+
+
+/* --- Dashboard Secondary Content Area (Right side for cards) --- */
+.dashboard-secondary-content {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-content: start;
+    box-sizing: border-box;
+    max-width: 350px;
+    justify-self: end;
+}
+
+
+/* --- General Dashboard Card Styling --- */
 .dashboard-card {
-  display: flex;
-  flex-direction: column;
-  padding: 25px;
-  min-height: 180px; /* Ensure cards have some minimum height */
-  box-sizing: border-box;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: var(--secondary-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 16px var(--shadow-color);
+    padding: 25px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    box-sizing: border-box;
 }
 
 .dashboard-card:hover {
-  transform: translateY(-5px); /* Subtle lift on hover */
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .card-title {
-  font-size: 1.5rem; /* Consistent title size */
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--border-color); /* Separator */
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+    text-align: left;
 }
 
-/* Welcome Card Specifics */
-.welcome-card {
-  grid-column: 1 / -1; /* Make welcome card span full width */
-  text-align: center;
-  background-color: var(--secondary-bg); /* Use secondary background */
-  border: 1px solid var(--border-color);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+.card-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--accent-color);
+    border-radius: 1px;
 }
 
-.welcome-card .card-title {
-  font-size: 2.2rem;
-  color: var(--accent-color); /* Accent color for welcome title */
-  border-bottom: none;
-  padding-bottom: 0;
-  margin-bottom: 15px;
+/* --- Upcoming Appointments Card --- */
+.appointments-card .appointment-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.appointments-card .appointment-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.95em;
+    color: var(--text-primary);
+}
+.appointments-card .appointment-item:last-child {
+    border-bottom: none;
+}
+.appointments-card .appointment-time {
+    font-weight: 600;
+    color: var(--accent-color);
+    flex-shrink: 0;
+    margin-right: 15px;
+}
+.appointments-card .appointment-description {
+    flex-grow: 1;
+    text-align: left;
+}
+.appointments-card .no-data-message {
+    color: var(--text-secondary);
+    font-style: italic;
+    text-align: center;
+    padding: 20px 0;
 }
 
-.welcome-message {
-  font-size: 1.1rem;
-  color: var(--text-secondary);
-  margin-bottom: 25px;
+/* --- Button for Upcoming Reminders --- */
+.reminders-button-container {
+    margin-top: 25px;
+    text-align: center;
 }
 
-.welcome-stats {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  font-size: 1.2rem;
-  color: var(--text-primary);
-  font-weight: 500;
-}
-.welcome-stats .stat-value {
-  color: var(--accent-color);
-  font-weight: 700;
-}
-
-/* General Stats Grid */
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 20px;
-  text-align: center;
+.reminders-button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    box-shadow: 0 4px 10px rgba(var(--accent-rgb), 0.3);
 }
 
-.stat-item .stat-value {
-  font-size: 2.5rem; /* Larger numbers */
-  font-weight: 700;
-  color: var(--accent-color);
-  margin-bottom: 5px;
-  line-height: 1;
-}
-.stat-item .stat-value.critical {
-  color: var(--ios-system-red); /* Red for critical */
-}
-.stat-item .stat-label {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+.reminders-button:hover {
+    background-color: var(--accent-dark);
+    transform: translateY(-2px);
 }
 
-/* Appointment List */
-.appointment-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.appointment-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  font-size: 0.95rem;
-}
-.appointment-item:last-child {
-  border-bottom: none;
-}
-.appointment-time {
-  color: var(--accent-color);
-  font-weight: 500;
-  white-space: nowrap;
-  margin-right: 10px;
-}
-.appointment-description {
-  flex-grow: 1;
-  color: var(--text-primary);
-}
-.no-data-message {
-  text-align: center;
-  color: var(--text-secondary);
-  font-style: italic;
-  padding: 20px 0;
-}
-
-/* Quick Actions */
-.action-buttons-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 15px;
-  margin-top: 10px;
-}
-
-.action-button {
-  background-color: var(--tertiary-bg); /* Darker button background */
-  color: var(--text-primary);
-  border: 1px solid var(--border-color);
-  border-radius: 10px;
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.1s ease, border-color 0.2s ease;
-  min-height: 90px;
-}
-
-.action-button:hover {
-  background-color: rgba(255, 255, 255, 0.08); /* Lighten on hover */
-  transform: translateY(-2px);
-  border-color: var(--accent-color); /* Accent border on hover */
-}
-.action-button:active {
-  transform: translateY(0);
-}
-
-.action-icon {
-  font-size: 2rem; /* Size for emoji icons */
-  margin-bottom: 8px;
-  line-height: 1;
-}
-.action-text {
-  font-size: 0.85rem;
-  font-weight: 500;
-  text-align: center;
-  line-height: 1.2;
+.reminders-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(var(--accent-rgb), 0.2);
 }
 
 
-/* Medication Supply */
-.supply-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.supply-list li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  font-size: 1rem;
-  color: var(--text-secondary);
-}
-.supply-list li:last-child {
-  border-bottom: none;
-}
-.supply-value {
-  font-weight: 600;
-  color: var(--text-primary);
-}
-.supply-value.danger { color: var(--ios-system-red); }
-.supply-value.warning { color: var(--ios-system-orange); }
-.supply-value.info { color: var(--ios-system-blue); }
-
-
-/* News & Updates */
-.news-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.news-item {
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  font-size: 0.95rem;
-}
-.news-item:last-child {
-  border-bottom: none;
-}
-.news-date {
-  display: block;
-  font-size: 0.8rem;
-  color: var(--text-secondary);
-  margin-bottom: 4px;
-}
-.news-title {
-  margin: 0;
-  color: var(--text-primary);
-  font-weight: 500;
+/* NEW: Medicine Availability Card Styles */
+.medicine-availability-card {
+    /* Inherits general dashboard-card styles */
 }
 
-/* Chart Placeholder */
-.chart-placeholder-card {
-  min-height: 250px; /* Taller for charts */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+.medicine-search-inputs {
+    display: flex;
+    flex-direction: column; /* Stack inputs vertically */
+    gap: 10px; /* Space between input fields */
+    margin-bottom: 15px;
 }
-.chart-area {
-  padding-top: 15px;
-  width: 100%;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: var(--text-secondary);
-  font-size: 1.1rem;
+
+.medicine-search-inputs .medicine-input,
+.medicine-search-inputs .pincode-input {
+    padding: 10px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    background-color: var(--primary-bg); /* Match general background */
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    width: 100%; /* Full width within its container */
+    box-sizing: border-box; /* Include padding in width */
 }
-.chart-description {
-  font-size: 0.85rem;
-  margin-top: 5px;
-  font-style: italic;
+
+.medicine-search-inputs .medicine-input:focus,
+.medicine-search-inputs .pincode-input:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(var(--accent-rgb), 0.2);
+}
+
+.medicine-search-inputs .search-button {
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    width: 100%; /* Full width button */
+    box-sizing: border-box;
+}
+
+.medicine-search-inputs .search-button:hover {
+    background-color: var(--accent-dark);
+    transform: translateY(-1px);
+}
+
+.medicine-search-inputs .search-button:active {
+    transform: translateY(0);
+}
+
+.medicine-search-inputs .search-button:disabled {
+    background-color: var(--text-secondary); /* Muted color when disabled */
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.medicine-results-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0; /* Space above results list */
+    max-height: 250px; /* Limit height and enable scrolling if many results */
+    overflow-y: auto;
+    border-top: 1px solid var(--border-color);
+    padding-top: 15px;
+}
+
+.medicine-result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--text-tertiary); /* Dashed border for results */
+}
+
+.medicine-result-item:last-child {
+    border-bottom: none;
+}
+
+.medicine-result-item .pharmacy-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.medicine-result-item .pharmacy-name {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+}
+
+.medicine-result-item .pharmacy-address {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.medicine-result-item .stock-status {
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 4px 8px;
+    border-radius: 6px;
+    white-space: nowrap; /* Prevent stock status from wrapping */
+}
+
+/* Stock Status Colors */
+.stock-status.high {
+    background-color: hsla(120, 70%, 40%, 0.2); /* Greenish background */
+    color: hsl(120, 70%, 60%); /* Green text */
+}
+.stock-status.medium {
+    background-color: hsla(40, 90%, 50%, 0.2); /* Orangish background */
+    color: hsl(40, 90%, 70%); /* Orange text */
+}
+.stock-status.low {
+    background-color: hsla(0, 90%, 60%, 0.2); /* Reddish background */
+    color: hsl(0, 90%, 70%); /* Red text */
+}
+.stock-status.unavailable {
+    background-color: hsla(220, 10%, 50%, 0.2); /* Grayish background */
+    color: hsl(220, 10%, 70%); /* Gray text */
+}
+
+.search-message {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-top: 10px;
+}
+
+.error-message {
+    color: var(--error-color);
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 10px;
 }
 
 
-/* Responsive Adjustments for Dashboard Grid */
-@media (min-width: 1200px) {
-  .dashboard-grid-container {
-    grid-template-columns: repeat(3, 1fr); /* Three columns on very large screens */
-  }
-  .welcome-card {
-    grid-column: 1 / 4; /* Spans all 3 columns */
-  }
-  .patient-stats-card {
-    grid-column: span 1;
-  }
-  .appointments-card {
-    grid-column: span 2; /* Appointments card spans two columns */
-  }
-  .quick-actions-card {
-    grid-column: span 2; /* Quick actions spans two columns */
-  }
-  .medication-supply-card {
-    grid-column: span 1;
-  }
-  .news-card {
-    grid-column: span 1;
-  }
-  .chart-placeholder-card {
-    grid-column: span 1;
-  }
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .dashboard-layout-with-map {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 15px;
+        max-width: 900px;
+    }
+    .dashboard-map-container {
+        grid-column: 1;
+        grid-row: auto;
+        min-height: 450px;
+        min-width: auto;
+        max-width: 100%;
+        order: 2;
+        background-color: var(--secondary-bg);
+        border-radius: 12px;
+        box-shadow: 0 4px 16px var(--shadow-color);
+        height: auto;
+    }
+    .dashboard-map-container::before,
+    .dashboard-map-container::after {
+        display: none;
+    }
+
+    .dashboard-secondary-content {
+        grid-column: 1;
+        order: 1;
+        flex-direction: column;
+        max-width: 100%;
+    }
+    .dashboard-card {
+        padding: 20px;
+    }
+    .card-title {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+    }
+
+    .nearby-map-container .map-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .nearby-map-container .map-controls .pincode-input,
+    .nearby-map-container .map-controls .search-button {
+        width: 100%;
+        max-width: none;
+    }
 }
 
 @media (max-width: 768px) {
-  .dashboard-grid-container {
-    grid-template-columns: 1fr; /* Single column on smaller tablets/mobiles */
-    padding: 15px;
-    gap: 20px;
-  }
-  .welcome-card .card-title {
-    font-size: 1.8rem;
-  }
-  .welcome-message {
-    font-size: 1rem;
-  }
-  .stat-item .stat-value {
-    font-size: 2rem;
-  }
-  .card-title {
-    font-size: 1.3rem;
-  }
-  .action-button {
-    min-height: 80px;
-    padding: 12px;
-  }
-  .action-icon {
-    font-size: 1.8rem;
-  }
-  .action-text {
-    font-size: 0.8rem;
-  }
-  .chart-placeholder-card {
-    min-height: 200px;
-  }
+    .dashboard-layout-with-map {
+        padding: 15px;
+        gap: 15px;
+    }
+    .dashboard-map-container {
+        min-height: 350px;
+    }
+    .dashboard-card {
+        padding: 18px;
+    }
+    .card-title {
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+    }
+    .dashboard-news-marquee-container {
+        padding: 8px 15px;
+        margin-bottom: 15px;
+    }
+    .dashboard-news-marquee-title {
+        font-size: 1rem;
+    }
+    .dashboard-news-marquee-item {
+        font-size: 0.9rem;
+        margin-right: 30px;
+    }
+
+    /* Medicine Availability Card Responsive */
+    .medicine-search-inputs {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .medicine-search-inputs .medicine-input,
+    .medicine-search-inputs .pincode-input,
+    .medicine-search-inputs .search-button {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+    .medicine-results-list {
+        max-height: 200px;
+        font-size: 0.9rem;
+    }
+    .medicine-result-item .pharmacy-name {
+        font-size: 0.9rem;
+    }
+    .medicine-result-item .pharmacy-address {
+        font-size: 0.75rem;
+    }
+    .medicine-result-item .stock-status {
+        font-size: 0.8rem;
+        padding: 3px 6px;
+    }
 }
-/* src/styles/DashboardHome.css */
 
-/* ... (your existing CSS) ... */
+@media (max-width: 480px) {
+    .dashboard-layout-with-map {
+        padding: 10px;
+        gap: 10px;
+    }
+    .dashboard-card {
+        padding: 15px;
+        border-radius: 10px;
+    }
+    .card-title {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        padding-bottom: 8px;
+    }
+    .card-title::after {
+        width: 30px;
+        height: 1.5px;
+    }
+    .dashboard-map-container {
+        min-height: 300px;
+        padding: 15px;
+        border-radius: 10px;
+    }
+    .dashboard-map-container .nearby-map-container .map-title {
+        font-size: 1.4rem;
+    }
+    .pincode-input, .search-button {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+        border-radius: 6px;
+    }
+    .dashboard-news-marquee-container {
+        padding: 5px 10px;
+        margin-bottom: 10px;
+    }
+    .dashboard-news-marquee-title {
+        font-size: 0.9rem;
+    }
+    .dashboard-news-marquee-item {
+        font-size: 0.8rem;
+        margin-right: 20px;
+    }
 
-.pharmacy-map-card {
-  /* You can add specific styles here if needed, e.g., */
-  /* grid-column: span 2; */ /* To make it span two columns if desired */
-}
-
-.map-placeholder {
-  /* Styles for the gray box that says "Interactive Map Placeholder" */
+    /* Medicine Availability Card Responsive */
+    .medicine-search-inputs {
+        gap: 6px;
+    }
+    .medicine-search-inputs .medicine-input,
+    .medicine-search-inputs .pincode-input,
+    .medicine-search-inputs .search-button {
+        font-size: 0.85rem;
+        padding: 6px 10px;
+    }
+    .medicine-results-list {
+        max-height: 150px;
+        font-size: 0.85rem;
+    }
+    .medicine-result-item .pharmacy-name {
+        font-size: 0.85rem;
+    }
+    .medicine-result-item .pharmacy-address {
+        font-size: 0.7rem;
+    }
+    .medicine-result-item .stock-status {
+        font-size: 0.75rem;
+        padding: 2px 5px;
+    }
 }

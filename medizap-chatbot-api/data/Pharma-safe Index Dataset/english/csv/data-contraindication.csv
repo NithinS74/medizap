@@ -1,0 +1,474 @@
+id_drug|contra_indication 
+0|Severe kidney dysfunction
+0|hypersensitive
+0|digestive tract obstruction
+0|very weak patient
+1|It should not be given to patients with severely impaired kidney function
+2|In patients who have a history of hypersensitivity to the ingredients in this product
+3|Do not give to people with severe kidney dysfunction
+3|because it can cause hypermagnesia, magnesium levels in the blood increase
+4|Do not give to people with severe kidney dysfunction
+4|because it can cause hypermagnesia, magnesium levels in the blood increase
+5|Do not give to people with severe kidney dysfunction, because it can cause hypermagnesia (increased magnesium levels in the blood)
+5|Should not be used in patients who are hypersensitive to aluminum hydroxide, magnesium hydroxide, simethicone or any other component in this drug formulation
+6|Do not give to people with severe kidney dysfunction, because it can cause hypermagnesia (increased magnesium levels in the blood)
+6|Should not be used in patients who are hypersensitive to aluminum hydroxide, magnesium hydroxide, simethicone or any other component in this drug formulation
+7|Hypersensitivity to any of the components of the drug
+7|Contraindicated for patients experiencing acute pancreatitis or acute exacerbation of chronic pancreatitis
+7|Contraindicated for patients taking anticoagulants
+8|Patients who are hypersensitive to aluminum, magnesium, simethicone
+8|Patients with severe kidney function disorders, because it can cause hypermagnesemia, magnesium levels in the blood increase
+9|Patients who are hypersensitive to aluminum, magnesium, simethicone
+9|Patients with severe kidney function disorders, because it can cause hypermagnesemia, magnesium levels in the blood increase
+10|Do not give it to people with severe kidney dysfunction, because it can cause hypermagnesia, increasing magnesium levels in the blood
+11|Do not give it to people with severe kidney dysfunction, because it can cause hypermagnesia, increasing magnesium levels in the blood
+12|Hypersensitivity and sufferers of severe kidney disorders
+13|Patients who have a history of allergies to one of the components of the drug
+14|If excessive and dangerous side effects occur, please consult medical personnel
+15|Do not use Promag medication if you are allergic to any of its ingredients
+15|This drug is also not recommended for people with kidney disorders
+15|Promag contains magnesium so it can cause hypermagnesemia
+16|Hypersensitivity to drug components
+17|BISOLVON EXTRA should not be used in patients with known hypersensitivity to bromhexine, guaifenesin or any other component in the formula
+17|Guaifenesin is considered unsafe in patients with porphyria because it has been shown to be porphyrinogenic in animals
+17|In cases of rare congenital disorders, namely conditions where there is a mismatch with the additional substances contained in the medicinal product attached to the product composition, use of the product is contraindicated.
+18|Hypersensitivity to any component of this drug
+19|Sufferers are hypersensitive to any of the components of this drug
+19|Should not be used on newborns or preadult babies
+19|Ototoxic antibiotic therapy because it will cause an ototoxic reaction
+20|Hypersensitivity to Acetylcysteine ​​or additional substances of this drug Children under 2 years
+21|In patients who have a history of hypersensitivity to the ingredients in this product
+22|newborns and preadult babies
+22|breastfeeding mothers
+22|people who are allergic to one of its ingredients
+23|Hypersensitive
+23|Sufferers of intestinal obstruction
+23|Sufferers should avoid constipation
+24|Avoid using OB Herbal if you have a history of allergies to any of the ingredients in the medicine
+25|Patients who experience hypersensitivity reactions to one of the drug ingredients. You will experience several symptoms, such as the appearance of a rash, itching and swelling
+25|Severe insomnia
+26|Patients who are hypersensitive to the components of this drug
+27|Patients who are hypersensitive to one of the components of the drug
+28|Patients who are hypersensitive to one of the components of the drug
+29|Patients with hypersensitivity to drugs
+30|Patients who are hypersensitive to any of the components of this drug
+31|Do not give to patients who are hypersensitive to drug components
+32|Patients who are hypersensitive to the components of this drug
+32|Pregnant and breastfeeding women
+33|SANADRYL Expectorant should not be used in infants, breastfeeding mothers, antibiotic therapy that is ototoxic because it can cause ototoxic reactions. Patients who are hypersensitive to any of the components of the expectorant SANADRYL
+34|Sufferers are hypersensitive to any of the ingredients contained in this preparation
+34|Patients with heart problems and diabetes mellitus
+34|Patients with severe liver dysfunction
+35|Hypersensitivity to Bromhexine HCI
+35|Guaifenesin or other components in this drug
+36|Hypersensitive sufferers
+36|glaucoma sufferers
+36|bronchial asthma
+36|respiratory failure and pregnant or breastfeeding women
+37|In pregnant and breastfeeding women
+37|sufferers are hypersensitive to one of the active ingredients
+37|glaucoma sufferers
+37|bronchial asthma
+37|respiratory failure should not use this drug
+38|Hypersensitive
+38|children < 2 years old
+38|using more than one cough and cold medicine
+38|Kidney illness
+38|liver disease
+38|children with severe dysentery
+38|hypersensitive
+39|It should not be given to patients who are sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, sufferers of severe high blood pressure, and those receiving monoamine oxidase MAO inhibitor type antidepressant therapy.
+39|Do not exceed the recommended dose
+39|Be careful when using it in people with high blood pressure or who have the potential for high blood pressure or stroke, such as in people who are overweight or elderly.
+39|If within 3 days the flu symptoms do not decrease, immediately contact a doctor or health service unit
+39|Stop using this medicine if you experience insomnia, heart palpitations and dizziness
+39|Patients who are hypersensitive to the components of this drug
+39|Patients with severe liver dysfunction
+39|Patients with heart problems and diabetes mellitus
+40|It should not be given to patients who are sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, sufferers of severe high blood pressure, and those receiving monoamine oxidase MAO inhibitor type antidepressant therapy.
+40|Do not exceed the recommended dose
+40|Be careful when using it in people with high blood pressure or who have the potential for high blood pressure or stroke, such as in people who are overweight or elderly.
+40|If within 3 days the flu symptoms do not decrease, immediately contact a doctor or health service unit
+40|Stop using this medicine if you experience insomnia, heart palpitations and dizziness
+40|Patients who are hypersensitive to the components of this drug
+40|Patients with severe liver dysfunction
+40|Patients with heart problems and diabetes mellitus
+41|It should not be given to patients who are sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, sufferers of severe high blood pressure, and those receiving monoamine oxidase MAO inhibitor type antidepressant therapy.
+41|Do not exceed the recommended dose
+41|Be careful when using it in people with high blood pressure or who have the potential for high blood pressure or stroke, such as in people who are overweight or elderly.
+41|If within 3 days the flu symptoms do not decrease, immediately contact a doctor or health service unit
+41|Stop using this medicine if you experience insomnia, heart palpitations and dizziness
+41|Patients who are hypersensitive to the components of this drug
+41|Patients with severe liver dysfunction
+41|Patients with heart problems and diabetes mellitus
+42|It should not be given to patients who are sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, sufferers of severe high blood pressure, and those receiving monoamine oxidase MAO inhibitor type antidepressant therapy.
+42|Do not exceed the recommended dose
+42|Be careful when using it in people with high blood pressure or who have the potential for high blood pressure or stroke, such as in people who are overweight or elderly.
+42|If within 3 days the flu symptoms do not decrease, immediately contact a doctor or health service unit
+42|Stop using this medicine if you experience insomnia, heart palpitations and dizziness
+42|Patients who are hypersensitive to the components of this drug
+42|Patients with severe liver dysfunction
+42|Patients with heart problems and diabetes mellitus
+43|It should not be given to patients who are sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, sufferers of severe high blood pressure, and those receiving monoamine oxidase MAO inhibitor type antidepressant therapy.
+43|Do not exceed the recommended dose
+43|Be careful when using it in people with high blood pressure or who have the potential for high blood pressure or stroke, such as in people who are overweight or elderly.
+43|If within 3 days the flu symptoms do not decrease, immediately contact a doctor or health service unit
+43|Stop using this medicine if you experience insomnia, heart palpitations and dizziness
+43|Patients who are hypersensitive to the components of this drug
+43|Patients with severe liver dysfunction
+43|Patients with heart problems and diabetes mellitus
+44|Patients who have a history of hypersensitivity to any of the components of this drug
+44|Patients who have sensitivity to other sympathomimetic drugs such as ephedrine, pseudoephedrine, phenylephrine are also contraindicated in using this drug.
+44|Patients with severe hypertension, heart disease, diabetes mellitus, and severe liver dysfunction should not use this drug
+44|Also contraindicated for patients who are using monoamine oxidase MAO inhibitors, because they can increase blood pressure.
+45|It should not be given to patients who are sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, sufferers of severe high blood pressure, and those receiving monoamine oxidase MAO inhibitor type antidepressant therapy.
+45|Do not exceed the recommended dose
+45|Be careful when using it in people with high blood pressure or who have the potential for high blood pressure or stroke, such as in people who are overweight or elderly.
+45|If within 3 days the flu symptoms do not decrease, immediately contact a doctor or health service unit
+45|Stop using this medicine if you experience insomnia, heart palpitations and dizziness
+45|Patients who are hypersensitive to the components of this drug
+45|Patients with severe liver dysfunction
+45|Patients with heart problems and diabetes mellitus
+46|It should not be given to patients who are sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, sufferers of severe high blood pressure, and those receiving monoamine oxidase MAO inhibitor type antidepressant therapy.
+46|Do not exceed the recommended dose
+46|Be careful when using it in people with high blood pressure or who have the potential for high blood pressure or stroke, such as in people who are overweight or elderly.
+46|If within 3 days the flu symptoms do not decrease, immediately contact a doctor or health service unit
+46|Stop using this medicine if you experience insomnia, heart palpitations and dizziness
+46|Patients who are hypersensitive to the components of this drug
+46|Patients with severe liver dysfunction
+46|Patients with heart problems and diabetes mellitus
+47|It should not be given to patients who are sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, sufferers of severe high blood pressure, and those receiving monoamine oxidase MAO inhibitor type antidepressant therapy.
+47|Do not exceed the recommended dose
+47|Be careful when using it in people with high blood pressure or who have the potential for high blood pressure or stroke, such as in people who are overweight or elderly.
+47|If within 3 days the flu symptoms do not decrease, immediately contact a doctor or health service unit
+47|Stop using this medicine if you experience insomnia, heart palpitations and dizziness
+47|Patients who are hypersensitive to the components of this drug
+47|Patients with severe liver dysfunction
+47|Patients with heart problems and diabetes mellitus
+48|It should not be given to patients who are sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, sufferers of severe high blood pressure, and those receiving monoamine oxidase MAO inhibitor type antidepressant therapy.
+48|Do not exceed the recommended dose
+48|Be careful when using it in people with high blood pressure or who have the potential for high blood pressure or stroke, such as in people who are overweight or elderly.
+48|If within 3 days the flu symptoms do not decrease, immediately contact a doctor or health service unit
+48|Stop using this medicine if you experience insomnia, heart palpitations and dizziness
+48|Patients who are hypersensitive to the components of this drug
+48|Patients with severe liver dysfunction
+48|Patients with heart problems and diabetes mellitus
+49|Patients who have a history of hypersensitivity to any of the components of this drug
+49|Patients who have sensitivity to other sympathomimetic drugs such as ephedrine, pseudoephedrine, phenylephrine are also contraindicated in using this drug.
+49|Patients with severe hypertension, heart disease, diabetes mellitus, and severe liver dysfunction should not use this drug
+49|Also contraindicated for patients who are using monoamine oxidase MAO inhibitors, because they can increase blood pressure.
+50|It should not be given to sufferers who are sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, sufferers of severe high blood pressure, and those receiving monoamine oxidase MAO inhibitor type antidepressant drug therapy.
+50|Do not exceed the recommended dose. Be careful when using it in people with high blood pressure or who have the potential for high blood pressure or stroke, such as in people who are overweight or elderly.
+50|If within 3 days the symptoms do not decrease, immediately contact a doctor or health service unit
+50|Stop using this medication if you experience insomnia, palpitations, and dizziness
+50|Patients with heart problems and diabetes mellitus
+50|Do not use if allergic to Triprolidine HCL, Pseudoephedrine HCL, Dextromethorphan Downstream, and the glue components in this drug
+50|The patient has severe renal impairment
+50|Patients with mild and moderate kidney disorders should consult a doctor
+50|Patients use other medicines to relieve coughs, colds and flu, nasal congestion
+50|Patients use other drugs such as cyclic antidepressants, stimulant drugs such as amphetamine, sometimes used to treat attention disorders or appetite suppressants.
+50|The patient is taking antibiotics such as furazolidone or linezolid
+50|The patient has an infection in the respiratory tract, asthma, or other respiratory problems
+51|Do not use if allergic to Triprolidine HCL, Pseudoephedrine HCL, Dextromethorphan Downstream, and the glue components in this drug
+51|The patient has severe renal impairment
+51|Patients with mild and moderate kidney disorders should consult a doctor
+51|Patients use other medicines to relieve coughs, colds and flu, nasal congestion
+51|Patients use other drugs such as cyclic antidepressants, stimulant drugs such as amphetamine, sometimes used to treat attention disorders or appetite suppressants.
+51|The patient is taking antibiotics such as furazolidone or linezolid
+52|Children less than 6 years old
+52|Alcohol consumption
+52|children under 4 years of age
+52|hypersensitivity
+52|monoamine oxidase inhibitor
+52|vigorous exercise in hot weather
+53|It should not be used in patients who are known to have allergies to the ingredients in Silex Syrup
+54|It should not be given to patients who are sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, sufferers of severe high blood pressure, and those receiving monoamine oxidase MAO inhibitor type antidepressant therapy.
+54|Do not exceed the recommended dose
+54|Be careful when using it in people with high blood pressure or who have the potential for high blood pressure or stroke, such as in people who are overweight or elderly.
+54|If within 3 days the flu symptoms do not decrease, immediately contact a doctor or health service unit
+54|Stop using this medicine if you experience insomnia, heart palpitations and dizziness
+54|Patients who are hypersensitive to the components of this drug
+54|Patients with severe liver dysfunction
+55|Sufferers of hypersensitivity, liver disease or respiratory failure
+56|In hypertensive patients
+56|chronic hepatitis
+56|severe kidney disorders
+56|diabetes
+57|In patients who have a history of hypersensitivity to the ingredients in this product
+58|BISOLVON should not be used by patients who are hypersensitive to bromhexine HCl or other components in the formula. In certain rare cases, namely conditions where there is incompatibility with the additional substances contained in the medicinal product, use of the product is contraindicated.
+59|BISOLVON should not be used by patients who are hypersensitive to bromhexine HCl or other components in the formula. In certain rare cases, namely conditions where there is incompatibility with the additional substances contained in the medicinal product, use of the product is contraindicated.
+60|Patients who are hypersensitive to the components of this drug
+60|Patients with severe liver dysfunction
+61|It should not be given to patients who are sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, sufferers of severe high blood pressure, and those receiving monoamine oxidase MAO inhibitor type antidepressant therapy.
+61|Do not exceed the recommended dose
+61|Be careful when using it in people with high blood pressure or who have the potential for high blood pressure or stroke, such as in people who are overweight or elderly.
+61|If within 3 days the flu symptoms do not decrease, immediately contact a doctor or health service unit
+61|Stop using this medicine if you experience insomnia, heart palpitations and dizziness
+61|Patients with heart problems and diabetes mellitus
+61|Patients with severe liver dysfunction
+61|Hypersensitivity to the components of this drug
+62|It should not be given to patients who are sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, sufferers of severe high blood pressure, and those receiving monoamine oxidase MAO inhibitor type antidepressant therapy.
+62|Do not exceed the recommended dose
+62|Be careful when using it in people with high blood pressure or who have the potential for high blood pressure or stroke, such as in people who are overweight or elderly.
+62|If within 3 days the flu symptoms do not decrease, immediately contact a doctor or health service unit
+62|Stop using this medicine if you experience insomnia, heart palpitations and dizziness
+62|Patients with heart problems and diabetes mellitus
+62|Patients with severe liver dysfunction
+62|Hypersensitivity to the components of this drug
+63|It should not be given to patients who are sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, sufferers of severe high blood pressure, and those receiving monoamine oxidase MAO inhibitor type antidepressant therapy.
+63|Do not exceed the recommended dose
+63|Be careful when using it in people with high blood pressure or who have the potential for high blood pressure or stroke, such as in people who are overweight or elderly.
+63|If within 3 days the flu symptoms do not decrease, immediately contact a doctor or health service unit
+63|Stop using this medicine if you experience insomnia, heart palpitations and dizziness
+63|Patients with a history of hypersensitivity to Paracetamol, Patients with a history of hypersensitivity to Paracetamol, Patients with a history of hypersensitivity to Paracetamol, Pseudoephedrine HCl, Chlorphenamine Maleate and Guaiafenesin
+63|Patients with severe liver dysfunction
+64|It should not be given to patients who are sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, sufferers of severe high blood pressure, and those receiving monoamine oxidase MAO inhibitor type antidepressant therapy.
+64|Do not exceed the recommended dose
+64|Be careful when using it in people with high blood pressure or who have the potential for high blood pressure or stroke, such as in people who are overweight or elderly.
+64|If within 3 days the flu symptoms do not decrease, immediately contact a doctor or health service unit
+64|Stop using this medicine if you experience insomnia, heart palpitations and dizziness
+64|Patients with a history of hypersensitivity to Paracetamol, Patients with a history of hypersensitivity to Paracetamol, Patients with a history of hypersensitivity to Paracetamol, Pseudoephedrine HCl, Chlorphenamine Maleate and Guaiafenesin
+64|Patients with severe liver dysfunction
+65|Patients who are too sensitive to drug components
+65|In patients with impaired liver function and active liver disease
+66|It should not be given to patients who are sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, sufferers of severe high blood pressure, and those receiving monoamine oxidase MAO inhibitor type antidepressant therapy.
+66|Do not exceed the recommended dose
+66|Be careful when using it in people with high blood pressure or who have the potential for high blood pressure or stroke, such as in people who are overweight or elderly.
+66|If within 3 days the flu symptoms do not decrease, immediately contact a doctor or health service unit
+66|Stop using this medicine if you experience insomnia, heart palpitations and dizziness
+66|Patients with a history of hypersensitivity to Paracetamol, Patients with a history of hypersensitivity to Paracetamol, Patients with a history of hypersensitivity to Paracetamol, Pseudoephedrine HCl, Chlorphenamine Maleate and Guaiafenesin
+66|Patients with severe liver dysfunction
+67|It should not be given to patients who are sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, sufferers of severe high blood pressure, and those receiving monoamine oxidase MAO inhibitor type antidepressant therapy.
+67|Do not exceed the recommended dose
+67|Be careful when using it in people with high blood pressure or who have the potential for high blood pressure or stroke, such as in people who are overweight or elderly.
+67|If within 3 days the flu symptoms do not decrease, immediately contact a doctor or health service unit
+67|Stop using this medicine if you experience insomnia, heart palpitations and dizziness
+67|Patients with a history of hypersensitivity to Paracetamol, Patients with a history of hypersensitivity to Paracetamol, Patients with a history of hypersensitivity to Paracetamol, Pseudoephedrine HCl, Chlorphenamine Maleate and Guaiafenesin
+67|Patients with severe liver dysfunction
+68|Patients with severe liver dysfunction
+68|heart problems and diabetes mellitus. Patients who are hypersensitive to the components of this drug
+69|Patients with impaired liver function
+69|Patients who are hypersensitive to the components of this drug
+70|Patients who have a history of hypersensitivity to one of the ingredients of Triaminic Cough and Cold
+71|It should not be given to patients who are sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, sufferers of severe high blood pressure, and those receiving monoamine oxidase MAO inhibitor type antidepressant therapy.
+71|Do not exceed the recommended dose
+71|Be careful when using it in people with high blood pressure or who have the potential for high blood pressure or stroke, such as in people who are overweight or elderly.
+71|If within 3 days the flu symptoms do not decrease, immediately contact a doctor or health service unit
+71|Stop using this medicine if you experience insomnia, heart palpitations and dizziness
+71|Patients with heart problems and diabetes mellitus
+72|It should not be given to patients who are sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, sufferers of severe high blood pressure, and those receiving monoamine oxidase MAO inhibitor type antidepressant therapy.
+72|Do not exceed the recommended dose
+72|Be careful when using it in people with high blood pressure or who have the potential for high blood pressure or stroke, such as in people who are overweight or elderly.
+72|If within 3 days the flu symptoms do not decrease, immediately contact a doctor or health service unit
+72|Stop using this medicine if you experience insomnia, heart palpitations and dizziness
+72|Patients who are hypersensitive to the components of this drug
+73|It should not be given to patients who are sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, sufferers of severe high blood pressure, and those receiving monoamine oxidase MAO inhibitor type antidepressant therapy.
+73|Do not exceed the recommended dose
+73|Be careful when using it in people with high blood pressure or who have the potential for high blood pressure or stroke, such as in people who are overweight or elderly.
+73|If within 3 days the flu symptoms do not decrease, immediately contact a doctor or health service unit
+73|Stop using this medicine if you experience insomnia, heart palpitations and dizziness
+73|Patients with a history of hypersensitivity to Paracetamol, Patients with a history of hypersensitivity to Paracetamol, Patients with a history of hypersensitivity to Paracetamol, Pseudoephedrine HCl, Chlorphenamine Maleate and Guaiafenesin
+73|Patients with severe liver dysfunction
+74|It should not be given to patients who are sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, sufferers of severe high blood pressure, and those receiving monoamine oxidase MAO inhibitor type antidepressant therapy.
+74|Do not exceed the recommended dose
+74|Be careful when using it in people with high blood pressure or who have the potential for high blood pressure or stroke, such as in people who are overweight or elderly.
+74|If within 3 days the flu symptoms do not decrease, immediately contact a doctor or health service unit
+74|Stop using this medicine if you experience insomnia, heart palpitations and dizziness
+74|Sufferers are hypersensitive to the components of this drug
+74|Sufferers of heart problems and diabetes mellitus
+75|Avoid using Rhinos Junior in patients - Patients who are sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, sufferers of severe hypertension
+75|Patients receiving MAO inhibitor type antidepressant drug therapy
+75|Severe hypertension or with the potential to develop hypertension or stroke
+76|Avoid using Rhinos Neo in patients
+76|Sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, severe hypertension sufferers
+76|Treated with MAO inhibitor type antidepressant drugs
+76|Severe hypertension or with the potential to develop hypertension or stroke
+77|It should not be given to patients who are sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, sufferers of severe high blood pressure, and those receiving monoamine oxidase MAO inhibitor type antidepressant therapy.
+77|Do not exceed the recommended dose
+77|Be careful when using it in people with high blood pressure or who have the potential for high blood pressure or stroke, such as in people who are overweight or elderly.
+77|If within 3 days the flu symptoms do not decrease, immediately contact a doctor or health service unit
+77|Stop using this medicine if you experience insomnia, heart palpitations and dizziness
+77|Patients who are hypersensitive to the components of this drug
+78|BISOLVON should not be used by patients who are hypersensitive to bromhexine HCl or other components in the formula
+78|In certain rare cases, namely conditions where there is incompatibility with the additional substances contained in the medicinal product, use of the product is contraindicated.
+79|The patient is hypersensitive to acetylcysteine
+79|Children under 2 years old
+80|Hypersensitive
+80|diabetes
+80|liver disease
+80|phenylketouria
+80|pregnant and breastfeeding
+81|It should not be given to patients who are sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, sufferers of severe high blood pressure, and those receiving monoamine oxidase MAO inhibitor type antidepressant therapy.
+81|Do not exceed the recommended dose
+81|Be careful when using it in people with high blood pressure or who have the potential for high blood pressure or stroke, such as in people who are overweight or elderly.
+81|If within 3 days the flu symptoms do not decrease, immediately contact a doctor or health service unit
+81|Stop using this medicine if you experience insomnia, heart palpitations and dizziness
+81|Patients with heart problems and diabetes mellitus
+81|Patients with severe liver dysfunction
+81|Hypersensitivity to the components of this drug
+82|It should not be given to patients who are sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, sufferers of severe high blood pressure, and those receiving monoamine oxidase MAO inhibitor type antidepressant therapy.
+82|Do not exceed the recommended dose
+82|Be careful when using it in people with high blood pressure or who have the potential for high blood pressure or stroke, such as in people who are overweight or elderly.
+82|If within 3 days the flu symptoms do not decrease, immediately contact a doctor or health service unit
+82|Stop using this medicine if you experience insomnia, heart palpitations and dizziness
+82|Patients with heart problems and diabetes mellitus
+82|Patients with severe liver dysfunction
+83|It should not be given to patients who are sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, sufferers of severe high blood pressure, and those receiving monoamine oxidase MAO inhibitor type antidepressant therapy.
+83|Do not exceed the recommended dose
+83|Be careful when using it in people with high blood pressure or who have the potential for high blood pressure or stroke, such as in people who are overweight or elderly.
+83|If within 3 days the flu symptoms do not decrease, immediately contact a doctor or health service unit
+83|Stop using this medicine if you experience insomnia, heart palpitations and dizziness
+83|Patients with heart problems and diabetes mellitus
+83|Patients with severe liver dysfunction
+83|If you are receiving therapy using amphetamines generally to treat attention deficit disorder, appetite suppressants, or other drugs that contain antihistamines. If you have a respiratory tract infection, respiratory tract problems
+84|It should not be given to patients who are sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, sufferers of severe high blood pressure, and those receiving monoamine oxidase MAO inhibitor type antidepressant therapy.
+84|Do not exceed the recommended dose
+84|Be careful when using it in people with high blood pressure or who have the potential for high blood pressure or stroke, such as in people who are overweight or elderly.
+84|If within 3 days the flu symptoms do not decrease, immediately contact a doctor or health service unit
+84|Stop using this medicine if you experience insomnia, heart palpitations and dizziness
+84|Patients with heart problems and diabetes mellitus
+84|Patients with severe liver dysfunction
+84|Hypersensitivity to the components of this drug
+85|It should not be given to patients who are sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, sufferers of severe high blood pressure, and those receiving monoamine oxidase MAO inhibitor type antidepressant therapy.
+85|Do not exceed the recommended dose
+85|Be careful when using it in people with high blood pressure or who have the potential for high blood pressure or stroke, such as in people who are overweight or elderly.
+85|If within 3 days the flu symptoms do not decrease, immediately contact a doctor or health service unit
+85|Stop using this medicine if you experience insomnia, heart palpitations and dizziness
+85|Patients with heart problems and diabetes mellitus
+85|Patients with severe liver dysfunction
+85|Sufferers are hypersensitive to one of the components of the drug
+86|This drug is not recommended for use by people with heart disease, diabetes mellitus, and severe liver dysfunction, as well as users of MAOI monoamine oxidase inhibitor type antidepressant drugs.
+87|It should not be given to patients who are sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, sufferers of severe high blood pressure, and those receiving monoamine oxidase MAO inhibitor type antidepressant therapy.
+87|Do not exceed the recommended dose
+87|Be careful when using it in people with high blood pressure or who have the potential for high blood pressure or stroke, such as in people who are overweight or elderly.
+87|If within 3 days the flu symptoms do not decrease, immediately contact a doctor or health service unit
+87|Stop using this medicine if you experience insomnia, heart palpitations and dizziness
+87|Patients with heart problems and diabetes mellitus
+87|Patients with severe liver dysfunction
+87|Hypersensitivity to the components of this drug
+88|It should not be given to patients who are sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, sufferers of severe high blood pressure, and those receiving monoamine oxidase MAO inhibitor type antidepressant therapy.
+88|Do not exceed the recommended dose
+88|Be careful when using it in people with high blood pressure or who have the potential for high blood pressure or stroke, such as in people who are overweight or elderly.
+88|If within 3 days the flu symptoms do not decrease, immediately contact a doctor or health service unit
+88|Stop using this medicine if you experience insomnia, heart palpitations and dizziness
+88|Patients with heart problems and diabetes mellitus
+88|Patients with severe liver dysfunction
+88|Hypersensitivity to the components of this drug
+89|It should not be given to people who are sensitive to sympathomimetic drugs, people with severe high blood pressure, and people who are on MAOI anti-depressant therapy.
+90|It should not be given to patients who are sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, sufferers of severe high blood pressure, and those receiving monoamine oxidase MAO inhibitor type antidepressant therapy.
+90|Do not exceed the recommended dose
+90|Be careful when using it in people with high blood pressure or who have the potential for high blood pressure or stroke, such as in people who are overweight or elderly.
+90|If within 3 days the flu symptoms do not decrease, immediately contact a doctor or health service unit
+90|Stop using this medicine if you experience insomnia, heart palpitations and dizziness
+90|Patients with heart problems and diabetes mellitus
+90|Patients with severe liver dysfunction
+91|It should not be given to patients who are sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, sufferers of severe high blood pressure, and those receiving monoamine oxidase MAO inhibitor type antidepressant therapy.
+91|Do not exceed the recommended dose
+91|Be careful when using it in people with high blood pressure or who have the potential for high blood pressure or stroke, such as in people who are overweight or elderly.
+91|If within 3 days the flu symptoms do not decrease, immediately contact a doctor or health service unit
+91|Stop using this medicine if you experience insomnia, heart palpitations and dizziness
+91|Patients who are hypersensitive to the components of this drug
+92|It should not be given to patients who are sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, sufferers of severe high blood pressure, and those receiving monoamine oxidase MAO inhibitor type antidepressant therapy.
+92|Do not exceed the recommended dose
+92|Be careful when using it in people with high blood pressure or who have the potential for high blood pressure or stroke, such as in people who are overweight or elderly.
+92|If within 3 days the flu symptoms do not decrease, immediately contact a doctor or health service unit
+92|Stop using this medicine if you experience insomnia, heart palpitations and dizziness
+92|Patients with heart problems and diabetes mellitus
+92|Patients with severe liver dysfunction
+92|Hypersensitivity to the components of this drug
+93|Hypersensitivity to any of the components
+94|Patients who are hypersensitive to the components of this drug
+95|Hypersensitivity to any of the components of this drug
+96|Komix Herbal medicine should not be given to patients who are hypersensitive to any of the ingredients in it
+97|Komix Herbal medicine should not be given to patients who are hypersensitive to any of the ingredients in it
+98|Komix Herbal medicine should not be given to patients who are hypersensitive to any of the ingredients in it
+99|It should not be given to patients who are sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, sufferers of severe high blood pressure, and those receiving monoamine oxidase MAO inhibitor type antidepressant therapy.
+99|Do not exceed the recommended dose
+99|Be careful when using it in people with high blood pressure or who have the potential for high blood pressure or stroke, such as in people who are overweight or elderly.
+99|If within 3 days the flu symptoms do not decrease, immediately contact a doctor or health service unit
+99|Stop using this medicine if you experience insomnia, heart palpitations and dizziness
+99|Patients with heart problems and diabetes mellitus
+99|Patients with severe liver dysfunction
+99|Hypersensitivity to the components of this drug
+100|It should not be given to patients who are sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, sufferers of severe high blood pressure, and those receiving monoamine oxidase MAO inhibitor type antidepressant therapy.
+100|Do not exceed the recommended dose
+100|Be careful when using it in people with high blood pressure or who have the potential for high blood pressure or stroke, such as in people who are overweight or elderly.
+100|If within 3 days the flu symptoms do not decrease, immediately contact a doctor or health service unit
+100|Stop using this medicine if you experience insomnia, heart palpitations and dizziness
+100|Patients with heart problems and diabetes mellitus
+100|Patients with severe liver dysfunction
+100|Hypersensitivity to the components of this drug
+101|It should not be given to patients who are sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, sufferers of severe high blood pressure, and those receiving monoamine oxidase MAO inhibitor type antidepressant therapy.
+101|Do not exceed the recommended dose
+101|Be careful when using it in people with high blood pressure or who have the potential for high blood pressure or stroke, such as in people who are overweight or elderly.
+101|If within 3 days the flu symptoms do not decrease, immediately contact a doctor or health service unit
+101|Stop using this medicine if you experience insomnia, heart palpitations and dizziness
+101|Patients with heart problems and diabetes mellitus
+101|Patients with severe liver dysfunction
+101|Hypersensitivity to the components of this drug
+102|It should not be given to patients who are sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, sufferers of severe high blood pressure, and those receiving monoamine oxidase MAO inhibitor type antidepressant therapy.
+102|Do not exceed the recommended dose
+102|Be careful when using it in people with high blood pressure or who have the potential for high blood pressure or stroke, such as in people who are overweight or elderly.
+102|If within 3 days the flu symptoms do not decrease, immediately contact a doctor or health service unit
+102|Stop using this medicine if you experience insomnia, heart palpitations and dizziness
+102|Patients with heart problems and diabetes mellitus
+102|Patients with severe liver dysfunction
+102|Hypersensitivity to the components of this drug
+103|It should not be given to patients who are sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, sufferers of severe high blood pressure, and those receiving monoamine oxidase MAO inhibitor type antidepressant therapy.
+103|Do not exceed the recommended dose
+103|Be careful when using it in people with high blood pressure or who have the potential for high blood pressure or stroke, such as in people who are overweight or elderly.
+103|If within 3 days the flu symptoms do not decrease, immediately contact a doctor or health service unit
+103|Stop using this medicine if you experience insomnia, heart palpitations and dizziness
+103|Patients with heart problems and diabetes mellitus
+103|Patients with severe liver dysfunction
+103|Hypersensitivity to the components of this drug
+104|It should not be given to patients who are sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, sufferers of severe high blood pressure, and those receiving monoamine oxidase MAO inhibitor type antidepressant therapy.
+104|Do not exceed the recommended dose
+104|Be careful when using it in people with high blood pressure or who have the potential for high blood pressure or stroke, such as in people who are overweight or elderly.
+104|If within 3 days the flu symptoms do not decrease, immediately contact a doctor or health service unit
+104|Stop using this medicine if you experience insomnia, heart palpitations and dizziness
+104|Sufferers are hypersensitive to the components of this drug
+104|Sufferers of heart problems and diabetes mellitus
+105|It should not be given to patients who are sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, sufferers of severe high blood pressure, and those receiving monoamine oxidase MAO inhibitor type antidepressant therapy.
+105|Do not exceed the recommended dose
+105|Be careful when using it in people with high blood pressure or who have the potential for high blood pressure or stroke, such as in people who are overweight or elderly.
+105|If within 3 days the flu symptoms do not decrease, immediately contact a doctor or health service unit
+105|Stop using this medicine if you experience insomnia, heart palpitations and dizziness
+105|Sufferers are hypersensitive to the components of this drug
+105|Sufferers of heart problems and diabetes mellitus
+106|It should not be given to patients who are sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, sufferers of severe high blood pressure, and those receiving monoamine oxidase MAO inhibitor type antidepressant therapy.
+106|Do not exceed the recommended dose
+106|Be careful when using it in people with high blood pressure or who have the potential for high blood pressure or stroke, such as in people who are overweight or elderly.
+106|If within 3 days the flu symptoms do not decrease, immediately contact a doctor or health service unit
+106|Stop using this medicine if you experience insomnia, heart palpitations and dizziness
+106|Patients with heart problems and diabetes mellitus
+106|Patients with severe liver dysfunction
+106|Hypersensitivity to the components of this drug
+107|It should not be given to patients who are sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, sufferers of severe high blood pressure, and those receiving monoamine oxidase MAO inhibitor type antidepressant therapy.
+107|Do not exceed the recommended dose
+107|Be careful when using it in people with high blood pressure or who have the potential for high blood pressure or stroke, such as in people who are overweight or elderly.
+107|If within 3 days the flu symptoms do not decrease, immediately contact a doctor or health service unit
+107|Stop using this medicine if you experience insomnia, heart palpitations and dizziness
+107|Patients with heart problems and diabetes mellitus
+107|Patients with severe liver dysfunction
+107|Patients with hyperthyroidism
+108|It should not be given to patients who are sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, sufferers of severe high blood pressure, and those receiving monoamine oxidase MAO inhibitor type antidepressant therapy.
+108|Do not exceed the recommended dose
+108|Be careful when using it in people with high blood pressure or who have the potential for high blood pressure or stroke, such as in people who are overweight or elderly.
+108|If within 3 days the flu symptoms do not decrease, immediately contact a doctor or health service unit
+108|Stop using this medicine if you experience insomnia, heart palpitations and dizziness
+108|Patients with heart problems and diabetes mellitus
+108|Patients with severe liver dysfunction
+108|Hypersensitivity to the components of this drug
+109|Avoid use in patients with conditions
+109|Patients who have a history of hypersensitivity to any of the ingredients of sanaflu
+109|Patients who have a history of decreased liver function
+109|Patients who have a history of high blood pressure
+110|Hypersensitivity to paracetamol. Patients with liver and kidney dysfunction
+111|It should not be given to patients who are sensitive to other sympathomimetic drugs such as ephedrine, phenylpropanolamine, phenylephrine, sufferers of severe high blood pressure, and those receiving monoamine oxidase MAO inhibitor type antidepressant therapy.
+111|Do not exceed the recommended dose
+111|Be careful when using it in people with high blood pressure or who have the potential for high blood pressure or stroke, such as in people who are overweight or elderly.
+111|If within 3 days the flu symptoms do not decrease, immediately contact a doctor or health service unit
+111|Stop using this medicine if you experience insomnia, heart palpitations and dizziness
+111|Sufferers are hypersensitive to the components of this drug
+111|Sufferers of heart problems and diabetes mellitus

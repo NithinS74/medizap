@@ -1,0 +1,832 @@
+id_drug|side_effect
+0|sometimes constipation, diarrhea
+0|Nauseous vomit
+0|Hypophosphatemia osteomalacia (on long-term administration of large doses when phosphate levels are low)
+0|Dialysis dementia in long-term administration in dialysis patients
+1|Constipation
+1|diarrhea
+1|nauseous
+1|vomit
+1|Symptoms will disappear when use of the drug is stopped
+3|A common side effect is constipation
+3|diarrhea
+3|nauseous
+3|vomit
+3|These symptoms will disappear if use of the drug is stopped
+4|A common side effect is constipation
+4|diarrhea
+4|nauseous
+4|vomit
+4|These symptoms will disappear if use of the drug is stopped.
+5|A common side effect is constipation
+5|diarrhea
+5|nauseous
+5|vomit
+5|burning sensation in the mouth or throat
+5|dysgeusia or altered taste perception
+5|hypersensitivity reactions including rash
+5|urticaria
+5|angioedema. These symptoms will disappear if use of the drug is stopped
+6|A common side effect is constipation
+6|diarrhea
+6|nauseous
+6|vomit
+6|burning sensation in the mouth or throat
+6|dysgeusia or altered taste perception
+6|hypersensitivity reactions including rash
+6|urticaria
+6|angioedema. These symptoms will disappear if use of the drug is stopped
+7|The most common side effect is stomach discomfort
+7|Constipation Dermatitis
+7|Another rare gastrointestinal reaction is diarrhea
+7|Heartburn
+7|Nausea and Vomiting
+7|Hypersensitivity reactions may occur
+8|Nauseous
+8|vomit
+8|constipation
+8|diarrhea. The symptoms will disappear if the use of the drug is stopped.
+9|Nauseous
+9|vomit
+9|constipation
+9|diarrhea. The symptoms will disappear if the use of the drug is stopped.
+10|A common side effect is constipation
+10|diarrhea
+10|nauseous
+10|vomit
+10|and these symptoms will disappear if use of the drug is stopped
+11|Constipation
+11|diarrhea
+11|nauseous
+11|vomiting and these symptoms will disappear if the use of the drug is stopped
+12|Constipation
+12|diarrhea
+12|nauseous
+12|vomit
+12|phosphate depletion
+13|Generally it is constipation
+13|diarrhea
+13|nauseous
+13|vomit
+13|and these symptoms will disappear if use of the drug is stopped
+14|The use of drugs generally has certain side effects and is appropriate for each individual
+14|If excessive and dangerous side effects occur, please consult medical personnel
+15|Not always, but there are several side effects that may occur after consuming Promag, such as diarrhea, constipation, nausea and vomiting
+15|The symptoms above will usually disappear when you stop taking the drug
+16|constipation
+16|diarrhea
+16|nauseous
+16|vomit
+17|Mild GL disorders. Allergic reactions, especially skin rashes
+17|Increased transaminase levels, headaches and vertigo
+18|Dry mouth
+18|sleepy
+18|blurred vision
+18|nauseous
+19|sleepy
+19|urinary retention
+19|dry mouth
+19|indigestion
+19|allergic skin reactions
+19|sedation
+19|Dizzy
+20|Bronchospasm
+20|gastric disorders
+20|stomatitis
+20|rhinorrhea
+20|headache
+20|tinnitus
+20|urticaria
+20|shivering
+20|fever
+20|hemoptitis
+20|anaphylactic reaction (rare)
+21|No side effects have been reported yet
+22|Gl disorders
+22|anorexia or increased appetite
+22|blurred vision
+22|urinary disorders
+22|dry mouth
+22|chest feels tight
+22|hypotension
+22|muscle weakness
+22|tinnitus
+22|headache
+22|epileptic attacks
+22|photosensitive
+23|There is no safety data for this drug
+24|In general, side effects are rarely found when using herbal medicines
+25|Nauseous
+25|Diarrhea
+25|Stomach ache
+25|Itchy rash
+25|Rash
+25|Swelling of the skin
+25|Headache
+25|Dizzy
+25|Difficulty sleeping or insomnia
+26|The side effect that occurs at large doses is metabolic acidosis
+26|sleepiness
+26|nausea and vomiting
+27|Nauseous
+27|vomit
+27|feeling of discomfort in the stomach. In large doses it can cause electrolyte disturbances in the body
+28|Sleepy
+29|Excessive doses may cause acidosis
+30|Nauseous
+30|vomit
+30|feeling of discomfort in the stomach
+30|In large doses it can cause electrolyte disturbances in the body
+31|Side effects that may arise are drowsiness
+31|Dizzy
+31|digestive tract disorders
+32|Sleepy
+32|sedation
+32|Dizzy
+32|coordination disorders
+32|unpleasant feeling in the pit of the stomach
+32|thickened airway secretions
+32|constipation
+32|Very large doses can cause respiratory and central nervous system depression
+33|Side effects that often occur are drowsiness
+33|sedation
+33|Dizzy
+33|coordination disorders
+33|unpleasant feeling in the pit of the stomach. thickened airway secretions
+34|Nauseous
+34|Dizzy
+34|sleepy
+34|constipation
+34|dry mouth and blurred vision
+34|Indigestion
+34|psychomotor disorders
+34|tachycardia
+34|ventricular arrhythmia
+34|palpitations
+34|urinary retention
+35|Nauseous
+35|diarrhea
+35|feeling of fullness in the stomach
+35|vertigo
+35|sweat more
+35|skin rash
+36|Can cause nausea
+36|Dizzy
+36|sleepy
+36|constipation
+36|sedation
+36|thickened airway secretions
+36|and restless
+36|May cause drowsiness
+37|side effects such as nausea
+37|Dizzy
+37|drowsiness and constipation
+38|Causes drowsiness. Sometimes vision is blurry
+38|dry mouth
+38|increased blood pressure
+38|nauseous vomit
+38|diarrhea
+38|gastrointestinal irritation
+39|Sleepy
+39|indigestion
+39|psychomotor disorders
+39|tachycardia
+39|arrhythmia
+39|dry mouth
+39|palpitations
+39|urinary retention
+39|Long-term and large doses cause liver damage
+40|Sleepy
+40|indigestion
+40|psychomotor disorders
+40|tachycardia
+40|arrhythmia
+40|dry mouth
+40|palpitations
+40|urinary retention
+40|Long-term and large doses cause liver damage
+41|drowsiness
+41|nauseous
+41|vomit
+41|headache
+41|hypertension
+42|Snarling
+42|indigestion
+42|insomnia
+42|nervous
+42|excitation
+42|tremors
+42|tachycardia
+42|arrhythmia
+42|dry mouth
+42|palpitations
+42|urine netence
+42|Long-term and large doses cause liver damage
+43|Sleepy
+43|indigestion
+43|insomnia
+43|nervous
+43|excitation
+43|tremors
+43|tachycardia
+43|ventricular arrhythmia
+43|dry mouth
+43|palpitations
+43|difficult to urinate
+43|Long-term and large doses cause liver damage
+44|GI Disorders
+44|psychomotor disorders
+44|tachycardia
+44|arrhythmia
+44|palpitations
+44|urinary retention
+44|sleepy
+44|Liver damage large doses long term therapy
+45|Sleepy
+45|indigestion
+45|psychomotor disorders
+45|tachycardia
+45|arrhythmia
+45|dry mouth
+45|palpitations
+45|urinary retention
+45|Long-term and large doses cause liver damage
+46|Sleepy
+46|indigestion
+46|psychomotor disorders
+46|tachycardia
+46|arrhythmia
+46|dry mouth
+46|palpitations
+46|urinary retention
+46|Long-term and large doses cause liver damage
+47|drowsiness
+47|nauseous
+47|vomit
+47|headache
+47|hypertension
+48|Snarling
+48|indigestion
+48|insomnia
+48|nervous
+48|excitation
+48|tremors
+48|tachycardia
+48|arrhythmia
+48|dry mouth
+48|palpitations
+48|urine netence
+48|Long-term and large doses cause liver damage
+49|GI Disorders
+49|psychomotor disorders
+49|tachycardia
+49|arrhythmia
+49|palpitations
+49|urinary retention
+49|sleepy
+49|Liver damage large doses long term therapy
+50|Sleepy
+50|sedation
+50|flustered
+50|insomnia. ins dizzy
+50|mouth
+50|nose
+50|or dry throat
+50|nervous
+50|indigestion nausea
+50|vomit
+50|impaired attention and coordination
+50|hallucinations, especially in children
+50|psychomotor disorders
+50|tachycardia
+50|arrhythmia
+50|palpitations
+50|difficult to urinate
+50|allergic redness of the skin
+50|sometimes accompanied by difficulty breathing
+50|swelling of the face or throat. Serotonin syndrome is a very rare case of feeling confused
+50|fatigue
+50|sweating
+50|shiver
+50|shivering
+50|sudden muscle contractions or increased blood pressure
+51|Sleepy
+51|sedation
+51|flustered
+51|Dizzy
+51|mouth
+51|dry nose or throat
+51|nervous
+51|indigestion nausea
+51|vomit
+51|impaired attention and coordination
+51|hallucinations, especially in children
+51|headache
+51|insomnia
+51|excitation
+51|tremors
+51|tachycardia
+51|arrhythmia
+51|palpitations
+51|difficult to urinate
+51|allergic redness of the skin
+51|sometimes accompanied by difficulty breathing
+51|swelling of the face or throat
+52|Gastrointestinal disorders
+52|sleepy
+52|Dizzy
+52|blurred vision
+52|dry mouth
+52|chest feels tight
+53|If consumed according to the recommended usage rules and dosage, Silex Syrup 100 Ml is generally safe
+53|However, in some people, the thyme content in Silex Syrup 100 ml can cause side effects in the form of stomach aches, headaches or dizziness.
+54|Sleepy
+54|indigestion
+54|insomnia
+54|nervous
+54|excitation
+54|tremors
+54|tachycardia
+54|ventricular arrhythmia
+54|dry mouth
+54|palpitations
+54|difficult to urinate
+54|Long-term and large doses cause liver damage
+55|At large doses, respiratory tract depression can occur
+55|Rarely causes drowsiness, nausea or dizziness
+56|OB Herbal Junior Syrup generally rarely causes side effects if used according to the instructions for use
+58|Immune sensitive reaction
+58|Digestive system disorders
+58|Skin disorders such as rashes
+58|Respiratory disorders
+59|Immune sensitive reaction
+59|Digestive system disorders
+59|Skin disorders such as rashes
+59|Respiratory disorders
+60|Sleepy
+60|indigestion
+60|insomnia
+60|nervous
+60|excitation
+60|tremors
+60|tachycardia
+60|ventricular arrhythmia
+60|dry mouth
+60|palpitations
+60|difficult to urinate
+60|Long-term and large doses can cause liver damage
+61|Sleepy
+61|indigestion
+61|insomnia
+61|nervous
+61|excitation
+61|tremors
+61|tachycardia
+61|arrhythmia
+61|dry mouth
+61|palpitations
+61|urinary retention
+61|Long-term and large doses cause liver damage
+62|Sleepy
+62|indigestion
+62|insomnia
+62|nervous
+62|excitation
+62|tremors
+62|tachycardia
+62|arrhythmia
+62|dry mouth
+62|palpitations
+62|urinary retention
+62|Long-term and large doses cause liver damage
+63|Sleepy
+63|indigestion
+63|nervous
+63|insomnia
+63|excitation
+63|tremors
+63|tachycardia
+63|ventricular arrhythmia
+63|dry mouth
+63|palpitations and difficulty urinating
+63|Long-term and excessive dose use can cause liver damage
+64|Sleepy
+64|indigestion
+64|nervous
+64|insomnia
+64|excitation
+64|tremors
+64|tachycardia
+64|ventricular arrhythmia
+64|dry mouth
+64|palpitations
+64|and difficulty urinating
+64|Long-term and excessive dose use can cause liver damage
+65|Sleepy
+65|heart beat
+65|dry mouth
+65|Nauseous
+65|vomit
+65|headache
+65|itching on the skin
+65|Long-term and large doses of paracetamol can cause liver damage
+66|Sleepy
+66|indigestion
+66|psychomotor disorders
+66|tachycardia
+66|arrhythmia
+66|dry mouth
+66|palpitations
+66|urinary retention
+66|Long-term and large doses cause liver damage
+67|Sleepy
+67|indigestion
+67|psychomotor disorders
+67|tachycardia
+67|arrhythmia
+67|dry mouth
+67|palpitations
+67|urinary retention
+67|vertigo
+67|Long-term and large doses cause liver damage
+67|Immune system disorders are rare
+67|Anaphylactic reactions include anaphylactic shock
+67|angioedema and pruritus
+67|Skin and subcutaneous disorders are rare
+67|rash
+67|urticaria there is no data yet
+67|serious skin reaction erythema multiforme
+67|Stevens-Johnson syndrome toxic epidermal necrolysis and pustulosis exanthema acul
+68|Sleepy
+68|indigestion
+68|psychomotor disorders
+68|tachycardia
+68|arrhythmia
+68|dry mouth palpinas retens un digestion large doses and long term cause liver damage
+69|Sleepy
+69|indigestion
+69|psychomotor disorders
+69|tachycardia
+69|arrhythmia
+69|dry mouth
+69|palpitations
+69|Long-term and large doses cause liver damage
+70|Side effects that may occur during use of Triaminic Cough and Cold include nausea
+70|vomit
+70|dry mouth and dizziness
+71|Sleepy
+71|headache
+71|insomnia
+71|excitation
+71|tachycardia
+71|arrhythmia
+71|tremors
+71|palpitations
+71|dry mouth
+71|sedation
+71|urinary retention
+71|digestive tract disorders
+71|psychomotor disorders
+72|Sleepy
+72|indigestion
+72|headache
+72|insomnia
+72|excitation
+72|tremors
+72|tachycardia
+72|arrhythmia
+72|dry mouth
+72|palpitations
+72|difficult to urinate
+73|Sleepy
+73|indigestion
+73|insomnia
+73|nervous
+73|excitation
+73|tremors
+73|tachycardia
+73|arrhythmia
+73|ventricle
+73|dry mouth
+73|palpitations
+73|urinary retention
+73|Long-term and large doses cause liver damage
+74|Chlorphenamine maleate can cause drowsiness and dry mouth
+74|Pseudoephedrine HCl can cause a feeling of intoxication
+74|headache
+74|nauseous
+74|vomit
+74|sweating
+74|thirsty
+74|tachycardia
+74|precordial pain
+74|palpitations
+74|difficulty urinating
+74|muscle weakness and tremors
+74|worry
+74|anxiety
+74|insomnia difficulty sleeping
+74|hypertension
+74|dry mouth
+74|mydriasis, enlarged pupils and stomach problems
+74|Ventricular arrhythmias may occur
+74|In patients with prostate enlargement it can cause difficulty urinating
+75|Insomnia
+75|Headache
+75|Shiver
+75|Tachycardia heart rate exceeding 100 beats per minute
+75|Arrhythmia, heart rhythm disturbance
+75|Heart beat
+75|Difficulty urinating
+76|Insomnia
+76|headache
+76|excitation
+76|tremors
+76|tachycardia
+76|arrhythmia
+76|palpitations
+76|difficulty urinating
+77|Sleepy
+77|insomnia
+77|excitation
+77|tachycardia
+77|ventricular arrhythmia
+77|tremors
+77|palpitations
+77|dry mouth
+77|urinary retention and gastrointestinal disorders
+78|Immune sensitive reaction
+78|Digestive system disorders
+78|Skin disorders such as rashes
+78|Respiratory disorders
+79|Side effects that may arise but are rare are pyrosis, nausea, vomiting, and diarrhea. In some limited cases, stomatitis, dizziness and ringing in the ears, tinnitus, occur
+79|After using NAC, allergic reactions sometimes occur such as itching, urticaria, cutaneous eruption rash, exanthema, difficulty breathing, bronchospasm, rapid heart rate, and hypotension.
+79|The occurrence of cases in the majority of patients with hyperreactivity in the bronchial system following bronchial asthma is called hyper responders, namely patients with increased sensitivity due to various stimuli. Then hemorrhage occurs after administering NAC, related to individual hypersensitivity reactions
+79|Actions that must be taken if side effects occur starting from the initial hypersensitivity reaction, stop using NAC immediately, consult a doctor for further action based on the severity of the disease
+80|nauseous
+80|vomit
+80|diarrhea and lower abdominal pain
+80|Dizzy
+80|dizzy
+80|headache
+80|neprolithiasis
+80|hypouricermia
+80|rash on the skin
+81|drowsiness
+81|indigestion
+81|psychomotor disorders
+81|tachycardia
+81|arrhythmia
+81|dry mouth
+81|palpitations
+81|urinary retention
+81|Long-term and large doses cause damage to liver function
+82|Indigestion
+82|insomnia
+82|nervous
+82|excitation
+82|tremors
+82|tachycardia
+82|arrhythmia
+82|dry mouth
+82|palpitations and urinary retention
+82|Long-term and large doses can cause damage to liver function
+83|Sometimes it can cause tachycardia, palpitations, dyspepsia, nausea, flushing of the skin, respiratory and central nervous system depression, drowsiness, constipation, nausea, dizziness
+83|Gastrointestinal disorders, restlessness, excitement, tremor
+83|May cause drowsiness and dizziness
+83|Serotonin syndrome is very rare, feeling confused, tired, sweating, nervous, shivering, sudden muscle contractions or increased blood pressure
+83|Hallucinations are very rare. Long-term and large doses cause liver damage
+84|Dry mouth
+84|indigestion
+84|arrhythmia
+84|palpitations
+84|tachycardia
+84|tremors
+84|nervous
+84|insomnia
+84|urinary retention
+84|and excitation
+84|Long-term and large doses of Paracetamol cause liver damage
+85|Indigestion
+85|Psychomotor disorders, tachycardia, arrhythmia, palpitations
+85|urinary retention
+85|sleepy
+85|Long-term and large doses cause liver damage
+85|dry mouth
+85|Headache
+85|Insomnia
+85|excitation
+85|nervous
+85|tremors and difficulty urinating
+86|Sleepy
+86|Dizzy
+86|dry mouth
+86|epilepsy-like seizures at large doses
+86|skin rash
+87|Digestion disorders
+87|Insomnia
+87|nervous
+87|excitation
+87|tremors
+87|tachycardia
+87|arrhythmia
+87|dry mouth
+87|palpitations and urinary retention
+87|Long-term and large doses cause liver damage
+87|Immune system disorders are rare hypersensitivity reactions
+87|there is no data on anaphylactic reactions including anaphylactic shock, angioederma and prutitus
+87|Rare skin and subcutaneous disorders: rash, urticaria, no data on serious skin reactions, erythema multiforme, Stevens-Johnson syndrome, toxic epidermal necrolysis and acute exanthema pustulosis
+88|Sleepy
+88|indigestion
+88|psychomotor disorders
+88|tachycardia
+88|arrhythmia
+88|dry mouth
+88|palpitations
+88|urinary retention
+88|Long-term and large doses cause liver damage
+89|Sleepy
+89|indigestion
+89|dry mouth
+89|palpitations
+89|psychomotor
+89|tachycardia
+89|arrhythmia
+89|urinary retention
+90|Sleepy
+90|indigestion
+90|insomnia
+90|nervous
+90|excitation
+90|tremors
+90|tachycardia
+90|ventricular arrhythmia
+90|dry mouth
+90|palpitations
+90|difficult to urinate
+90|Long-term and large doses cause liver damage
+91|Sleepy
+91|indigestion
+91|psychomotor disorders
+91|tachycardia
+91|arrhythmia
+91|dry mouth
+91|palpitations
+91|urinary retention
+91|Long-term and large doses cause liver damage
+91|Insomnia
+91|nervous
+91|excitation
+91|tremors
+91|ventricular arrhythmias and palpitationsı
+92|Sleepy
+92|indigestion
+92|headache
+92|insomnia
+92|excitation
+92|tremors
+92|tachycardia
+92|arrhythmia
+92|dry mouth
+92|palpitations
+92|difficult to urinate
+93|Mouth feels dry
+93|sleepy
+93|nauseous
+93|Dizzy
+93|constipation
+94|Sleepy
+94|indigestion
+94|headache
+94|insomnia
+94|excitation
+94|tremors
+94|tachycardia
+94|arrhythmia
+94|dry mouth
+94|palpitations
+94|difficult to urinate
+95|Sleepy
+95|digestive disorders
+95|dry mouth
+95|urinary retention
+96|There have been no reported side effects
+97|There have been no reported side effects
+98|There have been no reported side effects
+99|Sleepy
+99|indigestion
+99|psychomotor disorders
+99|tachycardia
+99|ventricular arrhythmia
+99|dry mouth
+99|palpitations
+99|urinary retention
+99|Long-term and large doses can cause liver damage
+100|Sleepy
+100|indigestion
+100|psychomotor disorders
+100|tachycardia
+100|arrhythmia
+100|dry mouth
+100|palpitations
+100|urinary retention
+100|Long-term and large doses cause liver damage
+101|Sleepy
+101|indigestion
+101|insomnia
+101|nervous
+101|excitation
+101|tremors
+101|tachycardia
+101|ventricular arrhythmia
+101|dry mouth
+101|palpitations
+101|difficult to urinate
+101|Long-term and large doses cause liver damage
+102|Sleepy
+102|indigestion
+102|psychomotor disorders
+102|tachycardia
+102|arrhythmia
+102|palpitations
+102|urinary retention
+102|dry mouth
+102|Long-term and large doses cause damage to liver function
+103|Sleepy
+103|indigestion
+103|psychomotor disorders
+103|tachycardia
+103|arrhythmia
+103|dry mouth
+103|palpitations
+103|urinary retention
+103|Long-term and large doses cause liver damage
+104|Sleepy
+104|indigestion
+104|headache
+104|insomnia
+104|nervous
+104|excitation
+104|tremors
+104|tachycardia
+104|arrhythmia
+104|dry mouth
+104|palpitations
+104|urinary retention
+105|Sleepy
+105|indigestion
+105|headache
+105|insomnia
+105|nervous
+105|excitation
+105|tremors
+105|tachycardia
+105|arrhythmia
+105|dry mouth
+105|palpitations
+105|urinary retention
+106|This drug can cause indigestion drowsiness
+106|psychomotor disorders
+106|tachycardia
+106|arrhythmia
+106|dry mouth
+106|palpitations
+106|urinary retention
+106|Long-term and large doses cause damage to liver function
+107|Long-term and large doses of Paracetamol can cause liver damage
+107|Sleepy
+107|glaucoma
+107|heart beat
+107|nauseous
+107|vomit
+107|dry mouth
+107|difficult to urinate
+107|visual and psychomotor disorders
+107|difficult to breathe
+107|worried
+107|hypertension
+107|May increase intraocular pressure in children
+108|Sleepy
+108|indigestion
+108|psychomotor disorders
+108|tachycardia
+108|arrhythmia
+108|dry mouth
+108|urinary retention
+108|Long-term and large doses cause liver damage
+108|Insomnia
+108|nervous
+108|excitation
+108|tremors and ventricular arrhythmias
+109|Side effects that may occur when consuming Sanaflu are:
+109|In the long term, paracetamol use can damage the liver
+109|Increases blood pressure
+110|Large doses or long-term therapy may cause liver damage
+111|Sleepy
+111|indigestion
+111|psychomotor disorders
+111|tachycardia
+111|arrhythmia
+111|dry mouth
+111|palpitations
+111|urinary retention

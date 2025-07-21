@@ -25,7 +25,7 @@ const ProfilePage = () => {
     insuranceProvider: '',
     insurancePolicyNumber: '',
     communicationPreferences: { emailNotifications: true, smsReminders: false, marketingOptIn: false },
-    emergencyContact: { name: '', phoneNumber: '', relationship: '' }
+    emergencyContact: { name: '', phoneNumber: '', relationship: '', email: '' } // NEW: Added email field
   });
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
@@ -93,7 +93,7 @@ const ProfilePage = () => {
           insuranceProvider: data.insuranceProvider || '',
           insurancePolicyNumber: data.insurancePolicyNumber || '',
           communicationPreferences: (typeof data.communicationPreferences === 'object' && data.communicationPreferences !== null) ? data.communicationPreferences : { emailNotifications: true, smsReminders: false, marketingOptIn: false },
-          emergencyContact: (typeof data.emergencyContact === 'object' && data.emergencyContact !== null) ? data.emergencyContact : { name: '', phoneNumber: '', relationship: '' }
+          emergencyContact: (typeof data.emergencyContact === 'object' && data.emergencyContact !== null) ? data.emergencyContact : { name: '', phoneNumber: '', relationship: '', email: '' } // NEW: Ensure email is initialized
         }));
         setMessage('Profile data loaded.');
       } else {
@@ -172,7 +172,7 @@ const ProfilePage = () => {
         insuranceProvider: profileData.insuranceProvider,
         insurancePolicyNumber: profileData.insurancePolicyNumber,
         communicationPreferences: profileData.communicationPreferences,
-        emergencyContact: profileData.emergencyContact
+        emergencyContact: profileData.emergencyContact // Ensure emergencyContact object is saved
       };
 
       await setDoc(userProfileDocRef, dataToSave, { merge: true });
@@ -278,6 +278,7 @@ const ProfilePage = () => {
                 value={profileData.dateOfBirth}
                 onChange={handleChange}
                 className="mt-1 block w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                placeholder=""
               />
             </div>
 
@@ -422,34 +423,6 @@ const ProfilePage = () => {
             </div>
           </div>
 
-          <div className="bg-gray-700 p-5 rounded-lg border border-gray-600 space-y-4">
-            <h2 className="text-xl font-semibold text-white mb-4">Insurance Information</h2>
-            <div>
-              <label htmlFor="insuranceProvider" className="block text-sm font-medium text-gray-400 mb-1">Insurance Provider</label>
-              <input
-                type="text"
-                id="insuranceProvider"
-                name="insuranceProvider"
-                value={profileData.insuranceProvider}
-                onChange={handleChange}
-                className="mt-1 block w-full px-4 py-2 bg-gray-600 border border-gray-500 rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="e.g., Blue Cross Blue Shield"
-              />
-            </div>
-            <div>
-              <label htmlFor="insurancePolicyNumber" className="block text-sm font-medium text-gray-400 mb-1">Insurance Policy Number</label>
-              <input
-                type="text"
-                id="insurancePolicyNumber"
-                name="insurancePolicyNumber"
-                value={profileData.insurancePolicyNumber}
-                onChange={handleChange}
-                className="mt-1 block w-full px-4 py-2 bg-gray-600 border border-gray-500 rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="e.g., XYZ123456789"
-              />
-            </div>
-          </div>
-
           <div className="bg-gray-700 p-5 rounded-lg border border-gray-600 space-y-3">
             <h2 className="text-xl font-semibold text-white mb-4">Communication Preferences</h2>
             <div className="flex items-center">
@@ -511,6 +484,19 @@ const ProfilePage = () => {
                     onChange={(e) => handleNestedChange('emergencyContact', 'phoneNumber', e.target.value)}
                     className="mt-1 block w-full px-4 py-2 bg-gray-600 border border-gray-500 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Emergency contact phone"
+                />
+            </div>
+            {/* NEW: Emergency Contact Email Input Field */}
+            <div>
+                <label htmlFor="emergencyEmail" className="block text-sm font-medium text-gray-400 mb-1">Email for Emergency Alerts</label>
+                <input
+                    type="email"
+                    id="emergencyEmail"
+                    name="email"
+                    value={profileData.emergencyContact.email}
+                    onChange={(e) => handleNestedChange('emergencyContact', 'email', e.target.value)}
+                    className="mt-1 block w-full px-4 py-2 bg-gray-600 border border-gray-500 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Emergency contact email"
                 />
             </div>
             <div>

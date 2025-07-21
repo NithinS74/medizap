@@ -1,95 +1,60 @@
 // src/components/Sidebar.jsx
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { getAuth, signOut } from 'firebase/auth';
-import { useAuth } from '../contexts/AuthContext'; // Import useAuth to get profileActionRequired
-import '../styles/Sidebar.css'; // Import the CSS file
+import { Link, useLocation } from 'react-router-dom'; // Assuming you use these for navigation
+import MedizapLogo from '../assets/medizap_logo.png'; // Import your logo
+import '../styles/Sidebar.css'; // Your sidebar's CSS
 
-// No external icon library imports needed now!
+// Assuming your Sidebar component receives 'isSidebarOpen' and 'toggleSidebar' props from DashboardLayout
+const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
+    const location = useLocation(); // To highlight active link
 
-const Sidebar = ({ isCollapsed, onToggleCollapse }) => {
-  const navigate = useNavigate();
-  const auth = getAuth();
-  const { profileActionRequired } = useAuth(); // Get the state from AuthContext
+    return (
+        <aside className={`dashboard-sidebar ${isSidebarOpen ? 'open' : ''}`}>
+            {/* Logo Section - NEW */}
+            <div className="sidebar-logo-section">
+                <Link to="/dashboard"> {/* Make logo clickable to Dashboard Home */}
+                    <img src={MedizapLogo} alt="Medizap Logo" className="sidebar-logo" />
+                </Link>
+                {/* Optionally, keep the toggle button here if desired in expanded mode */}
+                {/* <button className="toggle-button" onClick={toggleSidebar}>
+                    {isSidebarOpen ? '✖' : '☰'}
+                </button> */}
+            </div>
 
-  // Helper function to handle navigation and potential auto-collapse
-  const handleNavigation = (path) => {
-    // Only navigate if profileActionRequired is false, or if the path is the profile page itself
-    if (!profileActionRequired || path === '/dashboard/profile') {
-      navigate(path);
-      // Optional: auto-collapse sidebar after navigation if desired
-      // if (!isCollapsed) onToggleCollapse();
-    } else {
-      console.warn("Navigation disabled: Please complete your profile first.");
-      // Optionally provide user feedback here, e.g., a toast notification
-    }
-  };
+            <nav className="sidebar-nav">
+                <Link to="/dashboard" className={location.pathname === '/dashboard' ? 'active' : ''}>
+                    Dashboard Home
+                </Link>
+                <Link to="/dashboard/profile" className={location.pathname === '/dashboard/profile' ? 'active' : ''}>
+                    Profile
+                </Link>
+                <Link to="/dashboard/reminders" className={location.pathname === '/dashboard/reminders' ? 'active' : ''}>
+                    Reminders
+                </Link>
+                <Link to="/dashboard/chatbot-page" className={location.pathname === '/dashboard/chatbot-page' ? 'active' : ''}>
+                    Chatbot Page
+                </Link>
+                <Link to="/dashboard/upload-prescription" className={location.pathname === '/dashboard/upload-prescription' ? 'active' : ''}>
+                    Upload Prescription
+                </Link>
+            </nav>
 
-  const handleHomeClick = () => handleNavigation('/dashboard');
-  const handleProfileClick = () => handleNavigation('/dashboard/profile');
-  const handleRemindersClick = () => handleNavigation('/dashboard/reminders');
-  const handleUploadPrescriptionClick = () => handleNavigation('/dashboard/upload-prescription');
-  const handleChatbotPageClick = () => handleNavigation('/dashboard/chatbot-page');
+            {/* Theme Toggle Button & Logout Button from DashboardLayout */}
+            {/* These should ideally be passed as children or rendered via props if they truly belong to Sidebar */}
+            {/* For now, assuming your DashboardLayout passes them if they're still there */}
+            {/* If they are defined directly in Sidebar.jsx, move them inside the <aside> tag. */}
+            {/* Example: */}
+            {/* <button onClick={toggleTheme} className="sidebar-theme-toggle">
+                {isDarkMode ? '🌞 Light Mode' : '🌙 Dark Mode'}
+            </button>
+            <button onClick={handleLogout} className="logout-button sidebar-logout-button">Logout</button> */}
 
-  const handleLogoutClick = async () => {
-    try {
-      await signOut(auth);
-      navigate('/login');
-      console.log('User signed out successfully.');
-    } catch (error) {
-      console.error('Error signing out:', error);
-    }
-  };
-
-  // Add disabled class or attribute based on profileActionRequired
-  const navButtonClass = (isDisabled) => 
-    `${isCollapsed ? 'nav-button nav-button-collapsed' : 'nav-button nav-button-expanded'} ${isDisabled ? 'disabled-nav-button' : ''}`;
-
-  return (
-    <div className={`sidebar-container ${isCollapsed ? 'sidebar-collapsed' : 'sidebar-expanded'}`}>
-      <div className="top-section">
-        <button onClick={onToggleCollapse} className="toggle-button">
-          {/* Using Unicode characters for toggle */}
-          {isCollapsed ? '☰' : '✕'} {/* Hamburger for collapsed, 'X' for expanded */}
-        </button>
-        {!isCollapsed && <h2 className="logo-text">Medizap</h2>}
-      </div>
-
-      <nav className="navigation">
-        <button className={navButtonClass(profileActionRequired)} onClick={handleHomeClick} disabled={profileActionRequired}>
-          {/* Using Unicode characters for navigation icons */}
-          <span className="icon">🏠</span> {/* User/dashboard */}
-          {!isCollapsed && <span>Home</span>}
-        </button>
-        <button className={navButtonClass(false)} onClick={handleProfileClick} disabled={false}> {/* Profile page should always be accessible */}
-          {/* Using Unicode characters for navigation icons */}
-          <span className="icon">👤</span> {/* User/Profile */}
-          {!isCollapsed && <span>Profile</span>}
-        </button>
-        <button className={navButtonClass(profileActionRequired)} onClick={handleRemindersClick} disabled={profileActionRequired}>
-          <span className="icon">🔔</span> {/* Bell/Reminders */}
-          {!isCollapsed && <span>Reminders</span>}
-        </button>
-        <button className={navButtonClass(profileActionRequired)} onClick={handleUploadPrescriptionClick} disabled={profileActionRequired}>
-          {/* Using Unicode characters for navigation icons */}
-          <span className="icon">📄</span> {/* Document/Prescription */}
-          {!isCollapsed && <span>Upload Prescription</span>}
-        </button>
-        {/* --- NEW CHATBOT PAGE BUTTON --- */}
-        <button className={navButtonClass(profileActionRequired)} onClick={handleChatbotPageClick} disabled={profileActionRequired}>
-          <span className="icon">💬</span> {/* Chat bubble icon */}
-          {!isCollapsed && <span>Chatbot Page</span>}
-        </button>
-      </nav>
-
-      <div className="bottom-section">
-        <button className={navButtonClass(false)} onClick={handleLogoutClick} disabled={false}> {/* Logout should always be accessible */}
-          <span className="icon">🚪</span> {/* Door/Logout */}
-          {!isCollapsed && <span>Logout</span>}
-        </button>
-      </div>
-    </div>
-  );
+            {/* Note: If your theme toggle and logout buttons are currently in DashboardLayout.jsx,
+                      and you want them in the sidebar, they should be passed as props
+                      or the Sidebar component needs to manage them. For this specific request,
+                      I'm only adding the logo. */}
+        </aside>
+    );
 };
 
 export default Sidebar;

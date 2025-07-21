@@ -1,0 +1,273 @@
+/* src/styles/NearbyMap.css */
+
+.nearby-map-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    color: var(--text-primary);
+    font-family: var(--font-family-sans);
+    min-height: auto; /* Managed by parent .dashboard-map-container */
+    box-sizing: border-box;
+    width: 100%;
+    flex-grow: 1;
+}
+
+/* Header for Title and Pincode Section - THIS IS CRUCIAL FOR ONE-LINE LAYOUT */
+.map-header {
+    display: flex;
+    justify-content: space-between; /* Pushes title to left, input/button group to right */
+    align-items: center; /* Vertically aligns items in the center */
+    margin-bottom: 15px; /* Space between header and map canvas */
+    flex-wrap: nowrap; /* Prevent wrapping by default on large screens */
+    gap: 15px; /* Space between title and the pincode input section */
+    min-height: 40px; /* Ensure a minimum height for the header row */
+    /* Add a background and padding here if you want the header row to stand out from map */
+    /* background-color: var(--secondary-bg); */
+    /* padding: 10px 15px; */
+    /* border-radius: 8px 8px 0 0; */
+}
+
+.map-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0;
+    padding-bottom: 5px;
+    text-align: left;
+    position: relative;
+    letter-spacing: 0.5px;
+    flex-shrink: 0; /* Prevents title from shrinking */
+    white-space: nowrap; /* Keep title on one line */
+}
+
+.map-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 393px;
+    height: 2px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+
+/* Container for Pincode Input, Label, and Search Button */
+.pincode-input-section {
+    display: flex; /* Makes label, input, button flex items */
+    align-items: center; /* Vertically aligns them */
+    gap: 8px; /* Space between label, input, and button */
+    flex-shrink: 0; /* Prevents this section from shrinking */
+    margin-left: auto; /* Pushes this section to the right within map-header */
+    /* Allow wrapping for very small screens if necessary, but prioritize no-wrap */
+    flex-wrap: nowrap; /* Keep all items in this section on one line */
+}
+
+.map-label { /* Styling for the "Enter Pincode:" label */
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    font-weight: 500;
+    flex-shrink: 0; /* Prevents label from shrinking */
+    white-space: nowrap; /* Keep label on one line */
+}
+
+.pincode-input {
+    width: 150px; /* Adjusted width for better visibility, less dependence on placeholder */
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    background-color: var(--primary-bg-light);
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    flex-grow: 0; /* Prevent input from growing excessively */
+    flex-shrink: 1; /* Allow it to shrink if needed */
+    min-width: 80px; /* Smallest it can get before wrapping */
+}
+
+.pincode-input:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(var(--accent-rgb), 0.2);
+}
+
+.search-button {
+    padding: 8px 15px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    flex-shrink: 0; /* Prevent button from shrinking */
+}
+
+.search-button:hover {
+    background-color: var(--accent-dark);
+    transform: translateY(-1px);
+}
+
+.search-button:active {
+    transform: translateY(0);
+}
+
+
+.map-loading, .map-error {
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+    padding: 10px 15px;
+    background-color: var(--secondary-bg);
+    border-radius: 8px;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+.map-error {
+    color: var(--danger-color);
+}
+
+.map-canvas {
+    width: 100%;
+    /* height will be managed by flex-grow: 1 within .nearby-map-container
+       and the fixed height of .dashboard-map-container */
+    flex-grow: 1;
+    border-radius: 8px;
+    border: none !important; /* Overrides Leaflet's default border */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Subtle shadow around the map canvas */
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.user-location-info, .map-disclaimer {
+    font-size: 0.8rem;
+    margin-top: 10px;
+    line-height: 1.4;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+.map-disclaimer .disclaimer-note {
+    font-size: 0.75em;
+    margin-top: 5px;
+    display: block;
+}
+
+
+/* Responsive adjustments for NearbyMap.css */
+@media (max-width: 1024px) {
+    .nearby-map-container {
+        padding: 15px;
+    }
+    .map-header {
+        flex-direction: column; /* Stack title and input section */
+        align-items: flex-start; /* Align stacked items to the left */
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+    .map-title {
+        margin-right: 0;
+        margin-bottom: 5px;
+        font-size: 1.4rem;
+    }
+    .pincode-input-section {
+        width: 100%; /* Make input section take full width */
+        justify-content: flex-start; /* Align input and button to the left */
+        margin-left: 0;
+        flex-wrap: wrap; /* Allow wrapping within this section if needed */
+    }
+    .pincode-input {
+        width: auto;
+        flex-grow: 1;
+        max-width: none;
+        font-size: 0.85rem;
+    }
+    .search-button {
+        font-size: 0.85rem;
+    }
+    .map-canvas {
+        min-height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nearby-map-container {
+        padding: 10px;
+        min-height: 300px;
+    }
+    .map-header {
+        gap: 8px;
+        margin-bottom: 10px;
+    }
+    .map-title {
+        font-size: 1.2rem;
+        padding-bottom: 4px;
+    }
+    .map-title::after {
+        width: 40px;
+        height: 2px;
+    }
+    .pincode-input-section {
+        gap: 6px;
+    }
+    .pincode-input {
+        padding: 7px 10px;
+        font-size: 0.8rem;
+    }
+    .search-button {
+        padding: 7px 12px;
+        font-size: 0.8rem;
+    }
+    .map-loading, .map-error {
+        font-size: 0.8rem;
+        padding: 8px 10px;
+        margin-bottom: 8px;
+    }
+    .map-canvas {
+        min-height: 250px;
+    }
+    .user-location-info, .map-disclaimer {
+        font-size: 0.75rem;
+        margin-top: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nearby-map-container {
+        padding: 8px;
+        min-height: 250px;
+    }
+    .map-header {
+        gap: 6px;
+        margin-bottom: 8px;
+    }
+    .map-title {
+        font-size: 1.1rem;
+        padding-bottom: 3px;
+    }
+    .map-title::after {
+        width: 50px;
+        height: 1.5px;
+    }
+    .pincode-input-section {
+        flex-direction: column; /* Stack input and button on very small screens */
+        align-items: stretch;
+        gap: 6px;
+    }
+    .pincode-input, .search-button {
+        width: 100%;
+        padding: 8px 10px;
+        font-size: 0.75rem;
+    }
+    .map-loading, .map-error {
+        font-size: 0.7rem;
+        padding: 6px 8px;
+    }
+    .map-canvas {
+        min-height: 200px;
+    }
+    .user-location-info, .map-disclaimer {
+        font-size: 0.7rem;
+        margin-top: 6px;
+    }
+}

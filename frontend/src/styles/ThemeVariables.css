@@ -38,7 +38,7 @@
   --gradient-end: hsl(190, 20%, 88%);   /* A very subtle hint of light blue/green */
 
   /* Layout/Component Sizing Variables */
-  --sidebar-expanded-width: 280px;
+  --sidebar-expanded-width: 250px;
   --header-height: 70px;
 }
 

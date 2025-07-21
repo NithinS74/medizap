@@ -1,0 +1,187 @@
+/* src/features/ProductAvailability.css */
+
+.product-availability-container {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  background-color: #2d3748; /* Dark background */
+  color: #f7fafc; /* Light text color */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.product-availability-title {
+  text-align: center;
+  color: #a0aec0; /* Lighter gray for title */
+  margin-bottom: 2rem;
+  font-size: 1.75rem;
+}
+
+/* --- Form Styles --- */
+.availability-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.availability-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.availability-form label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #cbd5e0;
+}
+
+.availability-form input[type="text"] {
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #4a5568;
+  background-color: #1a202c;
+  color: #f7fafc;
+  font-size: 1rem;
+}
+
+.availability-form input[type="text"]:focus {
+  outline: none;
+  border-color: #4299e1; /* Blue highlight on focus */
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+}
+
+.availability-form .checkbox-group {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+}
+
+.availability-form .checkbox-group input[type="checkbox"] {
+  width: 1.25em;
+  height: 1.25em;
+  accent-color: #4299e1;
+}
+
+.availability-form .checkbox-group label {
+  margin-bottom: 0;
+  font-weight: normal;
+}
+
+.availability-form .form-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.availability-form button {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #2b6cb0; /* Blue button */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.availability-form button:hover:not(:disabled) {
+  background-color: #3182ce;
+}
+
+.availability-form button:disabled {
+  background-color: #4a5568;
+  cursor: not-allowed;
+}
+
+/* --- Messages and Results --- */
+.loading-message, .error-message {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.loading-message {
+  background-color: #4a5568;
+}
+
+.error-message {
+  background-color: #c53030; /* Red for errors */
+  color: #fff;
+}
+
+.results-container {
+  margin-top: 2rem;
+  border-top: 1px solid #4a5568;
+  padding-top: 2rem;
+}
+
+.results-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #e2e8f0;
+  margin-bottom: 1.5rem;
+}
+
+.results-disclaimer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #a0aec0;
+  margin-top: 2rem;
+}
+
+/* --- Re-used Product Card Styles --- */
+/* (Adapted from ProductManager styles for consistency) */
+.product-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.product-card {
+  background-color: #4a5568;
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.product-card .product-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #fff;
+  margin: 0;
+}
+
+.product-card .product-description {
+  color: #cbd5e0;
+  font-size: 0.95rem;
+  flex-grow: 1; /* Allows cards to have same height in a row */
+}
+
+.product-card .product-price, .product-card .product-category {
+  color: #e2e8f0;
+  font-weight: 500;
+}
+
+.product-card .product-stock {
+  font-weight: bold;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.product-card .in-stock {
+  background-color: #2f855a; /* Green */
+  color: #fff;
+}
+
+.product-card .out-of-stock {
+  background-color: #c53030; /* Red */
+  color: #fff;
+}

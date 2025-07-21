@@ -9,6 +9,9 @@ import { useAuth } from '../contexts/AuthContext';
 import '../styles/DashboardLayout.css';
 import NotificationCenter from './NotificationCenter';
 
+// Import your Medizap Logo here
+import MedizapLogo from '../assets/medizap_logo.png'; // <--- ADJUST THIS PATH if your file is not in src/assets/
+
 const DashboardLayout = () => {
     const { currentUser, loadingAuth, profileActionRequired } = useAuth();
     const [loadingReminders, setLoadingReminders] = useState(true);
@@ -19,6 +22,9 @@ const DashboardLayout = () => {
         return savedTheme === 'dark';
     });
     const location = useLocation();
+
+    // NEW STATE: Controls the visibility of the animated splash screen
+    const [showSplashScreen, setShowSplashScreen] = useState(true);
 
     const appId = app?.options?.projectId || 'default-app-id';
 
@@ -45,31 +51,25 @@ const DashboardLayout = () => {
         };
     }, [isSidebarOpen]);
 
-
-    // Firestore listener for reminders
+    // Firestore listener for reminders (no changes to this block)
     useEffect(() => {
         console.log("DashboardLayout useEffect (Reminders): Effect triggered.");
-
         if (!currentUser?.uid) {
             console.log("DashboardLayout useEffect (Reminders): No current user UID, clearing reminders.");
             setReminders([]);
             setLoadingReminders(false);
             return;
         }
-
         if (!db) {
             console.error("DashboardLayout useEffect (Reminders): Firestore DB instance is not available. Cannot fetch reminders.");
             setLoadingReminders(false);
             return;
         }
-
         setLoadingReminders(true);
         const remindersCollectionPath = `artifacts/${appId}/users/${currentUser.uid}/reminders`;
         console.log(`DashboardLayout useEffect (Reminders): Setting up listener for path: ${remindersCollectionPath}`);
-
         const remindersCollectionRef = collection(db, remindersCollectionPath);
         const q = query(remindersCollectionRef, orderBy('dateTime', 'asc'));
-
         const unsubscribe = onSnapshot(q, (snapshot) => {
             if (snapshot.empty) {
                 console.log(`DashboardLayout useEffect (Reminders): No reminders found for UID: ${currentUser.uid}. Collection is empty.`);
@@ -92,7 +92,6 @@ const DashboardLayout = () => {
             }
             setLoadingReminders(false);
         });
-
         return () => {
             console.log(`DashboardLayout useEffect (Reminders): Unsubscribing from reminder listener for UID: ${currentUser.uid}`);
             unsubscribe();
@@ -157,27 +156,68 @@ const DashboardLayout = () => {
         setIsDarkMode(prevMode => !prevMode);
     };
 
-    const handleEmergencyClick = () => {
-        // IMPORTANT: Replace alert() with a custom modal or navigation in a real app
-        alert("Emergency button clicked! Implement emergency contact or quick help features here.");
+    // MODIFIED: handleEmergencyClick to send EMAIL
+    const handleEmergencyClick = async () => {
+        if (!currentUser) {
+            alert("Please log in to use the emergency feature.");
+            return;
+        }
+
+        const confirmSend = window.confirm("Are you sure you want to send an emergency EMAIL to your designated contact?");
+        if (!confirmSend) {
+            return;
+        }
+
+        try {
+            const idToken = await currentUser.getIdToken();
+            const response = await fetch('http://localhost:8000/send-emergency-email', { // CHANGED: Endpoint to send-emergency-email
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${idToken}`,
+                },
+                // No body needed as recipient info is fetched server-side
+            });
+
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(errorData.detail || 'Failed to send emergency email');
+            }
+
+            const result = await response.json();
+            alert(`Emergency Email Status: ${result.message}`);
+            console.log("Emergency email sent result:", result);
+
+        } catch (error) {
+            console.error("Error sending emergency email:", error);
+            alert(`Failed to send emergency email: ${error.message}. Please ensure your emergency contact email is set in your profile.`);
+        }
     };
 
     useEffect(() => {
         setIsSidebarOpen(false);
     }, [location]);
 
-    if (loadingAuth) {
+    // NEW EFFECT: Manage splash screen timing
+    useEffect(() => {
+        if (!loadingAuth && showSplashScreen) {
+            const timer = setTimeout(() => {
+                setShowSplashScreen(false);
+            }, 3000); // 5000 milliseconds = 5 seconds
+
+            return () => clearTimeout(timer);
+        }
+    }, [loadingAuth, showSplashScreen]);
+
+    // CONDITIONAL RENDER: Show splash screen OR authentication loading message OR dashboard
+    if (loadingAuth || showSplashScreen) {
         return (
-            <div style={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                minHeight: '100vh',
-                backgroundColor: 'var(--primary-bg)',
-                color: 'var(--text-primary)',
-                fontSize: '1.5rem',
-            }}>
-                Authenticating user...
+            <div className="splash-screen-container">
+                <img
+                    src={MedizapLogo}
+                    alt="Medizap Logo"
+                    className={showSplashScreen && !loadingAuth ? "medizap-logo animating" : "medizap-logo"}
+                />
             </div>
         );
     }
@@ -201,12 +241,20 @@ const DashboardLayout = () => {
                         onOpenNotifications={() => { /* Implement navigation to reminders or a modal */ }}
                     />
                     {/* Emergency Button - kept in header */}
-                    <button className="emergency-button" onClick={handleEmergencyClick}>&#9888;</button> {/* Unicode Warning Sign */}
+                    <button className="emergency-button" onClick={handleEmergencyClick}>🚨</button>
                 </div>
             </header>
 
             <div className="dashboard-main-area">
+                {/* Updated aside element to include the logo */}
                 <aside className={`dashboard-sidebar ${isSidebarOpen ? 'open' : ''}`}>
+                    {/* NEW: Logo Section at the top of the sidebar */}
+                    <div className="sidebar-logo-section">
+                        <Link to="/dashboard"> {/* Make logo clickable to Dashboard Home */}
+                            <img src={MedizapLogo} alt="Medizap Logo" className="sidebar-logo" />
+                        </Link>
+                    </div>
+
                     <nav className="sidebar-nav">
                         <Link to="/dashboard" className={location.pathname === '/dashboard' ? 'active' : ''}>
                             Dashboard Home

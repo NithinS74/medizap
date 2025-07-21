@@ -1,77 +1,113 @@
 /* src/styles/UpcomingReminderNotification.css */
 
 .upcoming-reminder-notification {
-  position: fixed; /* Fixed position relative to viewport */
-  top: 20px;       /* From the top */
-  right: 20px;     /* From the right */
-  background-color: var(--card-bg); /* Use your card background color */
-  border: 1px solid var(--border-color);
-  border-radius: 12px; /* Nicely rounded corners */
-  padding: 15px 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Subtle shadow for depth */
-  z-index: 1000; /* Ensure it's above other content */
-  width: 280px; /* Fixed width for consistency */
-  max-width: 90vw; /* Responsive on smaller screens */
-  color: var(--text-primary);
-  opacity: 0.95; /* Slightly transparent */
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-  transform: translateY(0); /* Initial state */
-  display: flex;
-  flex-direction: column;
-  gap: 8px; /* Spacing between elements */
+    /* Position the notification to float over content */
+    position: fixed; /* Or 'absolute' if it's within a relatively positioned parent */
+    bottom: 20px; /* Adjust position as needed (e.g., from bottom right) */
+    right: 20px;
+    z-index: 1000; /* CRUCIAL: A very high z-index to ensure it's on top of everything */
+
+    background-color: var(--secondary-bg); /* Or a slightly brighter color to stand out */
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Stronger shadow to make it pop */
+    padding: 15px 20px;
+    width: 280px; /* Fixed width for the notification box */
+    max-width: 90%; /* Ensure it's responsive on very small screens */
+    color: var(--text-primary);
+    font-family: var(--font-family-sans);
+    animation: fadeInSlideUp 0.5s ease-out forwards; /* Add an entrance animation */
+    pointer-events: auto; /* Ensure it's clickable */
 }
 
-/* Header with icon */
+/* Header within the notification */
 .notification-header {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 5px; /* Space between header and content */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
 }
 
 .notification-icon {
-  font-size: 1.5rem;
-  line-height: 1;
-  color: var(--accent-color); /* Use accent color for icon */
+    font-size: 1.8rem;
+    line-height: 1;
 }
 
 .notification-header h4 {
-  margin: 0;
-  font-size: 1.1rem;
-  color: var(--text-primary);
-  font-weight: 600;
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--accent-color); /* Highlight the header */
 }
 
+/* Title/message/time within the notification */
 .notification-title {
-  font-weight: 500;
-  font-size: 1rem;
-  margin: 0;
-  color: var(--accent-color); /* Highlight title slightly */
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    line-height: 1.3;
 }
 
 .notification-message {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  margin: 0;
-  line-height: 1.3;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+    line-height: 1.4;
 }
 
 .notification-time {
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-  margin: 0;
-  text-align: right;
-  padding-top: 10px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08); /* Separator line */
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-tertiary);
+    text-align: right;
 }
 
-/* Media query for smaller screens */
+/* Optional: Close button for the notification (if you add one in JSX) */
+.notification-close-button {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+.notification-close-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Entrance Animation */
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments for notification */
 @media (max-width: 768px) {
-  .upcoming-reminder-notification {
-    width: auto; /* Let content dictate width */
-    left: 20px; /* Position from left on small screens */
-    right: 20px; /* Position from right on small screens */
-    top: 15px;
-    padding: 12px 15px;
-  }
+    .upcoming-reminder-notification {
+        width: 90%; /* Take more width on smaller screens */
+        left: 5%; /* Center it roughly */
+        right: 5%;
+        bottom: 15px; /* Adjust bottom margin */
+        padding: 12px 15px;
+    }
+    .notification-header h4 {
+        font-size: 1rem;
+    }
+    .notification-title {
+        font-size: 0.95rem;
+    }
+    .notification-message {
+        font-size: 0.85rem;
+    }
 }

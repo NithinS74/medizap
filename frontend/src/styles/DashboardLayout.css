@@ -30,7 +30,7 @@
   position: fixed; /* Make the header fixed */
   top: 0; /* Pin it to the top */
   width: 100%; /* Span the full width */
-  height: 90px;
+  height: 80px;
   left: 0; /* Align to the left edge */
 }
 
@@ -103,32 +103,38 @@
 
 /* Emergency Button Styling (Blinking Red Hazard Sign) */
 .dashboard-header .emergency-button {
-  position: relative; /* For pseudo-elements */
-  background-color: var(--error-color); /* Red background for emergency */
-  color: white; /* White for the warning sign character */
-  border: 2px solid hsl(0, 80%, 40%); /* Darker red border */
-  border-radius: 50%; /* Make it round */
-  width: 60px; /* Slightly larger for prominence */
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem; /* Larger unicode warning sign */
-  font-weight: 900; /* Bolder character */
-  cursor: pointer;
-  box-shadow: 0 0 10px hsla(0, 80%, 60%, 0.5); /* Initial red glow */
-  transition: all 0.3s ease;
-  overflow: hidden; /* Hide overflowing pseudo-elements */
-  animation: blink 1.5s infinite alternate; /* Blinking effect for the button */
+    position: relative;
+    background-color: var(--error-color); /* Red background for emergency */
+    color: white; /* White text */
+    border: 2px solid hsl(0, 90%, 40%); /* Darker red border */
+    border-radius: 8px; /* Rounded rectangular/pill shape */
+    padding: 8px 15px; /* Adjusted padding for "SOS" text */
+    min-width: 60px; /* Ensure minimum width for "SOS" */
+    height: var(--header-height); /* Match header height for vertical alignment */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem; /* Font size for "SOS" text */
+    font-weight: 700; /* Bolder text */
+    text-transform: uppercase; /* Ensure "SOS" is uppercase */
+    cursor: pointer;
+    box-shadow: 0 0 10px hsla(0, 80%, 60%, 0.5); /* Initial red glow */
+    transition: all 0.2s ease-out; /* Smoother transition */
+    overflow: hidden;
+    animation: blink 1.5s infinite alternate ease-in-out; /* Blinking effect for the button */
+
+    transform: translateZ(0); /* Ensure hardware acceleration */
+    flex-shrink: 0; /* Prevent it from shrinking */
 }
 
 .dashboard-header .emergency-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px hsla(0, 80%, 60%, 0.7); /* More pronounced red glow */
+    transform: scale(1.05) translateZ(5px); /* Slightly larger scale, with perceived depth */
+    box-shadow: 0 0 15px hsla(0, 80%, 60%, 0.8), 0 0 25px hsla(0, 80%, 70%, 0.5); /* Enhanced glow on hover */
 }
 
 .dashboard-header .emergency-button:active {
-  transform: scale(0.98);
+    transform: scale(0.95); /* More noticeable press effect */
+    box-shadow: 0 0 5px hsla(0, 80%, 60%, 0.3);
 }
 
 /* Animation for the button's blinking effect */
@@ -361,7 +367,7 @@
     width: calc(100% - 30px);
   }
   .dashboard-sidebar {
-    width: 250px;
+    width: 200px;
   }
   .dashboard-sidebar .sidebar-nav a {
     padding: 12px 20px;
@@ -381,3 +387,182 @@
     width: calc(100% - 30px);
   }
 }
+/* src/styles/DashboardLayout.css */
+
+/* ... (Existing CSS above this) ... */
+
+/* --- Splash Screen Styles --- */
+/* src/styles/DashboardLayout.css */
+
+/* ... (Existing CSS above this) ... */
+
+/* --- Splash Screen Styles --- */
+/* src/styles/DashboardLayout.css */
+
+/* ... (your other CSS code above this) ... */
+
+
+/* NEW: Logo Section in Sidebar */
+.sidebar-logo-section {
+    padding: 0; /* Explicitly set to 0 to remove all internal padding */
+    display: flex;
+    justify-content: center; /* Centers the logo horizontally within the section */
+    align-items: center; /* Centers the logo vertically within the section */
+    
+    border-bottom: 1px solid var(--border-color); /* This adds a line below the logo section */
+    margin-bottom: 0; /* Explicitly set to 0 to remove gap between logo section and next element */
+    
+    box-sizing: border-box;
+    overflow: hidden; /* Ensures nothing overflows this section */
+    width: 100%; /* Makes the section span the full width of the sidebar */
+    /* You can add a background-color here temporarily for debugging, e.g., background-color: red; */
+}
+
+/* src/styles/DashboardLayout.css */
+
+/* ... (your existing CSS before .sidebar-logo) ... */
+
+.sidebar-logo {
+    width: 180px; /* Adjust this value for the desired width of the logo in EXPANDED sidebar */
+    height: 180px; /* Adjust this value for the desired height of the logo in EXPANDED sidebar */
+    object-fit: fill; /* Use 'fill' to stretch to fit, 'contain' to maintain aspect ratio without cropping, 'cover' to crop */
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out; /* Animates size change smoothly */
+    
+    /* Crucial additions to eliminate default image spacing (as discussed previously): */
+    display: block; /* Prevents unwanted space below inline images due to baseline alignment */
+    margin: -30px; /* Ensures no default margins are applied to the image itself */
+    padding: 0; /* Ensures no default padding is applied to the image itself */
+    line-height: 0; /* Can help eliminate tiny vertical gaps often caused by inherited line-height */
+    
+    /* NEW: Bouncing Animation */
+    animation: bounce 2s infinite ease-in-out; /* Adjust '2s' for speed, 'infinite' for continuous, 'ease-in-out' for smooth acceleration/deceleration */
+    /* You can add a background-color here temporarily for debugging, e.g., background-color: blue; */
+}
+
+/* NEW: Keyframes for the bouncing animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0); /* Start and end at original vertical position */
+    }
+    50% {
+        transform: translateY(-10px); /* Move 10px upwards at the midpoint */
+    }
+}
+
+/* ... (your existing CSS after .sidebar-logo) ... */
+
+/* Adjust logo size for collapsed sidebar */
+.dashboard-sidebar:not(.open) .sidebar-logo { /* When sidebar is collapsed */
+    width: 150px; /* Adjust this value for the desired width of the logo in COLLAPSED sidebar */
+    height: 150px; /* Adjust this value for the desired height of the logo in COLLAPSED sidebar */
+    /* object-fit: contain; or inherit; if you want a different fit for collapsed state */
+}
+
+/* Responsive adjustments for sidebar logo (for mobile, when sidebar opens/closes) */
+@media (max-width: 768px) {
+    .sidebar-logo-section {
+        padding: 0; /* Ensure zero padding on mobile too */
+    }
+    .dashboard-sidebar.open .sidebar-logo {
+        width: 120px; /* Adjust width for logo when sidebar is open on mobile */
+        height: 40px; /* Adjust height for logo when sidebar is open on mobile */
+    }
+    .dashboard-sidebar:not(.open) .sidebar-logo { /* Collapsed state on mobile */
+        width: 40px; /* Adjust width for logo when sidebar is collapsed on mobile */
+        height: 40px; /* Adjust height for logo when sidebar is collapsed on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar-logo-section {
+        padding: 0; /* Ensure zero padding on very small mobile screens too */
+    }
+    .dashboard-sidebar.open .sidebar-logo {
+        width: 100px; /* Adjust width for logo when sidebar is open on very small mobile */
+        height: 35px; /* Adjust height for logo when sidebar is open on very small mobile */
+    }
+    .dashboard-sidebar:not(.open) .sidebar-logo { /* Collapsed state on very small mobile */
+        width: 35px; /* Adjust width for logo when sidebar is collapsed on very small mobile */
+        height: 35px; /* Adjust height for logo when sidebar is collapsed on very small mobile */
+    }
+}
+
+/*
+To adjust the gap size around your logo:
+
+1.  **Change the `padding` property of `.sidebar-logo-section`:**
+    * `padding: 20px 10px 15px;` (Top, horizontal, bottom)
+    * Increase `20px` to increase the gap above the logo.
+    * Increase `10px` to increase the gap on the left/right of the logo.
+    * Increase `15px` to increase the gap below the logo (within its section, before the bottom border).
+
+2.  **Change the `margin-bottom` property of `.sidebar-logo-section`:**
+    * `margin-bottom: 15px;`
+    * This specifically adjusts the gap *between the entire logo section* (including its padding and border) and the `sidebar-nav` (navigation links) that come after it.
+*/
+
+/* Responsive adjustments for sidebar logo (for mobile, when sidebar opens/closes) */
+
+/* ... (your other CSS code below this) ... */
+.splash-screen-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--primary-bg); /* Or a specific splash screen background color */
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    gap: 20px;
+    position: fixed; /* Ensures it covers the entire screen */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999; /* Very high z-index to be on top */
+    overflow: hidden; /* Prevent scrollbars during animation */
+}
+
+.splash-screen-container .medizap-logo {
+    width: clamp(120px, 45vw, 660px); /* Responsive width */
+    height: auto;
+    opacity: 0; /* Start invisible */
+    transform: scale(0.8); /* Start slightly zoomed out */
+}
+
+/* Animation class applied when it's time to animate */
+.splash-screen-container .medizap-logo.animating {
+    animation: zoomFadeInOut 3s ease-in-out forwards; /* CHANGED: Animation duration to 5s */
+}
+
+.splash-screen-container p {
+    opacity: 0; /* Start text invisible */
+    animation: fadeInText 0.8s ease-out 0.5s forwards; /* Fade in text after a slight delay */
+}
+
+/* Keyframes for the animation */
+@keyframes zoomFadeInOut {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    15% { /* Zoom in and fade in (adjust timing) */
+        opacity: 1;
+        transform: scale(1);
+    }
+    85% { /* Hold at full visibility (adjust timing) */
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% { /* Fade out and slightly zoom out more */
+        opacity: 0;
+        transform: scale(1.05); /* Slight zoom out while fading */
+    }
+}
+
+@keyframes fadeInText {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ... (Rest of your existing CSS below this) ... */

@@ -1,114 +1,172 @@
 /* src/styles/Sidebar.css */
-.sidebar-container {
-  background-color: var(--tertiary-bg);
-  color: var(--text-primary);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 15px 0;
-  box-shadow: 2px 0 8px rgba(0,0,0,0.2);
-  min-height: 100vh;
-  box-sizing: border-box;
-  transition: width 0.3s ease-in-out;
+.sidebar-container { /* This might be the parent of dashboard-sidebar in DashboardLayout */
+    background-color: var(--tertiary-bg);
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 0;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.2);
+    min-height: 100vh;
+    box-sizing: border-box;
+    transition: width 0.3s ease-in-out;
 }
 
 .sidebar-expanded {
-  width: var(--sidebar-expanded-width);
+    width: var(--sidebar-expanded-width); /* Or explicit 200px */
 }
 
 .sidebar-collapsed {
-  width: var(--sidebar-collapsed-width);
+    width: var(--sidebar-collapsed-width); /* Or explicit 60px */
 }
 
-.top-section {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 0 15px 20px;
-  border-bottom: 1px solid var(--border-color);
-  margin-bottom: 20px;
-  gap: 10px;
+/* NEW: Logo Section Styling */
+.sidebar-logo-section {
+    padding: 15px 10px 20px; /* Top, horizontal, bottom padding */
+    display: flex;
+    justify-content: center; /* Center logo in collapsed state */
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 15px; /* Space below logo and above nav links */
+    box-sizing: border-box;
+    overflow: hidden; /* Hide overflow if logo text is too long */
 }
+
+.sidebar-logo {
+    width: 120px; /* Default size for expanded sidebar */
+    height: auto;
+    transition: width 0.3s ease-in-out; /* Animate logo size change */
+    display: block; /* Remove extra space below image */
+}
+
+/* Adjust logo size in collapsed state */
+.dashboard-sidebar.open .sidebar-logo {
+    width: 120px; /* Keep size when sidebar is open */
+}
+
+.dashboard-sidebar:not(.open) .sidebar-logo { /* When sidebar is collapsed */
+    width: 40px; /* Smaller size for collapsed state */
+    padding: 0; /* No extra padding */
+}
+
+/* Hide the logo text (if any is part of the image) or adjust its display for collapsed state */
+/* This might not be necessary if your logo is just the symbol */
+
+
+/* Existing top-section modified or removed if logo section replaces it */
+/* If you had a .top-section with the toggle button and logo text before,
+   this .sidebar-logo-section might replace its functionality.
+   Ensure no conflicts or duplicate elements. */
+.top-section { /* Adjust or remove if redundant with sidebar-logo-section */
+    /* display: none; */ /* Consider hiding or removing this if the new logo section serves its purpose */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 10px 15px; /* Reduced horizontal padding from 15px, and bottom from 20px */
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 15px; /* Reduced from 20px */
+    gap: 8px; /* Reduced from 10px */
+}
+
 
 .toggle-button {
-  background-color: transparent;
-  border: none;
-  color: var(--text-primary);
-  font-size: 1.8rem; /* Slightly larger for visibility */
-  cursor: pointer;
-  padding: 5px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-  line-height: 1; /* Helps with vertical alignment */
-  display: flex; /* Ensures the icon is centered */
-  align-items: center;
-  justify-content: center;
+    background-color: transparent;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.6rem;
+    cursor: pointer;
+    padding: 3px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .toggle-button:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
-.logo-text {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin: 0;
-  white-space: nowrap;
-  overflow: hidden;
+.logo-text { /* This class might be for text next to logo, adjust or remove */
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .navigation {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  padding: 0 10px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 5px; /* Reduced horizontal padding from 10px */
 }
 
 .nav-button {
-  background-color: transparent;
-  border: none;
-  color: var(--text-primary);
-  text-align: left;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 25px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 15px; /* Space between icon and text */
-  white-space: nowrap;
-  overflow: hidden;
-  margin-bottom: 8px;
+    background-color: transparent;
+    border: none;
+    color: var(--text-primary);
+    text-align: left;
+    font-size: 0.95rem;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 6px;
 }
 
 .nav-button-expanded {
-  padding: 12px 20px;
-  justify-content: flex-start;
+    padding: 10px 15px;
+    justify-content: flex-start;
 }
 
 .nav-button-collapsed {
-  padding: 12px 0;
-  justify-content: center;
+    padding: 10px 0;
+    justify-content: center;
 }
 
 .nav-button:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
 }
 
-/* NEW: Styles for the Unicode icons */
 .nav-button .icon {
-  font-size: 1.5rem; /* Adjust size as needed */
-  width: 24px; /* Give it a fixed width to prevent text shift on collapse */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1; /* Important for vertical alignment of symbols */
+    font-size: 1.4rem;
+    width: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
 }
 
 .bottom-section {
-  padding: 20px 10px 0;
-  border-top: 1px solid var(--border-color);
-  margin-top: auto;
+    padding: 15px 5px 0;
+    border-top: 1px solid var(--border-color);
+    margin-top: auto;
+}
+
+/* Responsive adjustments (ensure logo scales correctly) */
+@media (max-width: 768px) {
+    /* Adjustments for collapsed state on mobile if sidebar is always collapsed initially */
+    .dashboard-sidebar:not(.open) .sidebar-logo {
+        width: 40px; /* Maintain small size when closed on mobile */
+    }
+    .dashboard-sidebar.open .sidebar-logo {
+        width: 100px; /* A bit smaller for opened mobile sidebar */
+    }
+    .sidebar-logo-section {
+        padding: 10px 5px 15px; /* Adjust padding for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-sidebar.open .sidebar-logo {
+        width: 90px;
+    }
 }
