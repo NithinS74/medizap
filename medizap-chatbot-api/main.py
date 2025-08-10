@@ -9,23 +9,23 @@ import requests
 import json
 from llama_cpp import Llama
 
-# Import dotenv and load environment variables
+
 from dotenv import load_dotenv
 load_dotenv()
 
-# NEW: Firebase Admin SDK Imports
+
 import firebase_admin
 from firebase_admin import credentials, firestore, auth
 from google.cloud.firestore_v1.async_client import AsyncClient 
 
-# --- CORS middleware (keep this as is) ---
+
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI, Request, HTTPException, status, Depends
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 
-# Import the products router and the products module itself
-import products # <-- IMPORT THE MODULE DIRECTLY
+
+import products 
 from products import router as products_router 
 
 origins = [
@@ -51,7 +51,7 @@ app.add_middleware(
 app.include_router(products_router, prefix="/api/v1")
 
 
-# --- Global variables for Firebase, DataFrame, and API Keys ---
+
 db_firestore_client_instance = None 
 medical_data_df = None
 CSV_FILE_NAME = "book1.csv"
@@ -59,14 +59,14 @@ APP_ID = os.environ.get("APP_ID", "default-medizap-app")
 NEWS_API_KEY = os.environ.get("NEWS_API_KEY", "4f30447ac575407ab4ddc687060d8677")
 GOOGLE_API_KEY = os.environ.get("GOOGLE_API_KEY", "")
 
-# Global variable for the local GGUF model
+
 llm_model = None
-# Global variables for the RAG knowledge bases
+
 disease_knowledge_db = []
 drug_knowledge_db = []
 
 
-# NEW: Centralized Firestore client getter (dependency provider)
+
 def get_firestore_client():
     if db_firestore_client_instance is None:
         raise HTTPException(
@@ -80,7 +80,7 @@ def get_firestore_client():
 async def load_medical_data_and_initialize_firebase():
     global medical_data_df, db_firestore_client_instance, llm_model, disease_knowledge_db, drug_knowledge_db
 
-    # --- Initialize Firebase Admin SDK ---
+    
     print("--- Initializing Firebase Admin SDK ---")
     firebase_service_account_key_path = os.environ.get("FIREBASE_SERVICE_ACCOUNT_KEY_PATH")
 
@@ -94,35 +94,35 @@ async def load_medical_data_and_initialize_firebase():
         products.get_firestore_client_dependency = None 
     else:
         try:
-            # Initialize Firebase Admin SDK first
+            
             if not firebase_admin._apps:
                 cred = credentials.Certificate(firebase_service_account_key_path)
                 firebase_admin.initialize_app(cred)
                 print("Firebase Admin SDK app initialized.")
             else:
-                # If app is already initialized (e.g., due to --reload), get the existing credentials
+                
                 cred = credentials.Certificate(firebase_service_account_key_path) 
                 print("Firebase Admin SDK app already initialized (likely due to --reload).")
             
-            # --- CRITICAL CORRECTION: Explicitly pass credentials and project to AsyncClient ---
+            
             db_firestore_client_instance = AsyncClient(
-                project=cred.project_id,           # Use project ID from credentials
-                credentials=cred.get_credential()  # Get the underlying Google Auth credential object
+                project=cred.project_id,           
+                credentials=cred.get_credential()  
             )
-            # --- END CRITICAL CORRECTION ---
+            
 
             products.get_firestore_client_dependency = get_firestore_client 
             
             print("Firebase Admin SDK initialized successfully and Firestore client obtained.")
         except Exception as e:
-            # Using logger.exception here would print the full traceback, but for consistency with original, sticking to print
+            
             print(f"ERROR: Failed to initialize Firebase Admin SDK from file: {e}. Firestore client will not be available.")
             db_firestore_client_instance = None
             products.get_firestore_client_dependency = None 
 
     print(f"Firebase client status after startup: {'Initialized' if db_firestore_client_instance else 'NOT Initialized'}")
 
-    # --- Load Medical Data CSV (keep as is) ---
+    
     csv_path = os.path.join(os.path.dirname(__file__), CSV_FILE_NAME)
     print(f"--- Application Startup: Loading Medical Data from CSV ---")
     encodings_to_try = ['utf-8', 'latin1', 'cp1252', 'ISO-8859-1']
@@ -141,7 +141,7 @@ async def load_medical_data_and_initialize_firebase():
         print("All attempted loading combinations failed. Falling back to a dummy DataFrame.")
         medical_data_df = pd.DataFrame(columns=['Disease', 'Description', 'Symptoms', 'Medicines'])
 
-    # --- Download and Load Local GGUF Model (keep as is) ---
+    
     print("--- Application Startup: Downloading and Loading GGUF Model ---")
     try:
         repo_id = "TheBloke/Wizard-Vicuna-13B-Uncensored-GGUF"
@@ -161,7 +161,7 @@ async def load_medical_data_and_initialize_firebase():
         print(f"CRITICAL ERROR: Failed to load local GGUF model. The /predict-disease endpoint will not work. Error: {e}")
         llm_model = None
 
-    # --- Load Disease Knowledge Base for RAG ---
+    
     print("--- Application Startup: Loading Disease Knowledge Base ---")
     try:
         knowledge_base_path = os.path.join(os.path.dirname(__file__), "disease_knowledge.json")
@@ -172,7 +172,7 @@ async def load_medical_data_and_initialize_firebase():
         print(f"ERROR: Failed to load disease_knowledge.json. RAG will not be available. Error: {e}")
         disease_knowledge_db = []
 
-    # --- Load Drug Knowledge Base for RAG ---
+    
     print("--- Application Startup: Loading Drug Knowledge Base ---")
     try:
         drug_knowledge_path = os.path.join(os.path.dirname(__file__), "data-drug.json")
@@ -184,10 +184,10 @@ async def load_medical_data_and_initialize_firebase():
         drug_knowledge_db = []
 
 
-# Helper function to save chat history to Firestore
+
 async def save_chat_history(user_id: str, query: str, response: dict, api_endpoint: str):
     """Saves a chat interaction to Firestore asynchronously."""
-    # Use the shared client instance
+    
     if db_firestore_client_instance is None:
         print("Firestore client not initialized. Cannot save chat history.")
         return
@@ -206,7 +206,7 @@ async def save_chat_history(user_id: str, query: str, response: dict, api_endpoi
         print(f"Error saving chat history to Firestore for user {user_id}: {e}")
 
 
-# --- Authentication Dependency ---
+
 async def get_current_user_id(request: Request):
     auth_header = request.headers.get("Authorization")
     if not auth_header:
@@ -214,7 +214,7 @@ async def get_current_user_id(request: Request):
     id_token = auth_header.split("Bearer ")[1] if "Bearer " in auth_header else None
     if not id_token:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Bearer token not found in Authorization header")
-    # Use the shared client instance check
+    
     if db_firestore_client_instance is None:
         raise HTTPException(status_code=status.HTTP_503_SERVICE_UNAVAILABLE, detail="Firebase Admin SDK not initialized. Cannot authenticate.")
     try:
@@ -224,7 +224,7 @@ async def get_current_user_id(request: Request):
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail=f"Invalid authentication token: {e}")
 
 
-# --- Define Input/Output Pydantic Models (keep as is) ---
+
 class TextInput(BaseModel):
     text: str
 
@@ -257,11 +257,11 @@ class NewsResponse(BaseModel):
     disclaimer: str = "News articles are provided for informational purposes only."
 
 
-# --- Define API Endpoints ---
+
 
 @app.get("/")
 async def root():
-    # Check the client instance directly
+    
     firebase_status = "Firestore initialized." if db_firestore_client_instance else "Firestore NOT initialized."
     llm_status = "Local LLM model loaded." if llm_model else "Local LLM model FAILED to load."
     return {"message": f"Medizap API is running. {firebase_status} {llm_status}"}
@@ -284,62 +284,82 @@ async def get_disease_by_symptoms(input_data: TextInput, user_id: str = Depends(
         await save_chat_history(user_id, input_data.text, response.dict(), "/predict-disease")
         return response
         
-    # 1. Retrieval Step: Find relevant documents from BOTH knowledge bases.
+    
     query_lower = input_data.text.lower()
-    keywords = re.split(r'[\s,]+|and', query_lower)
-    keywords = [k.strip() for k in keywords if k.strip()]
+    
+    keywords = re.split(r'[\s,;.()]+|and', query_lower)
+    keywords = [k.strip() for k in keywords if k.strip() and len(k) > 2] 
 
     scored_docs = []
 
-    # Search Disease Knowledge Base
+    
     for doc in disease_knowledge_db:
         score = 0
+        doc_disease_lower = doc.get('disease', '').lower()
         doc_symptoms_lower = [s.lower() for s in doc.get('symptoms', [])]
         
         for keyword in keywords:
-            if keyword in doc.get('disease', '').lower():
-                score += 2
+            if keyword in doc_disease_lower:
+                score += 3 
             for symptom in doc_symptoms_lower:
                 if keyword in symptom:
-                    # Higher score for exact word match
-                    if keyword in symptom.split():
-                        score += 2
-                    else:
-                        score += 1
+                    score += 1
         
         if score > 0:
             scored_docs.append({'doc': doc, 'score': score, 'type': 'disease'})
 
-    # Search Drug Knowledge Base
+    
+    
     for doc in drug_knowledge_db:
         score = 0
+        
         doc_name_lower = doc.get('name', '').lower()
         doc_indication_lower = doc.get('indication', '').lower()
         doc_category_lower = doc.get('category', '').lower()
+        composition_str_lower = ' '.join([c.get('composition', '').lower() for c in doc.get('composition', [])])
+        side_effects_str_lower = ' '.join([s.get('side_effect', '').lower() for s in doc.get('side_effect', [])])
+        
+        
+        dose_info_lower = []
+        for d in doc.get('dose', []):
+            profil = d.get('profil', '').lower()
+            dose_text = d.get('dose', '').lower()
+            dose_info_lower.append(f"{profil} {dose_text}")
+        dose_info_str_lower = ' '.join(dose_info_lower)
 
+        
         for keyword in keywords:
             if keyword in doc_name_lower:
-                score += 3  # Higher weight for a name match
+                score += 5  
+            if keyword in dose_info_str_lower:
+                score += 4  
             if keyword in doc_indication_lower:
-                score += 2  # Medium weight for indication
+                score += 3  
+            if keyword in composition_str_lower:
+                score += 2  
+            if keyword in side_effects_str_lower:
+                score += 1  
             if keyword in doc_category_lower:
-                score += 1  # Lower weight for category
+                score += 1
 
         if score > 0:
             scored_docs.append({'doc': doc, 'score': score, 'type': 'drug'})
+    
 
-    # 2. Augmentation Step: Build the context from top-ranked documents.
+    
     context = "No specific information found in the knowledge base."
     if scored_docs:
         scored_docs.sort(key=lambda x: x['score'], reverse=True)
         context_parts = []
 
-        # Helper to format list of dicts into a string
+        
         def format_list(data, key_name):
             if not isinstance(data, list): return "N/A"
-            return ', '.join(filter(None, [item.get(key_name) for item in data])) or "N/A"
+            
+            values = [item.get(key_name) or item.get(key_name.strip() + ' ') for item in data]
+            return ', '.join(filter(None, values)) or "N/A"
 
-        # Take top 3 results, which could be a mix of diseases and drugs
+        
         for item in scored_docs[:3]:
             doc_type = item['type']
             doc = item['doc']
@@ -367,7 +387,7 @@ async def get_disease_by_symptoms(input_data: TextInput, user_id: str = Depends(
                 )
         context = "\n\n---\n\n".join(context_parts)
 
-    # 3. Generation Step: Create the prompt and call the LLM.
+    
     system_instruction = (
         "You are an information synthesizer. Your task is to answer the user's question based *only* on the provided context, which may contain information about diseases, drugs, or both. "
         "Summarize the information from the context in a friendly, conversational paragraph. "
@@ -418,9 +438,9 @@ async def ocr_handwriting(input_data: ImageInput, user_id: str = Depends(get_cur
     except Exception as e:
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=f"Invalid Base64 image format: {e}")
 
-    # Re-checking for potentially corrupted string or invisible characters here
+    
     gemini_api_url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={GOOGLE_API_KEY}"
-    # This is the string literal most likely to cause the SyntaxError if corrupted.
+    
     prompt_ocr = "Extract all readable text from this image, focusing on any handwritten notes or prescription details." 
     payload = {"contents": [{"role": "user", "parts": [{"text": prompt_ocr}, {"inlineData": {"mimeType": mime_type, "data": base64_only_data}}]}]}
 
